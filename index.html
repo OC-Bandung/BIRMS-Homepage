@@ -1,278 +1,821 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Bandung Integrated Resources Management System">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>BIRMS ~ Bandung Integrated Resources Management System</title>
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/js/plugins/morris-chart/morris.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="assets/css/materialize-social.css" type="text/css" rel="stylesheet">
 </head>
+
 <body>
- 
-  <nav class="teal" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><i class="material-icons">cloud</i>BIRMS</a>
-      <ul id="apps" class="dropdown-content">
-		  <li><a href="#">e-project</a></li>
-		  <li><a href="#">e-contract</a></li>
-		  <li><a href="#">e-progress</a></li>
-		</ul>
-      <ul class="right hide-on-med-and-down">
-        <li class="active"><a href="#">Beranda</a></li>
-      	<li><a class="dropdown-button" href="#" data-activates="apps">BIRMS Apps<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a href="#">Lelang</a></li>
-        <li><a href="#">Kontrak</a></li>
-        <li><a href="#">SKPD</a></li>
-        <li><a href="#">Perusahaan</a></li>
-        <li><a href="#">Birms Lama</a></li>
-        <li><a href="#">Data</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-	
-      <ul id="nav-mobile" class="side-nav">
-        <li class="active"><a href="#">Beranda</a></li>
-        <li><a href="#">BIRMS Apps</a></li>
-        <li><a href="#">Lelang</a></li>
-        <li><a href="#">Kontrak</a></li>
-        <li><a href="#">SKPD</a></li>
-        <li><a href="#">Perusahaan</a></li>
-        <li><a href="#">Birms Lama</a></li>
-        <li><a href="#">Data</a></li>
-        <li><a href="#">Help</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s3 left">
-   	
-<ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header active"><i class="material-icons">assessment</i>Tanggal</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">assignment</i><span class="new badge" data-badge-caption="Paket">37</span>Lelang Umum</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">library_books</i><span class="new badge" data-badge-caption="Paket">700</span>Kontrak</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">business</i><span class="new badge" data-badge-caption="">1230</span>Perusahaan</div>
-      <div class="collapsible-body">
-      	<p class="flow-text">
-      		<ol>
-      			<li>Pengadaan Barang</li>
-      			<li>Konstruksi</li>
-      			<li>Jasa Konsultansi</li>
-      			<li>Jasa Lainnya</li>	
-      		</ol>
-      	</p>
-      </div>
-    </li>
-  </ul>
-        	
-		  </div>
-		  <div class="col s6 center">
-        	
-			  <div class="slider">
-         <ul class="slides">
-      <li>
-        <img src="http://lorempixel.com/580/250/business/1"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+    <nav class="teal" role="navigation">
+        <div class="nav container">
+            <a id="logo-container" href="#" class="brand-logo"><img src="assets/images/birms-logo.png" width="144"></a>
+            <ul id="apps" class="dropdown-content">
+                <li><a href="#">e-project</a></li>
+                <li><a href="#">e-rup</a></li>
+                <li><a href="#">e-ulp</a></li>
+                <li><a href="#">e-contract</a></li>
+                <li><a href="#">e-progress</a></li>
+                <li><a href="#">e-performance</a></li>
+                <li><a href="#">e-asset</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="#">Beranda</a></li>
+                <li><a class="dropdown-button" href="#" data-activates="apps">BIRMS Apps<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="#">Lelang</a></li>
+                <li><a href="#">Kontrak</a></li>
+                <li><a href="#">SKPD</a></li>
+                <li><a href="#">Perusahaan</a></li>
+                <li><a href="#">Birms Lama</a></li>
+                <li><a href="#">Data</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li class="active"><a href="#">Beranda</a></li>
+                <li><a href="#">BIRMS Apps</a></li>
+                <li><a href="#">Lelang</a></li>
+                <li><a href="#">Kontrak</a></li>
+                <li><a href="#">SKPD</a></li>
+                <li><a href="#">Perusahaan</a></li>
+                <li><a href="#">Birms Lama</a></li>
+                <li><a href="#">Data</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/business/2"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/business/3"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-			  
-		  </div>
-		  <div class="col s3 right">
-        	
-			  <div class="card hoverable darken-1">
-            
-            <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Fakta BIRMS<i class="material-icons right">more_vert</i></span>
-      <p>BIRMS e-contract management melalui LPSE Kota Bandung mendapatkan penghargaan inovasi pelayanan dari LKPP pada Tahun 2013</p>
-      <p><a href="#">Selengkapnya...</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-          </div>
-			  
-		  </div>
-		</div>
-	  </div>
-	</div>
-		  		  
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/images/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer teal">
+    </nav>
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+        <div class="section">
+            <div class="row">
+                <div class="col s3 left">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header active"><i class="material-icons">assessment</i>Hari ini</div>
+                            <div class="collapsible-body center">
+                                    <h4>30</h4>
+                                    <span>April 2017</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">assignment</i><span class="new badge" data-badge-caption="Paket">37</span>Lelang Umum</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">library_books</i><span class="new badge" data-badge-caption="Paket">700</span>Kontrak</div>
+                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">business</i><span class="new badge" data-badge-caption="">1230</span>Perusahaan</div>
+                            <div class="collapsible-body">
+                                <p class="flow-text">
+                                    <ol>
+                                        <li>Pengadaan Barang</li>
+                                        <li>Konstruksi</li>
+                                        <li>Jasa Konsultansi</li>
+                                        <li>Jasa Lainnya</li>
+                                    </ol>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col s6 center">
+                    <div class="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="http://lorempixel.com/580/250/business/1">
+                                <!-- random image -->
+                                <div class="caption center-align">
+                                    <h3>This is our big Tagline!</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://lorempixel.com/580/250/business/2">
+                                <!-- random image -->
+                                <div class="caption left-align">
+                                    <h3>Left Aligned Caption</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://lorempixel.com/580/250/business/3">
+                                <!-- random image -->
+                                <div class="caption right-align">
+                                    <h3>Right Aligned Caption</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="http://lorempixel.com/580/250/nature/4">
+                                <!-- random image -->
+                                <div class="caption center-align">
+                                    <h3>This is our big Tagline!</h3>
+                                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s3 right">
+                    <div class="card hoverable darken-1">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Fakta BIRMS<i class="material-icons right">more_vert</i></span>
+                            <p>BIRMS e-contract management melalui LPSE Kota Bandung mendapatkan penghargaan inovasi pelayanan dari LKPP pada Tahun 2013</p>
+                            <p><a href="#">Selengkapnya...</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
+    <div class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div class="card-panel black-text">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">search</i>
+                                    <input id="q" name="q" type="text" placeholder="Cari Pengadaan">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>Stage</option>
+                                        <option value="1">Planning</option>
+                                        <option value="2">Procurement</option>
+                                        <option value="3">Contract</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="startdate" type="date" class="datepicker">
+                                    <label for="startdate">Start Date</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="enddate" type="date" class="datepicker">
+                                    <label for="enddate">End Date</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>SKPD</option>
+                                        <option value="1">Dinas Pendidikan</option>
+                                        <option value="2">Badan Perencanaan Pembangunan Daerah</option>
+                                        <option value="3">Dinas Komunikasi dan Informatika</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>Activity</option>
+                                        <option value="1">Manager</option>
+                                        <option value="2">Developer</option>
+                                        <option value="3">Business</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                    <select id="kecamatanID">
+                                        <option value="" disabled selected>Kecamatan</option>
+                                        <option value="1">Andir</option>
+                                        <option value="2">Kiaracondong</option>
+                                        <option value="3">Cihapit</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>Klasifikasi Pengadaan</option>
+                                        <option value="1">Pengadaan Barang</option>
+                                        <option value="2">Jasa Konstruksi</option>
+                                        <option value="3">Jasa Konsultan</option>
+                                        <option value="4">Jasa Lainnya</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>Metode Procurement</option>
+                                        <option value="1">Lelang</option>
+                                        <option value="2">Pengadaan Langsung</option>
+                                        <option value="3">Penunjukan Langsung</option>
+                                    </select>
+                                </div>
+                                <div class="input-field col s4">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="min" name="min" type="number" placeholder="10000000" class="validate">
+                                    <label for="min">Min</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <input id="max" name="max" type="number" placeholder="1000000000" class="validate">
+                                    <label for="max">Max</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="assets/images/background3.jpg" alt="Unsplashed background img 1"></div>
     </div>
-  </footer>
+    <div class="container">
+        <div class="row">
+            <h4 class="header center teal-text text-lighten-2">Interactive Map of Contracts in Districts Of Bandung</h4>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="center">
+                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                    <div style='overflow:hidden;height:440px;width:auto;' class="center-align">
+                        <div id='gmap_canvas' style='height:440px;width:auto;'></div>
+                        <div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+                        <style>
+                        #gmap_canvas img {
+                            max-width: none!important;
+                            background: none!important
+                        }
+                        </style>
+                    </div>
+                    <script type='text/javascript'>
+                    function init_map() {
+                        var myOptions = {
+                            zoom: 15,
+                            center: new google.maps.LatLng(-6.9114574, 107.60972760000004),
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        };
+                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                        marker = new google.maps.Marker({
+                            map: map,
+                            position: new google.maps.LatLng(-6.9114574, 107.60972760000004)
+                        });
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<strong>Balai Kota Bandung</strong><br>Jl. Wastukencana No. 2<br>'
+                        });
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow.open(map, marker);
+                        });
+                        infowindow.open(map, marker);
+                    }
+                    google.maps.event.addDomListener(window, 'load', init_map);
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="center">
+                    <button class="btn">View Detail Map</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="teal">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Competitive vs Direct Procurement<i class="material-icons right">more_vert</i></span>
+                            <div id="competitive"></div>
+                        </div>
+                        <div class="card-action">
+                            <p align="right">
+                                <a href="#" class="btn btn-primary">Download Data</a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Competitive vs Direct Procurement<i class="material-icons right">close</i></span>
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="year">Tahun</th>
+                                        <th data-field="lelang">Lelang</th>
+                                        <th data-field="pl">Pengadaan Langsung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>561</td>
+                                        <td>2847</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>736</td>
+                                        <td>5007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>401</td>
+                                        <td>7633</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>736</td>
+                                        <td>8706</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>37</td>
+                                        <td>608</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Best Performance SKPD<i class="material-icons right">more_vert</i></span>
+                            <div id="performance"></div>
+                        </div>
+                        <div class="card-action">
+                            <p align="right">
+                                <a href="#" class="btn btn-primary">Download Data</a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Best Performance SKPD<i class="material-icons right">close</i></span>
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="year">Tahun</th>
+                                        <th data-field="lelang">Lelang</th>
+                                        <th data-field="pl">Pengadaan Langsung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>561</td>
+                                        <td>2847</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>736</td>
+                                        <td>5007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>401</td>
+                                        <td>7633</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>736</td>
+                                        <td>8706</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>37</td>
+                                        <td>608</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Procurement Category<i class="material-icons right">more_vert</i></span>
+                            <div id="proc_category"></div>
+                        </div>
+                        <div class="card-action">
+                            <p align="right">
+                                <a href="#" class="btn btn-primary">Download Data</a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Procurement Category<i class="material-icons right">close</i></span>
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="year">Tahun</th>
+                                        <th data-field="lelang">Lelang</th>
+                                        <th data-field="pl">Pengadaan Langsung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>561</td>
+                                        <td>2847</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>736</td>
+                                        <td>5007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>401</td>
+                                        <td>7633</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>736</td>
+                                        <td>8706</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>37</td>
+                                        <td>608</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card hoverable">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Top 5 Sectors<i class="material-icons right">more_vert</i></span>
+                            <div id="sectors"></div>
+                        </div>
+                        <div class="card-action">
+                            <p align="right">
+                                <a href="#" class="btn btn-primary">Download Data</a>
+                            </p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Top 5 Sectors<i class="material-icons right">close</i></span>
+                            <table class="responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th data-field="year">Tahun</th>
+                                        <th data-field="lelang">Lelang</th>
+                                        <th data-field="pl">Pengadaan Langsung</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2013</td>
+                                        <td>561</td>
+                                        <td>2847</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2014</td>
+                                        <td>736</td>
+                                        <td>5007</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2015</td>
+                                        <td>401</td>
+                                        <td>7633</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016</td>
+                                        <td>736</td>
+                                        <td>8706</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2017</td>
+                                        <td>37</td>
+                                        <td>608</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <h4 class="header center teal-text text-lighten-2">List of recent contracting processes by stage</h4>
+        </div>
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <ul class="tabs tabs-fixed-width tab-demo z-depth-1">
+                    <li class="tab"><a class="active" href="#stage1">Plans</a></li>
+                    <li class="tab"><a href="#stage2">Tenders</a></li>
+                    <li class="tab"><a href="#stage3">Awards</a></li>
+                    <li class="tab"><a href="#stage4">Contract</a></li>
+                    <li class="tab"><a href="#stage5">Implementation</a></li>
+                </ul>
+            </div>
+            <div id="stage1" class="col s12 m12 l12">
+                <div class="card horizontal">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s6 m6 l3 teal">
+                                    <blockquote>
+                                        <span class="card-title">Rp. 123.000.000,-</span>
+                                        <h5>Procurement method</h5>
+                                    </blockquote>
+                                </div>
+                                <div class="col s6 m6 l9">
+                                    <span class="card-title activator grey-text text-darken-4">Title of Contract<i class="material-icons right">info</i></span>
+                                    <small>OCDS-ID-1231415151515</small>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                                    <h5>SKPD : Bagian Layanan Pengadaan</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn" href="#"><i class="material-icons left">markunread_mailbox</i>Subscribe</a>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Title of Contract<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this contract that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="stage2" class="col s12">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="http://lorempixel.com/300/200/nature/7">
+                        <span>Rp. 1.000.0123,-</span>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Title of Contract<i class="material-icons right">info</i></span>
+                            <small>OCDS-ID-1231415151515</small>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                            <h5>SKPD : Bagian Layanan Pengadaan</h5>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Subscribe</a>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="stage3" class="col s12">Awards</div>
+            <div id="stage4" class="col s12">Contract</div>
+            <div id="stage5" class="col s12">Implementation</div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title blue-text">Article Title</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-action right-align">
+                                <a class="waves-effect waves-light social-icon btn facebook"><i class="fa fa-facebook"></i></a>
+                                <a class="waves-effect waves-light social-icon btn twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title lime-text">Article Title</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-action right-align">
+                                <a class="waves-effect waves-light social-icon btn facebook"><i class="fa fa-facebook"></i></a>
+                                <a class="waves-effect waves-light social-icon btn twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title blue-text">Article Title</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-action right-align">
+                                <a class="waves-effect waves-light social-icon btn facebook"><i class="fa fa-facebook"></i></a>
+                                <a class="waves-effect waves-light social-icon btn twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content black-text">
+                                <span class="card-title blue-text">Article Title</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="card-action right-align">
+                                <a class="waves-effect waves-light social-icon btn facebook"><i class="fa fa-facebook"></i></a>
+                                <a class="waves-effect waves-light social-icon btn twitter"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="assets/images/background3.jpg" alt="Unsplashed background img 1"></div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <!--   Icon Section   -->
+            <div class="row center">
+                <h4>BIRMS Partner</h4>
+                <div class="col s12 m3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="assets/images/partner/1lkpp.png">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">LKPP</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3 center">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="assets/images/partner/2simda.png">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">SIMDA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="assets/images/partner/4wb.png">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">World Bank</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img src="assets/images/partner/3oc.png">
+                        </div>
+                        <div class="card-action">
+                            <a href="#">Open Contracting</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">https://birms.bandung.go.id</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="assets/images/background3.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s8">
+                    <div class="map-card">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                                <div style='overflow:hidden;height:440px;width:auto;'>
+                                    <div id='gmap_location' style='height:440px;width:auto;'></div>
+                                    <div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+                                    <style>
+                                    #gmap_canvas img {
+                                        max-width: none!important;
+                                        background: none!important
+                                    }
+                                    </style>
+                                </div>
+                                <script type='text/javascript'>
+                                function init_map() {
+                                    var myOptions = {
+                                        zoom: 17,
+                                        center: new google.maps.LatLng(-6.9114574, 107.60972760000004),
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    };
+                                    map = new google.maps.Map(document.getElementById('gmap_location'), myOptions);
+                                    marker = new google.maps.Marker({
+                                        map: map,
+                                        position: new google.maps.LatLng(-6.9114574, 107.60972760000004)
+                                    });
+                                    infowindow = new google.maps.InfoWindow({
+                                        content: '<strong>Balai Kota Bandung</strong><br>Jl. Wastukencana No. 2<br>'
+                                    });
+                                    google.maps.event.addListener(marker, 'click', function() {
+                                        infowindow.open(map, marker);
+                                    });
+                                    infowindow.open(map, marker);
+                                }
+                                google.maps.event.addDomListener(window, 'load', init_map);
+                                </script>
+                            </div>
+                            <div class="card-content">
+                                <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                                    <i class="material-icons red">location_on</i>
+                                </a>
+                                <h4 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4"><img src="assets/images/logo-bandung.png" alt="Pemerintah Kota Bandung" align="left">BIRMS</a></h4>
+                                <small>Bandung Integrated Resources Management System</small>
+                                <br>
+                                <p class="blog-post-content">Sebuah Sistem Informasi Pengelolaan Sumber Daya Pemerintahan Yang Terintegrasi (Government Resources Management) yang dibangun oleh Pemerintah Kota Bandung untuk mewujudkan transparansi tata kelola pemerintahan dari perencanaan, penganggaran, pengadaan, progres, implementasi sampai menjadi asset.</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4"><img src="assets/images/logo-bandung.png" alt="Pemerintah Kota Bandung" align="left">BIRMS<a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons red">close</i></a></span>
+                                <small>Bandung Integrated Resources Management System</small>
+                                <br>
+                                <p class="blog-post-content">Sebuah Sistem Informasi Pengelolaan Sumber Daya Pemerintahan Yang Terintegrasi (Government Resources Management) yang dibangun oleh Pemerintah Kota Bandung untuk mewujudkan transparansi tata kelola pemerintahan dari perencanaan, penganggaran, pengadaan, progres, implementasi sampai menjadi asset.</p>
+                                <ul>
+                                    <li><i class="material-icons">business</i> Bagian Pelayanan Pengadaan Sekretariat Daerah Kota Bandung</li>
+                                    <li><i class="material-icons">location_on</i> Jl. Wastukencana No. 2 Bandung</li>
+                                    <li><i class="material-icons">phone</i> +62 22 123123124</li>
+                                    <li><a class="black-text" href="https://birms.bandung.go.id/support"><i class="material-icons">forum</i>
+                        Technical Support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Developed &amp; Maintenance</h5>
+                    <ul class="collection">
+                        <li class="collection-item avatar teal darken-3">
+                            <i class="material-icons circle green">business</i>
+                            <span class="title grey-text lighten-1">2017</span>
+                            <br>
+                            <small><a class="white-text" href="https://portal.bandung.go.id/pemerintahan/skpd/QR03/bagian-pengadaan-barang-dan-jasa" target="_blank">Bagian Pelayanan Pengadaan Sekretariat Daerah</a></small>
+                        </li>
+                        <li class="collection-item avatar teal darken-3">
+                            <i class="material-icons circle yellow darken-2">business</i>
+                            <span class="title grey-text lighten-1">Jan - Des 2016</span>
+                            <br>
+                            <small><a class="white-text" href="https://portal.bandung.go.id/site/sdk-skpddetail/Bagian-Pembangunan-dan-Sumber-Daya-Alam-(BPSDA)" target="_blank">Bagian Pembangunan &amp; Sumber Daya Alam</a></small>
+                        </li>
+                        <li class="collection-item avatar teal darken-3">
+                            <i class="material-icons circle red">business</i>
+                            <span class="title grey-text lighten-1">Sep 2015 - Des 2015 </span>
+                            <br>
+                            <small><a class="white-text" href="https://bandung.go.id" target="_blank">Dinas Komunikasi dan Informatika Kota Bandung</a> <span class="new badge" data-badge-caption="(Developed Only)"></span></small>
+                        </li>
+                        <li class="collection-item avatar teal darken-3">
+                            <i class="material-icons circle green darken-3">business</i>
+                            <span class="title grey-text lighten-1" grey-text lighten-1>Jan - Aug 2015 </span>
+                            <br>
+                            <small><a class="white-text" href="http://portal.bandung.go.id/site/sdk-skpddetail/Bagian-Pembangunan-dan-Sumber-Daya-Alam-(BPSDA)" target="_blank">Bagian Pembangunan &amp; Sumber Daya Alam Kota Bandung</a></small>
+                        </li>
+                        <li class="collection-item avatar teal darken-3">
+                            <i class="material-icons circle blue">business</i>
+                            <span class="title grey-text lighten-1">2010 - 2014</span>
+                            <br>
+                            <small><a class="white-text" href="http://bappeda.bandung.go.id/" target="_blank">Bappeda Kota Bandung</a></small>
+                        </li>
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made in Bandung with <a class="brown-text text-lighten-3" href="http://hadiyan.net">Love</a>
+            </div>
+        </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <!-- morris -->
+    <script type="text/javascript" src="assets/js/plugins/raphael/raphael-min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/morris-chart/morris.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/morris-chart/morris-script.js"></script>
+    <!-- google map api -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAZnaZBXLqNBRXjd-82km_NO7GUItyKek"></script>
+    <!--google map-->
+    <script type="text/javascript" src="assets/js/plugins/google-map/google-map-script.js"></script>
+</body>
 
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/init.js"></script>
-
-  </body>
 </html>
