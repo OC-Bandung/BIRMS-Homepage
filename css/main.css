@@ -1,8 +1,28 @@
-body , section {
+body {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+	 
 }
 
+.other-colors {
+	  background: #f44336;
+	  background-color: #f9f0d0;
+	  background-color: #1b3050;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.f300 {
+	font-weight: 300;
+}
+
+.text-center {
+	text-align: center;
+}
 .logo  {
 	position: absolute;
 	 
