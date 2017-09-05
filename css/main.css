@@ -5,6 +5,11 @@ body {
 	 
 }
 
+select.homepage-chart {
+	float: right;
+	width: 150px;
+}
+
 .other-colors {
 	  background: #f44336;
 	  background-color: #f9f0d0;
@@ -14,6 +19,11 @@ body {
 a {
 	text-decoration: none;
 	color: black;
+}
+
+.img-chart {
+	height: 350px;
+
 }
 
 .f300 {
