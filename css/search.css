@@ -5,11 +5,11 @@
 	align-items: center;
 	width: 100%;
 	height: 80vh;
-	background-color: #59b2ac;
-	background-image: url(../img/city.jpg);
+	background-color: #35b7c2;
+	background-image: url(../img/bandung.png);
 	background-repeat: no-repeat;
 	background-position: 50%;
-	background-size: 50% auto;
+	background-size: 100% auto;
 }
 
 .search .search--open {
@@ -240,7 +240,7 @@
 
 .search--open {
 	pointer-events: auto;
-	background-color: rgba(89,178,172, 0.9);
+	background-color: rgba(53,183,194, 0.9);
 }
 
 .search__form {

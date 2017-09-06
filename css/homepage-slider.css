@@ -134,7 +134,7 @@ body {
 	position: absolute;
 	top: 70%;
 	left: -1em;
-	background: #f44336;
+	background: #ee1c25;
 	margin: 0;
 	color: #fff;
 	font-size: 1.05em;
@@ -230,7 +230,7 @@ body {
 	margin: -5px 0 0 0;
 	border: 2px solid #98322a;
 	border-radius: 50%;
-	background: #f44336;
+	background: #ee1c25;
 	-webkit-transition: -webkit-transform 0.3s, border-color 0.3s, border-width 0.3s, background 0.3s;
 	transition: transform 0.3s, border-color 0.3s, border-width 0.3s, background 0.3s;
 }

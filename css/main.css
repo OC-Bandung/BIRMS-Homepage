@@ -34,9 +34,9 @@ a {
 	text-align: center;
 }
 .logo  {
-	position: absolute;
-	 
-	background-color: #ff00ff;
+	vertical-align: middle;
+	height: 45px;
+
 }
 .text-center {
 	text-align: center;
