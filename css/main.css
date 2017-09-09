@@ -22,7 +22,10 @@ select.homepage-chart {
 }
 
 .sticky {
-	position: sticky;
+	  top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+
 }
 .even {
   background-color: #f8f8f8;
@@ -43,6 +46,16 @@ select.homepage-chart {
 .procurement-card {
 	box-shadow: unset;
 	border-bottom: 1px solid lightgray;
+}
+
+.procurement-card img {
+	opacity: 0.3;
+}
+.procurement-card-container {
+	width: 100%;
+}
+.procurement-card-details {
+	min-width: 100px;
 }
  
 
@@ -92,11 +105,21 @@ ul {
 .list-planning {
 	border-left: 4px solid orange;
 	padding: 20px;
+
+}
+
+.list-planning.active , .list-planning:hover {
+	background-color: orange;
 }
 
 .list-tender {
 	border-left: 4px solid #c6e9bc;
 	padding: 20px;
+	
+}
+
+.list-tender.active , .list-tender:hover {
+	background-color: #c6e9bc;
 }
 
 .list-award {
@@ -104,14 +127,27 @@ ul {
 	padding: 20px;
 }
 
+.list-award:hover, .list-award.active {
+	background-color: #7ccdbd;
+}
+
 .list-contract {
 	border-left: 4px solid #35b7c2;
 	padding: 20px;
 }
 
+.list-contract:hover , .list-contract.active {
+	background-color: #35b7c2;
+}
+
 .list-implementation {
 	border-left: 4px solid #0092bb;
 	padding: 20px;
+}
+
+.list-implementation:hover , .list-implementation.active  {
+	background-color: #0092bb;
+ 
 }
 
 .img-chart {

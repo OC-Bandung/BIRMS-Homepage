@@ -175,15 +175,15 @@
                 <div class="mdc-layout-grid__cell--span-12">
                     <h3 class="mdc-typography--display1">RECENT PROCUREMENT</h3>
                 </div>
-                <div class="mdc-layout-grid__cell--span-3 sticky">
-                    <ul class="mdc-list mdc-list--two-line">
+                <div class="mdc-layout-grid__cell--span-3 ">
+                    <ul class="mdc-list mdc-list--two-line sticky">
                         <li class="mdc-list-item list-planning">
                             <span class="mdc-list-item__text">
                       <a href="#"> Planning</a>
                       <span class="mdc-list-item__text__secondary">see what's in our pipeline</span>
                             </span>
                         </li>
-                        <li class="mdc-list-item   list-tender">
+                        <li class="mdc-list-item  list-tender active ">
                             <span class="mdc-list-item__text">
                        <a href="#">Tender</a>
                       <span class="mdc-list-item__text__secondary">prepare to bid</span>
@@ -209,97 +209,291 @@
                         </li>
                     </ul>
                 </div>
-                <div class="mdc-layout-grid__cell--span-8">
+                <div class="mdc-layout-grid__cell--span-9">
+                    <div> 
+                    <span class="mdc-typography--display1 f300">Tenders</span>
+                    <i class="material-icons">sort</i>
+                        <select class="mdc-select">
+                            <option value="Sort By" default selected>Sort by</option>
+                            <option value="grains">Amount</option>
+                            <option value="vegetables">Dates</option>
+                            <option value="dairy">Recently updated</option>
+                            <option value="meat">Procuring Entity</option>
+                            <option value="fats">Budget source</option>
+                        </select>
+                    </div>
                     <div class="mdc-card procurement-card">
                         <section class="mdc-card__primary">
                             <h1 class="mdc-card__title mdc-card__title--large f300">Belanja Modal Peralatan dan Mesin Pengadaan Mebelair</h1>
                             <h2 class="mdc-card__subtitle">Kota Bandung - RUMAH SAKIT KHUSUS IBU DAN ANAK</h2>
                             <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192 </h3>
                         </section>
-                        <section class="mdc-card__supporting-text flex">
-                            <span class="padding-small">
-                                 <img class="icon-large" src="img/icon-money.png">
-                                 <div>pagu: 2286175000</div>
-                             </span>
-
-                             <span class="padding-small ">
-                                 <img class="icon-large" src="img/icon-gov.png">
-                                 <div>Budget Source: APBD</div>
-                             </span>
-
-                              <span class="padding-small ">
-                                 <img class="icon-large" src="img/icon-tender-start.png">
-                                 <div>Tender start: 01 February 1978</div>
-                             </span>
-
-                              <span class="padding-small ">
-                                 <img class="icon-large" src="img/icon-tender-end.png">
-                                 <div>Tender end: 02 March 1978</div>
-                             </span>
-
-                              <span class="padding-small ">
-                                 <img class="icon-large" src="img/icon-contract-start.png">
-                                 <div>Contract Start: 02 March 1978</div>
-                             </span>
-
-                              <span class="padding-small ">
-                                 <img class="icon-large" src="img/icon-contract-end.png">
-                                 <div>Contract end: 02 March 1978</div>
-                             </span>
-
-
-                            <div> 
-                          </div>
+                        <section class="mdc-card__supporting-text ">
+                            <div class="procurement-card-container flex">
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-money.png">
+                                    <div class="mdc-typography--subheading1"> Pagu </div>
+                                    <div> <span class="mdc-typography--title f300"> 2.8 </span> M</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-gov.png">
+                                    <div class="mdc-typography--subheading1"> Budget </div>
+                                    <div class="mdc-typography--title f300"> BLUD </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-start.png">
+                                    <div class="mdc-typography--subheading1"> Tender start </div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2017 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-end.png">
+                                    <div class="mdc-typography--subheading1"> Tender end</div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2018 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center ">
+                                    <img class="icon-large" src="img/icon-contract-start.png">
+                                    <div class="mdc-typography--subheading1">Contract start</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-contract-end.png">
+                                    <div class="mdc-typography--subheading1">Contract end</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>This contract is for <i> <u> Goods and Services</u></i> and will procured as <i> <u>Seleksi Sederhana</u></i>. You have <span class="mdc-typography--subheading1"> 10 days </span> to submit a bid. </p>
+                            </div>
                         </section>
                         <section class="mdc-card__actions pull-right">
                             <button class="mdc-button mdc-button--compact mdc-card__action">
-                                <i class="material-icons">file_download</i>
+                                Apply in Sirup
                             </button>
-                            <button class="mdc-button mdc-button--compact mdc-card__action"><i class="material-icons ">mail_outline</i> </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Download
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
                         </section>
                     </div>
-                    <div class="mdc-card procurement-card">
+                    <div class="mdc-card procurement-card even">
                         <section class="mdc-card__primary">
                             <h1 class="mdc-card__title mdc-card__title--large f300">Perawatan dan Pengoperasian Bus TMB Koridor 2 (Cicaheum-Cibeureum)</h1>
                             <h2 class="mdc-card__subtitle">Kota Bandung - DINAS KESEHATAN</h2>
-                              <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
+                            <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
                         </section>
-                        <section class="mdc-card__supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <section class="mdc-card__supporting-text ">
+                            <div class="procurement-card-container flex">
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-money.png">
+                                    <div class="mdc-typography--subheading1"> Pagu </div>
+                                    <div> <span class="mdc-typography--title f300"> 5.3 </span> M</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-gov.png">
+                                    <div class="mdc-typography--subheading1"> Budget </div>
+                                    <div class="mdc-typography--title f300"> APBD </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-start.png">
+                                    <div class="mdc-typography--subheading1"> Tender start </div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2012 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-end.png">
+                                    <div class="mdc-typography--subheading1"> Tender end</div>
+                                    <div class="mdc-typography--title f300"> 01-January-2018 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center ">
+                                    <img class="icon-large" src="img/icon-contract-start.png">
+                                    <div class="mdc-typography--subheading1">Contract start</div>
+                                    <div class="mdc-typography--title f300">02-June-1978</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-contract-end.png">
+                                    <div class="mdc-typography--subheading1">Contract end</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>This contract is for <i> <u> works</u></i> and will procured as <i> <u>Seleksi Sederhana</u></i>. You have <span class="mdc-typography--subheading1"> xx days </span> to submit a bid. </p>
+                            </div>
                         </section>
-                        <section class="mdc-card__actions">
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+                        <section class="mdc-card__actions pull-right">
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Apply in Sirup
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Download
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
                         </section>
                     </div>
                     <div class="mdc-card procurement-card">
                         <section class="mdc-card__primary">
                             <h1 class="mdc-card__title mdc-card__title--large f300">Belanja Bahan Makanan Dan Minuman Pasien Bulan</h1>
                             <h2 class="mdc-card__subtitle">Kota Bandung - DINAS PEMUDA DAN OLAH RAGA</h2>
-                              <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
+                            <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
                         </section>
-                        <section class="mdc-card__supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <section class="mdc-card__supporting-text ">
+                            <div class="procurement-card-container flex">
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-money.png">
+                                    <div class="mdc-typography--subheading1"> Pagu </div>
+                                    <div> <span class="mdc-typography--title f300"> 2.8 </span> M</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-gov.png">
+                                    <div class="mdc-typography--subheading1"> Budget </div>
+                                    <div class="mdc-typography--title f300"> BLUD </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-start.png">
+                                    <div class="mdc-typography--subheading1"> Tender start </div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2017 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-end.png">
+                                    <div class="mdc-typography--subheading1"> Tender end</div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2018 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center ">
+                                    <img class="icon-large" src="img/icon-contract-start.png">
+                                    <div class="mdc-typography--subheading1">Contract start</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-contract-end.png">
+                                    <div class="mdc-typography--subheading1">Contract end</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>This contract is for <i> <u> a consultancy</u></i> and will procured as <i> <u>Seleksi Sederhana</u></i>. You have <span class="mdc-typography--subheading1"> 10 days </span> to submit a bid. </p>
+                            </div>
                         </section>
-                        <section class="mdc-card__actions">
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+                        <section class="mdc-card__actions pull-right">
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Apply in Sirup
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Download
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
+                        </section>
+                    </div>
+                    <div class="mdc-card procurement-card even">
+                        <section class="mdc-card__primary">
+                            <h1 class="mdc-card__title mdc-card__title--large f300">Belanja Makanan dan Minuman Kegiatan Puslat Paskibra</h1>
+                            <h2 class="mdc-card__subtitle">Kota Bandung - DINAS PEMUDA DAN OLAH RAGA</h2>
+                            <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
+                        </section>
+                        <section class="mdc-card__supporting-text ">
+                            <div class="procurement-card-container flex">
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-money.png">
+                                    <div class="mdc-typography--subheading1"> Pagu </div>
+                                    <div> <span class="mdc-typography--title f300"> 2.8 </span> M</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-gov.png">
+                                    <div class="mdc-typography--subheading1"> Budget </div>
+                                    <div class="mdc-typography--title f300"> BLUD </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-start.png">
+                                    <div class="mdc-typography--subheading1"> Tender start </div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2017 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-end.png">
+                                    <div class="mdc-typography--subheading1"> Tender end</div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2018 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center ">
+                                    <img class="icon-large" src="img/icon-contract-start.png">
+                                    <div class="mdc-typography--subheading1">Contract start</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-contract-end.png">
+                                    <div class="mdc-typography--subheading1">Contract end</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>This contract is for <i> <u> Goods and Services</u></i> and will procured as <i> <u>Seleksi Sederhana</u></i>. You have <span class="mdc-typography--subheading1"> 10 days </span> to submit a bid. </p>
+                            </div>
+                        </section>
+                        <section class="mdc-card__actions pull-right">
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Apply in Sirup
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Download
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
                         </section>
                     </div>
                     <div class="mdc-card procurement-card">
                         <section class="mdc-card__primary">
                             <h1 class="mdc-card__title mdc-card__title--large f300">Belanja Makanan dan Minuman Kegiatan Puslat Paskibra</h1>
                             <h2 class="mdc-card__subtitle">Kota Bandung - DINAS PEMUDA DAN OLAH RAGA</h2>
-                              <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
+                            <h3 class="mdc-card__subtitle dark-gray">SirupID: #3662192</h3>
                         </section>
-                        <section class="mdc-card__supporting-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        <section class="mdc-card__supporting-text ">
+                            <div class="procurement-card-container flex">
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-money.png">
+                                    <div class="mdc-typography--subheading1"> Pagu </div>
+                                    <div> <span class="mdc-typography--title f300"> 2.8 </span> M</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-gov.png">
+                                    <div class="mdc-typography--subheading1"> Budget </div>
+                                    <div class="mdc-typography--title f300"> BLUD </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-start.png">
+                                    <div class="mdc-typography--subheading1"> Tender start </div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2017 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-tender-end.png">
+                                    <div class="mdc-typography--subheading1"> Tender end</div>
+                                    <div class="mdc-typography--title f300"> 01-Feb-2018 </div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center ">
+                                    <img class="icon-large" src="img/icon-contract-start.png">
+                                    <div class="mdc-typography--subheading1">Contract start</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                                <div class="procurement-card-details padding-small text-center">
+                                    <img class="icon-large" src="img/icon-contract-end.png">
+                                    <div class="mdc-typography--subheading1">Contract end</div>
+                                    <div class="mdc-typography--title f300">02 March 1978</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p>This contract is for <i> <u> Goods and Services</u></i> and will procured as <i> <u>Seleksi Sederhana</u></i>. You have <span class="mdc-typography--subheading1"> 10 days </span> to submit a bid. </p>
+                            </div>
                         </section>
-                        <section class="mdc-card__actions">
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 1</button>
-                            <button class="mdc-button mdc-button--compact mdc-card__action">Action 2</button>
+                        <section class="mdc-card__actions pull-right">
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Apply in Sirup
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">
+                                Download
+                            </button>
+                            <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
                         </section>
                     </div>
+
+                    <div class="mdc-card procurement-card text-center">
+                        <section class="mdc-card__primary">
+                                <button class="mdc-button">view more</button>
+                        </section>
+                    </div>
+
                 </div>
             </div>
         </div>
