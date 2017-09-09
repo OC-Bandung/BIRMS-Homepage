@@ -27,6 +27,19 @@ ul.map-list li {
 .hidden {
 	visibility: none;
 }
+.stat-settings {
+	height: 300px;
+ 	
+}
+
+.stat-settings-button {
+	padding-top: 110px;
+
+}
+
+.stat-settings-button button {
+	display: block;
+}
 
 .sticky {
 	  top: 20px;
@@ -159,7 +172,7 @@ ul {
 
 .img-chart {
 	height: 350px;
-
+	min-height: 350px;
 }
 
 .f300 {
