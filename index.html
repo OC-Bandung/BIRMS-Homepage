@@ -497,7 +497,6 @@
             </div>
         </div>
     </section>
-   
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
@@ -507,29 +506,63 @@
                 <div class="mdc-layout-grid__cell--span-6">
                     <div id="map"></div>
                 </div>
-
                 <div class="mdc-layout-grid__cell--span-6">
-                    <nav class="mdc-tab-bar mdc-tab-bar--icons-with-text">
+                    <nav id="icon-text-tab-bar" class="mdc-tab-bar mdc-tab-bar--icons-with-text">
                         <a class="mdc-tab mdc-tab--with-icon-and-text mdc-tab--active" href="#recents">
-              <i class="material-icons mdc-tab__icon" aria-hidden="true">fiber_new</i>
-              <span class="mdc-tab__icon-text">By time</span>
-            </a>
-                        <a class="mdc-tab mdc-tab--with-icon-and-text" href="#favorites">
-              <i class="material-icons mdc-tab__icon" aria-hidden="true">attach_money</i>
-              <span class="mdc-tab__icon-text">By value</span>
-            </a>
-            
-            <a class="mdc-tab mdc-tab--with-icon-and-text" href="#nearby">
-              <i class="material-icons mdc-tab__icon" aria-hidden="true"> </i>
-              <span class="mdc-tab__icon-text"> </span>
-            </a>
+                        <i class="material-icons mdc-tab__icon" aria-hidden="true">fiber_new</i>
+                        <span class="mdc-tab__icon-caption">Recent</span>
+                      </a>
+                        <a class="mdc-tab mdc-tab--with-icon-and-text" href="#byvalue">
+                        <i class="material-icons mdc-tab__icon" aria-hidden="true">attach_money</i>
+                        <span class="mdc-tab__icon-caption">Value</span>
+                      </a>
                         <span class="mdc-tab-bar__indicator"></span>
                     </nav>
+                    <div class="panels">
+                        <p class="panel active" id="recents" role="tabpanel" aria-hidden="true">
+                            <ul class="map-list mdc-list mdc-list--two-line">
+                                <li class="mdc-list-item">
+                                    <span class="mdc-list-item__text">
+                                  <span>02.09.2017</span>
+                                    <span>Belanja Modal Peralatan Dan Mesin-Pengadaan Meubeleir</span>
+                                    <span class="mdc-list-item__text__secondary">KECAMATAN ASTANAANYAR</span>
+                                    </span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <span class="mdc-list-item__text">
+                                 <span>02.08.2017</span>
+                                    <span>Belanja Pengadaan Modal Dan Mesin-alat studio/Proyektor</span>
+                                    <span class="mdc-list-item__text__secondary">KECAMATAN ASTANAANYAR</span>
+                                    </span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <span class="mdc-list-item__text">
+                                 <span>02.10.2017</span>
+                                    <span> Belanja Modal Peralatan Dan Mesin-Pengadaan Komputer</span>
+                                    <span class="mdc-list-item__text__secondary">KECAMATAN ASTANAANYAR</span>
+                                    </span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <span class="mdc-list-item__text">
+                                  <span>02.10.2017</span>
+                                    <span>Belanja Pemeliharaan Bangunan</span>
+                                    <span class="mdc-list-item__text__secondary">KECAMATAN ASTANAANYAR</span>
+                                    </span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <span class="mdc-list-item__text">
+                                  <span>02.10.2017</span>
+                                    <span>Belanja Pemeliharaan Ruangan Pelayanan</span>
+                                    <span class="mdc-list-item__text__secondary">KECAMATAN ASTANAANYAR</span>
+                                    </span>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">

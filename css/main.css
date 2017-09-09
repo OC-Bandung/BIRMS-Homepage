@@ -21,6 +21,13 @@ select.homepage-chart {
 	width: 150px;
 }
 
+ul.map-list li {
+	margin-bottom: 20px;
+}
+.hidden {
+	visibility: none;
+}
+
 .sticky {
 	  top: 20px;
     position: -webkit-sticky;
