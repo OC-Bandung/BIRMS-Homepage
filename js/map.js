@@ -15,7 +15,7 @@ var map;
         map.data.loadGeoJson('geojson/kota-bandung-level-kecamatan.json');
 
         map.data.setStyle({
-          fillColor: green,
+          fillColor: '#7ccdbd',
           strokeWeight: 1
         });
 
