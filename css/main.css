@@ -5,11 +5,27 @@ body {
 	 
 }
 
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.mdc-typography--display1 {
+	font-weight: 900;
+}
+
 select.homepage-chart {
 	float: right;
 	width: 150px;
 }
 
+.bg-primary {
+	background-color: #35b7c2;
+}
+
+.color-primary {
+	color: #35b7c2;
+}
 .other-colors {
 	  background: #f44336;
 	  background-color: #f9f0d0;
@@ -19,6 +35,44 @@ select.homepage-chart {
 a {
 	text-decoration: none;
 	color: black;
+}
+
+ul {
+	list-style: none;
+}
+
+.f300 {
+	font-weight: 300;
+}
+
+.f900 {
+	font-weight: 900;
+}
+
+ 
+.list-planning {
+	border-left: 4px solid orange;
+	padding: 20px;
+}
+
+.list-tender {
+	border-left: 4px solid #c6e9bc;
+	padding: 20px;
+}
+
+.list-award {
+	border-left: 4px solid #7ccdbd;
+	padding: 20px;
+}
+
+.list-contract {
+	border-left: 4px solid #35b7c2;
+	padding: 20px;
+}
+
+.list-implementation {
+	border-left: 4px solid #0092bb;
+	padding: 20px;
 }
 
 .img-chart {
