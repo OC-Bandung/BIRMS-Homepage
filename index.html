@@ -12,6 +12,7 @@
     <link rel=stylesheet href="css/menu.css">
     <link rel=stylesheet href="css/search.css">
     <link rel=stylesheet href="css/homepage-slider.css">
+    <link rel=stylesheet href="css/map.css">
     <link rel=stylesheet href="css/main.css">
 </head>
 
@@ -210,9 +211,9 @@
                     </ul>
                 </div>
                 <div class="mdc-layout-grid__cell--span-9">
-                    <div> 
-                    <span class="mdc-typography--display1 f300">Tenders</span>
-                    <i class="material-icons">sort</i>
+                    <div>
+                        <span class="mdc-typography--display1 f300">Tenders</span>
+                        <i class="material-icons">sort</i>
                         <select class="mdc-select">
                             <option value="Sort By" default selected>Sort by</option>
                             <option value="grains">Amount</option>
@@ -487,22 +488,53 @@
                             <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>
                         </section>
                     </div>
-
                     <div class="mdc-card procurement-card text-center">
                         <section class="mdc-card__primary">
-                                <button class="mdc-button">view more</button>
+                            <button class="mdc-button">view more</button>
                         </section>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
+   
+    <section>
+        <div class="mdc-layout-grid">
+            <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-12">
+                    <div class="mdc-typography--display1">PROCUREMENT MAP</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-6">
+                    <div id="map"></div>
+                </div>
+
+                <div class="mdc-layout-grid__cell--span-6">
+                    <nav class="mdc-tab-bar mdc-tab-bar--icons-with-text">
+                        <a class="mdc-tab mdc-tab--with-icon-and-text mdc-tab--active" href="#recents">
+              <i class="material-icons mdc-tab__icon" aria-hidden="true">fiber_new</i>
+              <span class="mdc-tab__icon-text">By time</span>
+            </a>
+                        <a class="mdc-tab mdc-tab--with-icon-and-text" href="#favorites">
+              <i class="material-icons mdc-tab__icon" aria-hidden="true">attach_money</i>
+              <span class="mdc-tab__icon-text">By value</span>
+            </a>
+            
+            <a class="mdc-tab mdc-tab--with-icon-and-text" href="#nearby">
+              <i class="material-icons mdc-tab__icon" aria-hidden="true"> </i>
+              <span class="mdc-tab__icon-text"> </span>
+            </a>
+                        <span class="mdc-tab-bar__indicator"></span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
-                    <div class="mdc-typography--display1">Key Statistics</div>
+                    <div class="mdc-typography--display1">KEY STATISTICS</div>
                 </div>
             </div>
         </div>
@@ -709,6 +741,9 @@
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
     <script src="js/homepage-slider.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGnhhccwog6j_hFmAo8zg1VaYWE_m7Ak&callback=initMap">
+    </script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>
