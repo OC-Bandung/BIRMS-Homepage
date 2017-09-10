@@ -12,6 +12,17 @@ body {
 	 
 }
 
+footer {
+	margin-top: 100px;
+	background-color: #212121;
+	height: 150px;
+}
+
+footer img {
+	float: right;
+	padding: 20px;
+}
+
 .mdc-typography--display1 {
 	font-weight: 900;
 }
