@@ -55,8 +55,28 @@ ul.map-list li {
   background-color: #f8f8f8;
 }
 
+.blog-1 {
+	border-top: 15px solid #c6e9bc;
+	padding: 20px;
+}
+
+.blog-2 {
+	border-top: 15px solid #7ccdbd;
+	padding: 20px;
+}
+
+.blog-3 {
+	border-top: 15px solid #35b7c2;
+	padding: 20px;
+}
+
+.blog-4 {
+	border-top: 15px solid #0092bb;
+	padding: 20px;
+}
+
 .bg-primary {
-	background-color: #35b7c2;
+	background-color: #7ccdbd;
 }
 
 .dark-gray {
@@ -64,7 +84,7 @@ ul.map-list li {
 }
 
 .color-primary {
-	color: #35b7c2;
+	color: #7ccdbd;
 }
 
 .procurement-card {
@@ -156,12 +176,12 @@ ul {
 }
 
 .list-contract {
-	border-left: 4px solid #35b7c2;
+	border-left: 4px solid #7ccdbd;
 	padding: 20px;
 }
 
 .list-contract:hover , .list-contract.active {
-	background-color: #35b7c2;
+	background-color: #7ccdbd;
 }
 
 .list-implementation {
