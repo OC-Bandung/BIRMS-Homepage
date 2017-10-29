@@ -47,6 +47,11 @@ ul.map-list li {
 	background-color: rgba(0,0,0,0.7);
 }
 
+.mdc-button--stroked:not(:disabled) {
+	border-color: #000;
+	color: #000;
+}
+
 .stat-settings-button {
 	padding-top: 110px;
 

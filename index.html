@@ -68,7 +68,7 @@
                         <div class="mdc-layout-grid__inner">
                             <div class="mdc-layout-grid__cell--span-4">
                                 <select class="search-select  mdc-select ">
-                                    <option value="default selected">Please Pick a Stage</option>
+                                    <option value="default selected">Stage</option>
                                     <option value="a">Planning</option>
                                     <option value="b">Tender</option>
                                     <option value="c">Award</option>
@@ -98,34 +98,42 @@
                             </div>
                             <div class="mdc-layout-grid__cell--span-4">
                                 <select class="search-select mdc-select">
+                                    <option value="default selected">Award Criteria</option>
+                                    <option value="a">Sistem Gugur</option>
+                                    <option value="b">Kualitas dan Biaya</option>
+                                    <option value="c">Biaya Terendah</option>
+                                    <option value="d">Pagu Anggaran</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="mdc-layout-grid__cell--span-4">
+                                <select class="search-select mdc-select">
                                     <option value="default selected">Category</option>
-                                    <option value="a">Works</option>
-                                    <option value="b">Goods</option>
-                                    <option value="c">Services</option>
-                                    <option value="d">Consultant</option>
+                                    <option value="a">Barang</option>
+                                    <option value="b">Pekerjaan Konstruksi</option>
+                                    <option value="c">Jasa Konsultansi</option>
+                                    <option value="d">Jasa Konsultansi</option>
                                     <option value="e">Other</option>
                                 </select>
                             </div>
                             <div class="mdc-layout-grid__cell--span-4">
                                 <select class="search-select mdc-select">
-                                    <option value="default selected">Klasifikasi Pengadaan</option>
-                                    <option value="a">Works</option>
-                                    <option value="b">Goods</option>
-                                    <option value="c">Services</option>
-                                    <option value="d">Consultant</option>
-                                    <option value="e">Other</option>
+                                    <option value="default selected">Method</option>
+                                    <option value="a">Lelang Umum</option>
+                                    <option value="b">Lelang Sederhana</option>
+                                    <option value="c">Lelang Terbatas</option>
+                                    <option value="d">Seleksi Umum </option>
+                                    <option value="d">Seleksi Sederhana </option>
+                                    <option value="e">Pemilihan Langsung</option>
+                                    <option value="e">Penunjukan Langsung</option>
+                                    <option value="e">Pengadaan Langsung</option>
+                                    <option value="e">e-Purchasing</option>
+                                    <option value="e">Sayembara Kontes</option>
                                 </select>
                             </div>
-                            <div class="mdc-layout-grid__cell--span-4">
-                                <select class="search-select mdc-select">
-                                    <option value="default selected">Procurement Method</option>
-                                    <option value="a">Works</option>
-                                    <option value="b">Goods</option>
-                                    <option value="c">Services</option>
-                                    <option value="d">Consultant</option>
-                                    <option value="e">Other</option>
-                                </select>
-                            </div>
+
+   
+     
                             
                              <div class="search-select mdc-layout-grid__cell--span-12 ">
                                 <label>Value</label>
@@ -144,16 +152,15 @@
                                 </div>
                             </div>
 
-                           
+                           <div class="search-select mdc-layout-grid__cell--span-12 pull-right">
+                              <button class="mdc-button mdc-button--stroked mdc-button--compact">Search</button>
+                              <button class="mdc-button mdc-button--stroked mdc-button--compact" >CLOSE</button>
+                           </div>
+
                         </div>
                     </div>
                 </form>
-                <div class="search__related">
-                    <div class="search__suggestion">
-                        <h3>Suggested search:</h3>
-                        <p><a href="#">Pengadaan Pakaian PDH Hitam Putih</a>,<a href="#"> Pengadaan Kendaraan Bermotor Beroda Dua </a>, <a href="#"> Belanja makanan dan minuman pasien</a></p>
-                    </div>
-                </div>
+                 
             </div>
             <!-- /search -->
         </main>
@@ -226,32 +233,32 @@
                     <h3 class="mdc-typography--display1">RECENT PROCUREMENT</h3>
                 </div>
                 <div class="mdc-layout-grid__cell--span-3 ">
-                    <ul class="mdc-list mdc-list--two-line sticky">
-                        <li class="mdc-list-item list-planning">
+                    <ul id="load_recent-procurement" class="mdc-list mdc-list--two-line sticky">
+                        <li id="load_planning" class="mdc-list-item list-planning active">
                             <span class="mdc-list-item__text">
-                      <a href="#"> Planning</a>
+                                <a href="#"> Planning</a>
                       <span class="mdc-list-item__text__secondary">see what's in our pipeline</span>
                             </span>
                         </li>
-                        <li class="mdc-list-item  list-tender active ">
+                        <li id="load_tender" class="mdc-list-item  list-tender  ">
                             <span class="mdc-list-item__text">
                        <a href="#">Tender</a>
                       <span class="mdc-list-item__text__secondary">prepare to bid</span>
                             </span>
                         </li>
-                        <li class="mdc-list-item list-award">
+                        <li id="load_award" class="mdc-list-item list-award">
                             <span class="mdc-list-item__text">
                        <a href="#">Award</a>
                       <span class="mdc-list-item__text__secondary">see who was awarded</span>
                             </span>
                         </li>
-                        <li class="mdc-list-item   list-contract">
+                        <li id="load_contract" class="mdc-list-item   list-contract">
                             <span class="mdc-list-item__text">
                        <a href="#">Contract</a>
                       <span class="mdc-list-item__text__secondary">view contract information</span>
                             </span>
                         </li>
-                        <li class="mdc-list-item list-implementation">
+                        <li id="load_implementation" class="mdc-list-item list-implementation">
                             <span class="mdc-list-item__text">
                        <a href="#">Implementation</a>
                       <span class="mdc-list-item__text__secondary">watch the progress</span>
@@ -261,7 +268,7 @@
                 </div>
                 <div class="mdc-layout-grid__cell--span-9">
                     <div>
-                        <span class="mdc-typography--display1 f300">Tenders</span>
+                        <span id="recent_procurement_title" class="mdc-typography--display1 f300"></span>
                         <i class="material-icons">sort</i>
                         <select class="mdc-select">
                             <option value="Sort By" default selected>Sort by</option>
@@ -1015,6 +1022,8 @@
     <script src="js/menu.js"></script>
     <script src="js/search.js"></script>
     <script src="js/homepage-slider.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/moment.js"></script>
     <script src="js/recent.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmGnhhccwog6j_hFmAo8zg1VaYWE_m7Ak&callback=initMap">
     </script>
