@@ -1,0 +1,118 @@
+skpID,lng,lat,place_id,formatted_address,administrative_area_level_3
+1.json,-6.916817,107.634879,ChIJHxh5NcXnaC4RIvimSqz1-_k,"Jl. Sukabumi No.30, Kacapiring, Batununggal, Kota Bandung, Jawa Barat 40271, Indonesia",Batununggal
+10.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+100.json,-6.9290734,107.6059492,ChIJ3XcSkJ3oaC4ReCMVE2XeEu0,"Jl. Raden Dewi Sartika No.115, Pungkur, Regol, Kota Bandung, Jawa Barat 40251, Indonesia",Regol
+101.json,-6.9211411,107.6260979,ChIJw4AmwNPnaC4RuBH0Drc_6L4,"Jl. Samoja No.5, Samoja, Batununggal, Kota Bandung, Jawa Barat 40262, Indonesia",Batununggal
+102.json,-6.9140134,107.6141025,ChIJVdgxFTHmaC4REtvZFdbJCMs,"Jl. Sumatera No.42, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113, Indonesia",Sumur Bandung
+103.json,-6.9070405,107.6185685,ChIJd6UagErmaC4RrsL7v1M25tA,"Jl. Ambon No.23, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115, Indonesia",Bandung Wetan
+104.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+105.json,-6.9082008,107.6304016,ChIJ_elXtcnnaC4RFKKvrEcHBaM,"Jl. Lap. Supratman No.8, Cihapit, Bandung Wetan, Kota Bandung, Jawa Barat 40114, Indonesia",Bandung Wetan
+106.json,-6.8994067,107.642505,ChIJ6a5Gsr3naC4RQs9ccWP9Nbg,"Jl. PH.H. Mustofa No.53, Neglasari, Cibeunying Kaler, Kota Bandung, Jawa Barat 40124, Indonesia",Cibeunying Kaler
+107.json,-6.920327299999999,107.6263611,ChIJ21VFz9PnaC4RNuzSHVV3dLo,"Jl. Centeh No.5, Samoja, Batununggal, Kota Bandung, Jawa Barat 40273, Indonesia",Batununggal
+108.json,-6.9119431,107.63381,ChIJIz2dSsjnaC4RTBV6hm3a_Wo,"Jl. W.R. Supratman No.24, Sukamaju, Cibeunying Kidul, Kota Bandung, Jawa Barat 40121, Indonesia",Cibeunying Kidul
+109.json,-7.259472000000001,112.7268041,ChIJG496rFD51y0R3lfxTb5uL84,"Jl. Raya Arjuno No.22A, Sawahan, Kec. Sawahan, Kota SBY, Jawa Timur 60251, Indonesia",Kecamatan Sawahan
+11.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+110.json,-6.9178168,107.5927711,ChIJS5WmTxfmaC4ROAqpKt51OcM,"Jl. Kelenteng No.5, Ciroyom, Andir, Kota Bandung, Jawa Barat 40182, Indonesia",Andir
+111.json,-6.860606,107.586145,ChIJ8UKcNLvmaC4RqWZfC0oSgLY,"Jl. Geger Arum No.11, Isola, Sukasari, Kota Bandung, Jawa Barat 40154, Indonesia",Sukasari
+112.json,-6.9384539,107.6403716,ChIJS3o9P3LoaC4RTPMCPFFxtYU,"Jl. Binong Jati No.139, Binong, Batununggal, Kota Bandung, Jawa Barat 40275, Indonesia",Batununggal
+113.json,-6.931047299999999,107.5896316,ChIJLSG26aPoaC4RandfCLLoI2Y,"Jl. Babakan Tarogong, Bojongloa Kaler, Kota Bandung, Jawa Barat, Indonesia",Bojongloa Kaler
+114.json,-6.8744314,107.6169688,ChIJGYhIbePmaC4RUrxidGRWO20,"Jl. Dago Pojok No.12, Dago, Coblong, Kota Bandung, Jawa Barat 40135, Indonesia",Coblong
+115.json,-6.924349599999999,107.6532188,ChIJrRH3-OLnaC4RS9NBHGpzxBk,"Jl. Babakan Sari, Babakan Sari, Kiaracondong, Kota Bandung, Jawa Barat, Indonesia",Kiaracondong
+116.json,-6.9051801,107.6200523,ChIJO3s9SUjmaC4RTCiE4X1eyAM,"Jl. Cimanuk No.1, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115, Indonesia",Bandung Wetan
+117.json,-6.9065607,107.7314673,ChIJk11KnMPcaC4RdJqHD5k7C6g,"Cigagak, Cibiru, Kota Bandung, Jawa Barat 40615, Indonesia",Cibiru
+118.json,-6.8848313,107.6876736,ChIJWz9Ks2jdaC4RpQ7aUP2-NZQ,"Jl. Sindanglaya, Jawa Barat, Indonesia",Cibiru
+119.json,-6.9174639,107.6191228,ChIJf0dSgjnmaC4RshXo05MfahQ,"Bandung, Bandung City, West Java, Indonesia",Cibiru
+12.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+13.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+14.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+15.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+16.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+17.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+18.json,-6.9163418,107.6335934,ChIJXyWHV8XnaC4RlIiZeM-B8Us,"Jl. Cianjur No.34, Kacapiring, Batununggal, Kota Bandung, Jawa Barat 40271, Indonesia",Batununggal
+19.json,-6.916811000000001,107.6341357,ChIJkwWETcXnaC4RbbozEx8IuWs,"Jl. Sukabumi No.17, Kacapiring, Batununggal, Kota Bandung, Jawa Barat 40271, Indonesia",Batununggal
+2.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+20.json,-6.9171394,107.6272591,EmBKbC4gSmVuZHJhbCBBaG1hZCBZYW5pIE5vLjIyNywgTWVyZGVrYSwgU3VtdXIgQmFuZHVuZywgS290YSBCYW5kdW5nLCBKYXdhIEJhcmF0IDQwMTEzLCBJbmRvbmVzaWE,"Jl. Jendral Ahmad Yani No.227, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113, Indonesia",Sumur Bandung
+21.json,-6.9087768,107.6138498,ChIJUSKiQDbmaC4R2QKHMe4drQQ,"Jl. Ambon No.1, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115, Indonesia",Bandung Wetan
+22.json,-6.937995,107.6637609,ChIJweVClxzoaC4RB9VP5nt4iOQ,"Jl. Kawaluyaan No.2, Jatisari, Buahbatu, Kota Bandung, Jawa Barat 40286, Indonesia",Buahbatu
+23.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+24.json,-6.915840999999999,107.628979,ChIJ11MXQM7naC4RbqRRf2rtvc8,"Jl. Jendral Ahmad Yani No.239, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113, Indonesia",Sumur Bandung
+25.json,-6.877675099999999,107.5910415,ChIJK-zzHI7maC4RilLKeIDrP-M,"Jl. Sindang Sirna No.40, Gegerkalong, Sukasari, Kota Bandung, Jawa Barat 40151, Indonesia",Sukasari
+26.json,-6.9163418,107.6335934,ChIJXyWHV8XnaC4RlIiZeM-B8Us,"Jl. Cianjur No.34, Kacapiring, Batununggal, Kota Bandung, Jawa Barat 40271, Indonesia",Batununggal
+27.json,-6.933130599999999,107.626412,ChIJRxnJHHzoaC4RrKqJJo4HhsM,"Jl. R.A.A. Marta Negara No.4, Turangga, Lengkong, Kota Bandung, Jawa Barat 40264, Indonesia",Lengkong
+28.json,-6.9156735,107.6128903,Ek9KbC4gVGVyYSBOby4yMCwgQnJhZ2EsIFN1bXVyIEJhbmR1bmcsIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCA0MDExMSwgSW5kb25lc2lh,"Jl. Tera No.20, Braga, Sumur Bandung, Kota Bandung, Jawa Barat 40111, Indonesia",Sumur Bandung
+29.json,-6.906413400000001,107.6140892,ChIJofjnwUnmaC4R7FgyOPz1-lA,"Jl. L. L. R. E. Martadinata No.45, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115, Indonesia",Bandung Wetan
+3.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+30.json,-6.9292001,107.6005856,ChIJe4B30p_oaC4RUuk_XSE5Ffs,"Jl. Astana Anyar No.224, Nyengseret, Astanaanyar, Kota Bandung, Jawa Barat 40242, Indonesia",Astanaanyar
+304.json,-6.9159668,107.6992156,ElRKbC4gUnVtYWggU2FraXQgTm8uMjIsIFBha2VtaXRhbiwgQ2luYW1ibywgS290YSBCYW5kdW5nLCBKYXdhIEJhcmF0IDQ1NDc0LCBJbmRvbmVzaWE,"Jl. Rumah Sakit No.22, Pakemitan, Cinambo, Kota Bandung, Jawa Barat 45474, Indonesia",Cinambo
+31.json,-6.9159668,107.6992156,ElRKbC4gUnVtYWggU2FraXQgTm8uMjIsIFBha2VtaXRhbiwgQ2luYW1ibywgS290YSBCYW5kdW5nLCBKYXdhIEJhcmF0IDQ1NDc0LCBJbmRvbmVzaWE,"Jl. Rumah Sakit No.22, Pakemitan, Cinambo, Kota Bandung, Jawa Barat 45474, Indonesia",Cinambo
+32.json,-6.9332804,107.6265282,ChIJVdFmNXroaC4RnlSsUYc6U3k,"Jl. R.A.A. Marta Negara No.4, Turangga, Lengkong, Kota Bandung, Jawa Barat 40264, Indonesia",Lengkong
+33.json,-6.868493,107.582213,ChIJsTgjkpjmaC4Rv8Ro4ldYPHo,"Jl. Gegerkalong Hilir No.155, Gegerkalong, Sukasari, Kota Bandung, Jawa Barat 40153, Indonesia",Sukasari
+34.json,-6.8927735,107.5880908,ChIJlbQNY2PmaC4RjhvPfOYHRVU,"Jl. Sukamulya No.4, Sukagalih, Sukajadi, Kota Bandung, Jawa Barat 40163, Indonesia",Sukajadi
+35.json,-6.9072894,107.5953813,Ek1KbC4gUHVyYWJheWEgTm8uMSwgQXJqdW5hLCBDaWNlbmRvLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxNzIsIEluZG9uZXNpYQ,"Jl. Purabaya No.1, Arjuna, Cicendo, Kota Bandung, Jawa Barat 40172, Indonesia",Cicendo
+36.json,-6.909202,107.5717375,ChIJPQJVeODlaC4RDx4CWRXQxhM,"Jl. Srigunting Tim. No.1, Maleber, Andir, Kota Bandung, Jawa Barat 40184, Indonesia",Andir
+37.json,-6.873475399999999,107.5994434,ChIJ0yxD6uzmaC4RKENqEsZGswc,"Jl. Hegarmanah Tengah No.1, Hegarmanah, Cidadap, Kota Bandung, Jawa Barat 40141, Indonesia",Cidadap
+38.json,-6.8833669,107.6111312,ChIJ5aWiwPnmaC4RsgyLb-0_CQw,"Jl. Sangkuriang No.10A, Dago, Coblong, Kota Bandung, Jawa Barat 40135, Indonesia",Coblong
+39.json,-6.8967012,107.609464,ChIJ00vWp1rmaC4RL11NSHtG9Q0,"Jl. Taman Sari No.49, Tamansari, Bandung Wetan, Kota Bandung, Jawa Barat 40116, Indonesia",Bandung Wetan
+4.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+40.json,-6.914635199999999,107.6173571,ChIJx2vKtzPmaC4R3NgIlARznOk,"Jl. Lombok No.6, Merdeka, Sumur Bandung, Kota Bandung, Jawa Barat 40113, Indonesia",Sumur Bandung
+41.json,-6.885820799999999,107.6265434,ChIJfR4PpgDnaC4R8AVxVPGUCSE,"Jl. Cigadung Selatan No.100, Sadang Serang, Coblong, Kota Bandung, Jawa Barat 40133, Indonesia",Coblong
+42.json,-6.900053499999999,107.6372654,ChIJgbL1uLvnaC4RmhmWB8gpsvU,"Jl. Sukasenang Raya No.11, Cikutra, Cibeunying Kidul, Kota Bandung, Jawa Barat 40124, Indonesia",Cibeunying Kidul
+43.json,-6.9362426,107.5972761,ChIJqzv8fKLoaC4RTPEPiLKi6hQ,"Jl. Bojongloa No.69, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat 40234, Indonesia",Bojongloa Kidul
+44.json,-6.9388546,107.5938873,ElZKbC4gUmF5YSBLb3BvIE5vLjI1OCwgS29wbywgQm9qb25nbG9hIEthbGVyLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAyMzMsIEluZG9uZXNpYQ,"Jl. Raya Kopo No.258, Kopo, Bojongloa Kaler, Kota Bandung, Jawa Barat 40233, Indonesia",Bojongloa Kaler
+45.json,-6.9372665,107.5829475,ChIJ_aaeVK7oaC4R3QL7ZQf15cQ,"Jl. Babakan Ciparay No.212, Babakan Ciparay, Kota Bandung, Jawa Barat 40223, Indonesia",Babakan Ciparay
+46.json,-6.94522,107.595484,ElJKbC4gTGV1d2kgUGFuamFuZywgU2l0dXNhZXVyLCBCb2pvbmdsb2EgS2lkdWwsIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCwgSW5kb25lc2lh,"Jl. Leuwi Panjang, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat, Indonesia",Bojongloa Kidul
+47.json,-6.9261366,107.5744975,ElRKbC4gSG9saXMgTm8uMjEwLCBDYXJpbmdpbiwgQmFuZHVuZyBLdWxvbiwgS290YSBCYW5kdW5nLCBKYXdhIEJhcmF0IDQwMjEyLCBJbmRvbmVzaWE,"Jl. Holis No.210, Caringin, Bandung Kulon, Kota Bandung, Jawa Barat 40212, Indonesia",Bandung Kulon
+48.json,-6.945991999999999,107.6116826,Ek1KbC4gRGVua2kgTm8uNTQsIENpZ2VyZWxlbmcsIFJlZ29sLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAyNTMsIEluZG9uZXNpYQ,"Jl. Denki No.54, Cigereleng, Regol, Kota Bandung, Jawa Barat 40253, Indonesia",Regol
+49.json,-6.9283573,107.6227556,ChIJEzDH7X_oaC4RaucplzBPJPU,"Jl. Talaga Bodas No.35, Malabar, Lengkong, Kota Bandung, Jawa Barat 40262, Indonesia",Lengkong
+5.json,-6.934989799999999,107.6263189,ChIJLatUYXzoaC4RSFSOazZcmMc,"Jl. Maskumambang No.4, Turangga, Lengkong, Kota Bandung, Jawa Barat 40264, Indonesia",Lengkong
+50.json,-6.9404416,107.6670782,ChIJ6QozwR3oaC4R1WxQNWUyIqA,"Jl. Venus Raya No.6, Manjahlega, Rancasari, Kota Bandung, Jawa Barat 40286, Indonesia",Rancasari
+51.json,-6.9239555,107.6542823,ChIJb_Eq_uLnaC4ReG-fUqPtPEk,"Jl. Babakan Sari No.117, Babakan Sari, Kiaracondong, Kota Bandung, Jawa Barat 40283, Indonesia",Kiaracondong
+52.json,-6.9272177,107.6826165,ChIJSXz4dU3daC4RUNPIScq230Q,"Jl. Cisaranten Kulon, Arcamanik, Kota Bandung, Jawa Barat, Indonesia",Arcamanik
+53.json,-6.9571407,107.6317283,ChIJSTUBlVroaC4RT5aotAPTjyI,"Jl. Batununggal Molek No.3, Batununggal, Bandung Kidul, Kota Bandung, Jawa Barat 40266, Indonesia",Bandung Kidul
+54.json,-6.929075999999999,107.720036,ChIJjcM_2CvDaC4RR0dJ9y0zM4Q,"Jl. Manisi No.13, Cipadung, Cibiru, Kota Bandung, Jawa Barat 40615, Indonesia",Cibiru
+55.json,-6.9349016,107.7204311,ChIJRWA6IybDaC4RHXbNpGrxag4,"Cibiru, Jl. A.H. Nasution No.14, Cipadung Kidul, Panyileukan, Kota Bandung, Jawa Barat 40615, Indonesia",Panyileukan
+56.json,-6.913022,107.701445,ChIJ2-SHXzrdaC4Rgu97UuRsyPY,"Jl. Alun-Alun Utara No.211, Cigending, Ujung Berung, Kota Bandung, Jawa Barat 40611, Indonesia",Ujung Berung
+57.json,-6.9475101,107.6722546,ChIJ07GPc5_CaC4ReE8-HV8wDeA,"Jl. Santosa Asih IV No.17, Cipamokolan, Rancasari, Kota Bandung, Jawa Barat 40292, Indonesia",Rancasari
+58.json,-6.9623211,107.6571022,ElZKbC4gQ2lqYXd1cmEgSGlsaXIgTm8uNjQsIENpamF1cmEsIEJ1YWhiYXR1LCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAyODcsIEluZG9uZXNpYQ,"Jl. Cijawura Hilir No.64, Cijaura, Buahbatu, Kota Bandung, Jawa Barat 40287, Indonesia",Buahbatu
+6.json,-6.890670099999999,107.6252792,ChIJ-6m6kKvnaC4R9J99HYtKMKA,"Jl. Sadang Tengah No.4, Sekeloa, Coblong, Kota Bandung, Jawa Barat 40133, Indonesia",Coblong
+60.json,-6.9355005,107.7010775,ChIJUWB_hMXCaC4RB4Nq1ZJ3odk,"JL. Soekarno Hatta KM. 12,5, No. 791, Bandung, 40294, Mekar Mulya, Panyileukan, Bandung City, West Java, Indonesia",Panyileukan
+61.json,-6.914131299999999,107.6984781,ChIJn1Oe-DndaC4RH1z97Yw6uVo,"Jl. A.H. Nasution No.82, Pakemitan, Cinambo, Kota Bandung, Jawa Barat 45474, Indonesia",Cinambo
+62.json,-6.897547599999999,107.6718469,ChIJneeBKGPdaC4Rddo7MBPvUe4,"Mandalajati, Bandung City, West Java, Indonesia",Mandalajati
+63.json,-6.909810999999999,107.6099604,ChIJrdjGhjfmaC4RvpbirzIfOdA,"Jl. Aceh No.51, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+64.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+65.json,-6.9163418,107.6335934,ChIJXyWHV8XnaC4RlIiZeM-B8Us,"Jl. Cianjur No.34, Kacapiring, Batununggal, Kota Bandung, Jawa Barat 40271, Indonesia",Batununggal
+66.json,-6.9121177,107.5892421,ChIJcTu0tRPmaC4RRtBJ6JM4mG8,"Jl. Arjuna No.45, Husen Sastranegara, Cicendo, Kota Bandung, Jawa Barat 40174, Indonesia",Cicendo
+67.json,-6.9079425,107.6132741,ElFKbC4gU2VyYW0gTm8uMiwgQ2l0YXJ1bSwgQmFuZHVuZyBXZXRhbiwgS290YSBCYW5kdW5nLCBKYXdhIEJhcmF0IDQwMTE1LCBJbmRvbmVzaWE,"Jl. Seram No.2, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115, Indonesia",Bandung Wetan
+68.json,-6.904403599999999,107.6285612,EltKbC4gVy5SLiBTdXByYXRtYW4gTm8uNzMsIENpaGFwaXQsIEJhbmR1bmcgV2V0YW4sIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCA0MDExNCwgSW5kb25lc2lh,"Jl. W.R. Supratman No.73, Cihapit, Bandung Wetan, Kota Bandung, Jawa Barat 40114, Indonesia",Bandung Wetan
+69.json,-6.9462177,107.5934753,ChIJ-fGmur_oaC4RyESpq8NK8So,"Jl. Soekarno Hatta No.205, Situsaeur, Bojongloa Kidul, Kota Bandung, Jawa Barat 40233, Indonesia",Bojongloa Kidul
+7.json,-6.9028882,107.6062596,El5KbC4gVGFtYW5zYXJpIEJhd2FoIE5vLjc2LCBUYW1hbnNhcmksIEJhbmR1bmcgV2V0YW4sIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCA0MDExNiwgSW5kb25lc2lh,"Jl. Tamansari Bawah No.76, Tamansari, Bandung Wetan, Kota Bandung, Jawa Barat 40116, Indonesia",Bandung Wetan
+70.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+71.json,-6.945546100000001,107.5830326,ChIJr9SG2LboaC4R1TA2d7h_IcQ,"Jl. Caringin No.103, Babakan Ciparay, Kota Bandung, Jawa Barat 40223, Indonesia",Babakan Ciparay
+72.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+73.json,-6.9254387,107.606783,ChIJoyrfVSbmaC4RiVB4TKpk-w4,"Jl. Kautamaan Istri, Balonggede, Regol, Kota Bandung, Jawa Barat 40251, Indonesia",Regol
+74.json,-6.909841000000001,107.597021,ChIJyT4NbxXmaC4RTFHtE-4YD3g,"Jl. Semar No.5, Arjuna, Cicendo, Kota Bandung, Jawa Barat 40172, Indonesia",Cicendo
+75.json,-6.917945,107.6016225,EkxKbC4gWWFrdWIgTm8uMzYsIEtiLiBKZXJ1aywgQW5kaXIsIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCA0MDE4MSwgSW5kb25lc2lh,"Jl. Yakub No.36, Kb. Jeruk, Andir, Kota Bandung, Jawa Barat 40181, Indonesia",Andir
+76.json,-6.9153578,107.5901672,ChIJ0RM_FxHmaC4R-3lgYxhhwaI,"Jl. Arjuna No.18, Ciroyom, Andir, Kota Bandung, Jawa Barat 40182, Indonesia",Andir
+77.json,-6.8631531,107.607616,ChIJK6mC_8LmaC4RLOHe8riduK8,"Jl. Bukit Raya, Ciumbuleuit, Cidadap, Kota Bandung, Jawa Barat 40142, Indonesia",Cidadap
+78.json,-6.9385683,107.66321,ChIJLc0JgxzoaC4R2acnhnKmRJk,"Jl. Manjah Lega No. 41 Margasari Margacinta Bandung Jawa Barat, Jatisari, Buahbatu, Kota Bandung, Jawa Barat 40286, Indonesia",Buahbatu
+79.json,-6.9380143,107.6266227,ChIJrZE5UWPoaC4RkPdKdj8W7pw,"Jl. Solontongan II, Turangga, Lengkong, Kota Bandung, Jawa Barat 40264, Indonesia",Lengkong
+8.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+80.json,-6.885568399999999,107.5629281,ChIJZ_b9hC3kaC4RnAkcLKZvm_I,"Jl. BUDI, Cilember No.121, Pasirkaliki, Cimahi Utara, Kota Cimahi, Jawa Barat 40514, Indonesia",Cimahi Utara
+81.json,-6.9646878,107.6821595,EjtKbC4gRGVyd2F0aSwgUmFuY2FzYXJpLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQsIEluZG9uZXNpYQ,"Jl. Derwati, Rancasari, Kota Bandung, Jawa Barat, Indonesia",Rancasari
+82.json,-6.8800946,107.576449,ChIJP0l9-oLmaC4RRqvsqCHRMno,"Jl. Sarimanah Raya No.23, Sarijadi, Sukasari, Kota Bandung, Jawa Barat 40151, Indonesia",Sukasari
+83.json,-6.923139399999999,107.6598766,ElhKbC4gWW9neWFrYXJ0YSBOby4xLCBBbnRhcGFuaSBLaWR1bCwgQW50YXBhbmksIEtvdGEgQmFuZHVuZywgSmF3YSBCYXJhdCA0MDI5MSwgSW5kb25lc2lh,"Jl. Yogyakarta No.1, Antapani Kidul, Antapani, Kota Bandung, Jawa Barat 40291, Indonesia",Antapani
+84.json,-6.94344,107.577695,ChIJC5eG6bPoaC4RZZ63t8X2Jm8,"Jl. Caringin, Kota Bandung, Jawa Barat, Indonesia",Antapani
+85.json,-6.891420699999999,107.5882705,ElNKbC4gU3VrYW11bHlhIE5vLjMzLCBTdWthZ2FsaWgsIFN1a2FqYWRpLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxNjMsIEluZG9uZXNpYQ,"Jl. Sukamulya No.33, Sukagalih, Sukajadi, Kota Bandung, Jawa Barat 40163, Indonesia",Sukajadi
+86.json,-6.9403161,107.6444053,EllKbC4gU2VrZWphdGkgTm8uMjMsIEtiLiBLYW5na3VuZywgS2lhcmFjb25kb25nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAyODQsIEluZG9uZXNpYQ,"Jl. Sekejati No.23, Kb. Kangkung, Kiaracondong, Kota Bandung, Jawa Barat 40284, Indonesia",Kiaracondong
+87.json,52.1858859,11.9127117,ChIJ6Vjl26NNr0cRE-lBzO7rLjM,"Jerichower Land, Germany",Jerichower Land
+88.json,52.1858859,11.9127117,ChIJ6Vjl26NNr0cRE-lBzO7rLjM,"Jerichower Land, Germany",Jerichower Land
+89.json,52.1858859,11.9127117,ChIJ6Vjl26NNr0cRE-lBzO7rLjM,"Jerichower Land, Germany",Jerichower Land
+9.json,-6.9134539,107.6090197,El9KbC4gV2FzdHVrZW5jYW5hIE5vLjIsIEJhYmFrYW4gQ2lhbWlzLCBTdW11ciBCYW5kdW5nLCBLb3RhIEJhbmR1bmcsIEphd2EgQmFyYXQgNDAxMTcsIEluZG9uZXNpYQ,"Jl. Wastukencana No.2, Babakan Ciamis, Sumur Bandung, Kota Bandung, Jawa Barat 40117, Indonesia",Sumur Bandung
+90.json,52.1858859,11.9127117,ChIJ6Vjl26NNr0cRE-lBzO7rLjM,"Jerichower Land, Germany",Jerichower Land
+91.json,-6.934671900000001,107.6080352,ChIJs2fYapvoaC4RhQ71rPfSwdk,"Jl. H. Samsudin No.34, Ciateul, Regol, Kota Bandung, Jawa Barat 40252, Indonesia",Regol
+92.json,-6.9174639,107.6191228,ChIJf0dSgjnmaC4RshXo05MfahQ,"Bandung, Bandung City, West Java, Indonesia",Regol
+93.json,-6.927531099999999,107.6443497,ChIJge56X3XoaC4RSzFXuBAlxNs,"Jl. Kiaracondong, Kota Bandung, Jawa Barat, Indonesia",Regol
+94.json,-6.8865765,107.6221488,ChIJfdjTBQDnaC4RgMf_iS80f6E,"Jl. Sadang Luhur XI, Coblong, Sekeloa, Coblong, Kota Bandung, Jawa Barat 40134, Indonesia",Coblong
+95.json,42.6747823,-83.0340746,ChIJCTHtTwrnJIgRdEXiOyxpKI8,"51745 Van Dyke, Shelby Charter Township, MI 48316, USA",Coblong
+97.json,42.6747823,-83.0340746,ChIJCTHtTwrnJIgRdEXiOyxpKI8,"51745 Van Dyke, Shelby Charter Township, MI 48316, USA",Coblong
+99.json,-6.9153578,107.5901672,ChIJ0RM_FxHmaC4R-3lgYxhhwaI,"Jl. Arjuna No.18, Ciroyom, Andir, Kota Bandung, Jawa Barat 40182, Indonesia",Andir
