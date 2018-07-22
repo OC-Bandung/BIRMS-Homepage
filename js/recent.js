@@ -1,34 +1,84 @@
+// When we click on the LI
+$("#load_recent-procurement li").click(function(e){
+  e.preventDefault();
+
+  // If this isn't already active
+  if (!$(this).hasClass("active")) {
+    // Remove the class from anything that is active
+    $("li.active").removeClass("active");
+    // And make this active
+    $(this).addClass("active");
+  }
+});
+
+
+$(".main-menu div a").click(function(e){
+
+  // If this isn't already active
+  if (!$(this).hasClass("active")) {
+    // Remove the class from anything that is active
+    $(".main-menu div.active").removeClass("active");
+    // And make this active
+    $(this).parent().addClass("active");
+  }
+});
+
+
 $(document).ready(function(){
-   var jqxhr = $.getJSON("api/v1/recent/planning.json", function(data) {
+
+var jqxhr = $.getJSON("api/v1/recent/perencanaan.json", function(data) {
         get_planning(data);
     });
 });
 
-$("#load_planning").click(function(e) {
+$("#load_perencanaan").click(function(e) {
 
 e.preventDefault();
-var jqxhr = $.getJSON("api/v1/recent/planning.json", function(data) {
+var jqxhr = $.getJSON("api/v1/recent/perencanaan.json", function(data) {
         get_planning(data);
     });
 });
 
-$("#load_contract").click(function(e) {
+$("#load_pengadaan").click(function(e) {
 
 e.preventDefault();
 
-var jqxhr = $.getJSON("api/v1/recent/contract.json", function(data) {
+var jqxhr = $.getJSON("api/v1/recent/pengadaan.json", function(data) {
+    get_tender(data);
+    });
+});
+
+
+$("#load_pemenang").click(function(e) {
+
+ e.preventDefault();
+
+var jqxhr = $.getJSON("api/v1/recent/pemenang.json", function(data) {
+    get_award(data);
+    });
+});
+
+
+$("#load_kontrak").click(function(e) {
+
+e.preventDefault();
+
+var jqxhr = $.getJSON("api/v1/recent/kontrak.json", function(data) {
     get_contract(data);
     });
 });
 
-$("#load_tender").click(function(e) {
+
+$("#load_implementasi").click(function(e) {
 
 e.preventDefault();
 
-var jqxhr = $.getJSON("api/v1/recent/tender.json", function(data) {
-    get_tender(data);
+var jqxhr = $.getJSON("api/v1/recent/implementasi.json", function(data) {
+    get_implementasi(data);
     });
 });
+
+
 
 
 
@@ -42,84 +92,66 @@ function get_planning(data) {
 
     json = data[i];
 
-    if (i % 2 ==0) {
-         html +=  '<div class="even">';
-    } else
-    {
-         html +=  '<div class="odd">';
-    }
-   
-    html += '<section class="mdc-card__primary">';
-        html += '<h1 class="mdc-card__title mdc-card__title--large f300">';
-        html += json.title;
-        html += '</h1>';
-        html += '<h2 class="mdc-card__subtitle">';
-        html += 'Kota Bandung - ' + json.SKPD;
-        html += '</h2>';
-        html += '<h3 class="mdc-card__subtitle dark-gray">';
-        html += 'SirupID: #' + json.sirupID;
-        html += '</h3>'
-    html += '</section>';
-   
-    html += '<section class="mdc-card__supporting-text ">';
-        
-        html += '<div class="procurement-card-container flex">';
-            html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-money.png">';
-            html += '<div class="mdc-typography--subheading1"> Pagu </div>';
-            html += '<div> <span class="mdc-typography--title f300"> ' + json.budget.amount.amount / 1000000 + ' </span> M</div>';
-        html += '</div>';
-    
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-gov.png">';
-            html += ' <div class="mdc-typography--subheading1"> Budget </div>';
-            html += ' <div class="mdc-typography--title f300"> ' + json.budget.description + ' </div>';
-        html += '</div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += ' <img class="icon-large" src="img/icon-tender-start.png">';
-            html += ' <div class="mdc-typography--subheading1"> Tender start </div>';
-            html += '<div class="mdc-typography--title f300"> ' + moment(json.tender.startDate).format('ll') +  ' </div>';
-        html += '</div>';
+    html+= '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start rounded-0">';
+    html+= '<div class="d-flex w-100 justify-content-between">';
+    html+= '    <h5 class="mb-1">' + json.title + '</h5>';
+    html+= '    <small>3 days ago</small>';
+    html+= '  </div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-tender-end.png">';
-            html += ' <div class="mdc-typography--subheading1"> Tender end</div>';
-            html += '<div class="mdc-typography--title f300"> ' +  moment(json.tender.endDate).format('ll') + ' </div>';
-    html += ' </div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center ">';
-            html += '<img class="icon-large" src="img/icon-contract-start.png">';
-            html += '<div class="mdc-typography--subheading1">Contract start</div>';
-            html += '<div class="mdc-typography--title f300">' +  moment(json.contract.startDate).format('ll') + '</div>';
-    html += '</div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-contract-end.png">';
-            html += '<div class="mdc-typography--subheading1">Contract end</div>';
-            html += ' <div class="mdc-typography--title f300">' +  moment(json.contract.endDate).format('ll')  +'</div>';
-    html += '</div>';
-   
-    html += ' </div>';
-    html += ' <div>';
-    html += '<p>This contract is for <i> <u> ' +  json.mainProcurementCategory + '</u></i> in the program <u><i>' + json.project + '</u></i>. The procurement method is <u><i> ' + json.procurementMethodDetails  + ' </i></u>. The award criteria is <i> <u>'+  json.awardCriteria +'</u></i>.</p>';
-    html += ' </div>';
-    html += '</section>';
+    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '      <h6>SirupID: ' +  json.sirupID + ' - Kota Bandung: ' + json.SKPD + ' </h6>';
+    html+= '  </div>';
 
-    html += '<section class="mdc-card__actions">';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action"> Apply in Sirup </button>';
-    html += '<button class="mdc-button mdc-button--compact mdc-card__action"> Download </button>';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>';
-    html += '</section>';
-    html += '</div>';
+    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Pagu  </span>';
+    html+= '        <div class="h6 pt-1">' + json.budget.amount.amount / 1000000  + '</div>';
+    html+= '    </span>';
 
+
+    html+= '    <span class="h6">';
+    html+= '       <span class="font-weight-bold"> Budget </span>';
+    html+= '      <div class="h6 pt-1">' +   json.budget.description + '</div>';
+    html+= '    </span>';
+
+    html+= '    <span class="h6">';
+    html+= '    <span class="font-weight-bold"> Tender start </span>';
+    html+= '      <div class="h6 pt-1"> ' + moment(json.tender.startDate).format('ll') + '</div>';
+    html+= '    </span>';
+
+    html+= '      <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Tender end </span>';
+    html+= '      <div class="h6 pt-1">' +  moment(json.tender.endDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Contract start </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.contract.startDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Contract end </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.contract.endDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '  </div>';
+
+
+    html+= '    <p class="mb-0"><span class="hammer">Program: </span>' + json.project + '' ;
+    html+= '  </p>';
+
+    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '    <span><span class="hammer">Category</span>: <span class="text-capitalize">' + json.mainProcurementCategory + '</span></span>';
+    html+= '    <span><span class="hammer">Procurement method: </span>' +  json.procurementMethodDetails + '</span>';
+    html+= '    <span><span class="hammer">Award criteria: </span>' +  json.awardCriteria + '</span>';
+    html+= '  </div>';
+
+    html+= '</a>';
 
 
 
   }
 
   $("#recent-from-api").html(html);
- 
+
 }
 
 
@@ -135,99 +167,148 @@ function get_tender(data) {
 
     json = data[i];
 
-    if (i % 2 ==0) {
-         html +=  '<div class="even">';
-    } else
-    {
-         html +=  '<div class="odd">';
-    }
-   
-    html += '<section class="mdc-card__primary">';
-        html += '<h1 class="mdc-card__title mdc-card__title--large f300">';
-        html += json.title;
-        html += '</h1>';
-        html += '<h2 class="mdc-card__subtitle">';
-        html += 'Kota Bandung - ' + json.SKPD;
-        html += '</h2>';
-        html += '<h3 class="mdc-card__subtitle dark-gray">';
-        html += 'SirupID: #' + json.sirupID;
-        html += '</h3>'
-    html += '</section>';
-   
-    html += '<section class="mdc-card__supporting-text ">';
-        
-        html += '<div class="procurement-card-container flex">';
-            html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-money.png">';
-            html += '<div class="mdc-typography--subheading1"> Value </div>';
-            html += '<div> <span class="mdc-typography--title f300"> ' + json.value.amount / 1000000 + ' </span> M</div>';
-        html += '</div>';
-    
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-status.png">';
-            html += ' <div class="mdc-typography--subheading1"> Status </div>';
-            html += ' <div class="mdc-typography--title f300"> ' + json.status + ' </div>';
-        html += '</div>';
+    html+= '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start rounded-0">';
+    html+= '<div class="d-flex w-100 justify-content-between">';
+    html+= '    <h5 class="mb-1">' + json.title + '</h5>';
+    html+= '    <small>3 days ago</small>';
+    html+= '  </div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += ' <img class="icon-large" src="img/icon-tender-start.png">';
-            html += ' <div class="mdc-typography--subheading1"> Tender start </div>';
-            html += '<div class="mdc-typography--title f300"> ' + moment(json.tender.startDate).format('ll') +  ' </div>';
-        html += '</div>';
+    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '      <h6>SirupID: ' +  json.sirupID + ' - Kota Bandung: ' + json.SKPD + ' </h6>';
+    html+= '  </div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-tender-end.png">';
-            html += ' <div class="mdc-typography--subheading1"> Tender end</div>';
-            html += '<div class="mdc-typography--title f300"> ' +  moment(json.tender.endDate).format('ll') + ' </div>';
-    html += ' </div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center ">';
-            html += '<img class="icon-large" src="img/icon-contract-start.png">';
-            html += '<div class="mdc-typography--subheading1">Contract Start</div>';
-            html += '<div class="mdc-typography--title f300">' + moment(json.contract.startDate).format('ll') + '</div>';
-    html += '</div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-contract-end.png">';
-            html += '<div class="mdc-typography--subheading1">Contract end</div>';
-            html += ' <div class="mdc-typography--title f300">' +  moment(json.contract.endDate).format('ll')  +'</div>';
-    html += '</div>';
+    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
 
-     html += ' <div class="procurement-card-details padding-small text-center ">';
-            html += '<img class="icon-large" src="img/icon-number.png">';
-            html += '<div class="mdc-typography--subheading1">Items</div>';
-            html += '<div class="mdc-typography--title f300">' +  json.item.length + '</div>';
-    html += '</div>';
-
-   
-    html += ' </div>';
-    html += ' <div>';
-    html += '<p>The procurement entity <i> <u> ' +  json.procuringEntity + '</u></i> is procuring for the project <u><i>' + json.project + '</u></i> the following item(s):   </p>';
-    html += '<ol>';
-    for (j=0; j< json.item.length; j++) {
-        html += '<li>' + json.item[j].description + '</li>';
-    }
-    html += '</ol>';
-    html += ' </div>';
-    html += '</section>';
-
-    html += '<section class="mdc-card__actions">';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action"> Apply in Sirup </button>';
-    html += '<button class="mdc-button mdc-button--compact mdc-card__action"> Download </button>';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>';
-    html += '</section>';
-    html += '</div>';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Anggaran  </span>';
+    html+= '        <div class="h6 pt-1">' + json.anggaran / 1000000  + ' M</div>';
+    html+= '    </span>';
 
 
+    html+= '    <span class="h6">';
+    html+= '       <span class="font-weight-bold"> Method </span>';
+    html+= '      <div class="h6 pt-1">' +   json.procurementMethod + '</div>';
+    html+= '    </span>';
 
+    html+= '    <span class="h6">';
+    html+= '    <span class="font-weight-bold"> HPS </span>';
+    html+= '      <div class="h6 pt-1"> ' + json.hps / 1000000 + ' M</div>';
+    html+= '    </span>';
+
+    html+= '      <span class="h6">';
+    html+= '      <span class="font-weight-bold">Nilai Penawaran </span>';
+    html+= '      <div class="h6 pt-1">' + json.nilai_penawaran / 1000000  + ' M</div>';
+    html+= '    </span>';
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Nilai Nego</span>';
+    html+= '      <div class="h6 pt-1">' + json.nilai_nego / 1000000 + ' M</div>';
+    html+= '    </span>';
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Date Signed </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.dateSigned.endDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '  </div>';
+    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Activity </span>';
+    html+= '      <div class="h6 pt-1">' + json.activity  + '</div>';
+    html+= '    </span>';
+
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> # Suppliers </span>';
+    html+= '      <div class="h6 pt-1 text-cetn">' + json.suppliers.length  + '</div>';
+    html+= '    </span>';
+    html+= '  </div>';
+
+    html+= '</a>';
+
+
+    // html += '<p>The activity is <i> <u> ' +  json.activity + '</u></i>. The following supplier(s) applied:   </p>';
+    // html += '<ol>';
+    // for (j=0; j< json.suppliers.length; j++) {
+    //     html += '<li>' + json.suppliers[j].name + '</li>';
+    // }
+    // html += '</ol>';
 
   }
 
   $("#recent-from-api").html(html);
- 
+
 }
 
 
+
+
+function get_award(data){
+
+
+
+$("#recent_procurement_title").text("Award")
+
+html = "";
+
+
+  for (i=0; i < data.length; i++) {
+
+    json = data[i];
+
+
+    html+= '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start rounded-0">';
+    html+= '<div class="d-flex w-100 justify-content-between">';
+    html+= '    <h5 class="mb-1">' + json.title + '</h5>';
+    html+= '    <small>3 days ago</small>';
+    html+= '</div>';
+
+    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '      <h6>SirupID: ' +  json.sirupID + ' - Kota Bandung: ' + json.SKPD + ' </h6>';
+    html+= '  </div>';
+
+    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Value  </span>';
+    html+= '        <div class="h6 pt-1">' + json.budget.value.amount / 1000000  + ' M</div>';
+    html+= '    </span>';
+
+
+    html+= '    <span class="h6">';
+    html+= '       <span class="font-weight-bold"> Status </span>';
+    html+= '      <div class="h6 pt-1">' +   json.status + '</div>';
+    html+= '    </span>';
+
+    html+= '    <span class="h6">';
+    html+= '    <span class="font-weight-bold">  Decision Date </span>';
+    html+= '      <div class="h6 pt-1"> ' + moment(json.date).format('ll') + ' M</div>';
+    html+= '    </span>';
+
+    html+= '      <span class="h6">';
+    html+= '      <span class="font-weight-bold">Contract Start</span>';
+    html+= '      <div class="h6 pt-1">' +  moment(json.contract.startDate).format('ll') + ' M</div>';
+    html+= '    </span>';
+
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Contract end </span>';
+    html+= '      <div class="h6 pt-1">' +  moment(json.contract.endDate).format('ll') + ' M</div>';
+    html+= '    </span>';
+
+    if (json.hasOwnProperty("suppliers")) {
+      html+= '    <span class="h6">';
+      html+= '      <span class="font-weight-bold"> #Suppliers</span>';
+      html+= '      <div class="h6 pt-1">' + json.suppliers.length + '</div>';
+      html+= '    </span>';
+    }
+    html+= '  </div>';
+    html+= '</a>';
+
+  }
+
+ $("#recent-from-api").html(html);
+
+}
 
 
 function get_contract(data){
@@ -240,83 +321,49 @@ html = "";
 
     json = data[i];
 
-    if (i % 2 ==0) {
-         html +=  '<div class="even">';
-    } else
-    {
-         html +=  '<div class="odd">';
-    }
-   
-    html += '<section class="mdc-card__primary">';
-        html += '<h1 class="mdc-card__title mdc-card__title--large f300">';
-        html += json.title;
-        html += '</h1>';
-        html += '<h2 class="mdc-card__subtitle">';
-        html += 'Kota Bandung - ' + json.SKPD;
-        html += '</h2>';
-        html += '<h3 class="mdc-card__subtitle dark-gray">';
-        html += 'SirupID: #' + json.sirupID;
-        html += '</h3>'
-    html += '</section>';
-   
-    html += '<section class="mdc-card__supporting-text ">';
-        
-        html += '<div class="procurement-card-container flex">';
-            html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-money.png">';
-            html += '<div class="mdc-typography--subheading1"> Anggaran </div>';
-            html += '<div> <span class="mdc-typography--title f300"> ' + json.anggaran / 1000000 + ' </span> M</div>';
-        html += '</div>';
-    
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-RP.png">';
-            html += ' <div class="mdc-typography--subheading1"> HPS </div>';
-            html += ' <div class="mdc-typography--title f300"> ' + json.hps / 1000000  + ' </div>';
-        html += '</div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += ' <img class="icon-large" src="img/icon-offer.png">';
-            html += ' <div class="mdc-typography--subheading1"> Nilai Penawaran </div>';
-            html += '<div class="mdc-typography--title f300"> ' +  json.nilai_penawaran  / 1000000  +  ' </div>';
-        html += '</div>';
+    html+= '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start rounded-0">';
+    html+= '<div class="d-flex w-100 justify-content-between">';
+    html+= '    <h5 class="mb-1">' + json.title + '</h5>';
+    html+= '    <small>3 days ago</small>';
+    html+= '  </div>';
 
-        html += '<div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-negotiation.png">';
-            html += ' <div class="mdc-typography--subheading1"> Nilai Negotiation</div>';
-            html += '<div class="mdc-typography--title f300"> ' +  json.nilai_nego / 1000000  + ' </div>';
-    html += ' </div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center ">';
-            html += '<img class="icon-large" src="img/icon-contract-start.png">';
-            html += '<div class="mdc-typography--subheading1">Contract start</div>';
-            html += '<div class="mdc-typography--title f300">' +  moment(json.contract.startDate).format('ll') + '</div>';
-    html += '</div>';
-    
-    html += ' <div class="procurement-card-details padding-small text-center">';
-            html += '<img class="icon-large" src="img/icon-contract-end.png">';
-            html += '<div class="mdc-typography--subheading1">Contract end</div>';
-            html += ' <div class="mdc-typography--title f300">' +  moment(json.contract.endDate).format('ll')  +'</div>';
-    html += '</div>';
-   
-    html += ' </div>';
-    html += ' <div>';
-    html += '<p>This contract was awarded to <i> <u> ' +  json.suppliers[0].name + '</u></i> ';
-    html += 'and it was signed on <i> <u> ' +  moment(json.dateSigned).format('ll') + '</u></i> . ';
-    html += 'The award criteria was <i><u>' + json.awardCriteria + '</u></i> , '; 
-    html += 'The procurement method is <i><u>' + json.procurementMethodDetails + '</u></i>.'; 
-    html += '</p>'; 
-    html += ' </div>';
-    html += '</section>';
+    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '      <h6>SirupID: ' +  json.sirupID + ' - Kota Bandung: ' + json.SKPD + ' </h6>';
+    html+= '  </div>';
 
-    html += '<section class="mdc-card__actions">';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action"> Apply in Sirup </button>';
-    html += '<button class="mdc-button mdc-button--compact mdc-card__action"> Download </button>';
-    html += ' <button class="mdc-button mdc-button--compact mdc-card__action">Email</button>';
-    html += '</section>';
-    html += '</div>';
+    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Anggaran  </span>';
+    html+= '        <div class="h6 pt-1">' + json.anggaran / 1000000  + '</div>';
+    html+= '    </span>';
 
 
+    html+= '    <span class="h6">';
+    html+= '       <span class="font-weight-bold"> HPS </span>';
+    html+= '      <div class="h6 pt-1">' +   json.hps / 1000000   + '</div>';
+    html+= '    </span>';
 
+    html+= '    <span class="h6">';
+    html+= '    <span class="font-weight-bold"> Nilai Penawaran </span>';
+    html+= '      <div class="h6 pt-1"> ' + json.nilai_penawaran  / 1000000  + ' M</div>';
+    html+= '    </span>';
+
+    html+= '      <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Tender end </span>';
+    html+= '      <div class="h6 pt-1">' +    json.nilai_nego / 1000000  + 'M</div>';
+    html+= '    </span>';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Contract start </span>';
+    html+= '      <div class="h6 pt-1">' +  moment(json.contract.startDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '    <span class="h6">';
+    html+= '      <span class="font-weight-bold"> Contract end </span>';
+    html+= '      <div class="h6 pt-1">' +   moment(json.contract.endDate).format('ll') + '</div>';
+    html+= '    </span>';
+    html+= '  </div>';
+
+    html+= '</a>';
 
   }
 

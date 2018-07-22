@@ -2,14 +2,12 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
-	 
-}
 
- 
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
-	 
+
 }
 
 footer {
@@ -40,7 +38,7 @@ ul.map-list li {
 }
 .stat-settings {
 	height: 300px;
- 	
+
 }
 
 .mdc-grid-tile__secondary {
@@ -117,7 +115,7 @@ ul.map-list li {
 .procurement-card-details {
 	min-width: 100px;
 }
- 
+
 
 .other-colors {
 	  background: #f44336;
@@ -127,9 +125,9 @@ ul.map-list li {
 
 .flex {
 	display: flex;
-	 
+
 }
- 
+
 .pull-right {
 	float: right;
 }
@@ -161,7 +159,7 @@ ul {
 	font-weight: 900;
 }
 
- 
+
 .list-planning {
 	border-left: 4px solid orange;
 	padding: 20px;
@@ -175,7 +173,7 @@ ul {
 .list-tender {
 	border-left: 4px solid #c6e9bc;
 	padding: 20px;
-	
+
 }
 
 .list-tender.active , .list-tender:hover {
@@ -207,7 +205,7 @@ ul {
 
 .list-implementation:hover , .list-implementation.active  {
 	background-color: #0092bb;
- 
+
 }
 
 .img-chart {
