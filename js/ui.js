@@ -10,3 +10,8 @@ $("#load_recent-procurement li").click(function(e){
     $(this).addClass("active");
   }
 });
+
+$("#show-search-filters").click(function() {
+    $("#search-filters").removeClass("d-none");
+    $(this).hide();
+});

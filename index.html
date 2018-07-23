@@ -80,7 +80,7 @@
     <div class="row">
       <div class="col-12 bdg-city">
         <div class="img-bg" style='background-image:url(img/bandung.png)'>
-          <div class="col-12 col-lg-6 bg-primary bg-opacity p-5 mt-5">
+          <div class="col-12 col-lg-6 bg-primary bg-opacity p-4 mt-4">
             <h4><span class="font-weight-700">Search</span> for tenders and contracts</h4>
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Enter your keyword" aria-label="Search">
@@ -88,7 +88,89 @@
                 <button class="btn btn-dark" type="button">Search</button>
               </div>
             </div>
-            <small>* Use advanced search for more options.</small>
+
+            <div class="pt-2">
+              <span><small>* Use advanced filters for more options.</small></span>
+              <span id="show-search-filters" class="float-right"><a class="h6 no-underline " href="#">Show filters <i class="material-icons align-middle"> arrow_drop_down </i> </a></span>
+            </div>
+
+
+            <div id="search-filters" class="pt-3 d-none">
+
+              <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                       <h6> Tahun </h6>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>2013</option>
+                          <option>2014</option>
+                          <option>2015</option>
+                          <option>2016</option>
+                          <option>2017</option>
+                          <option>2018</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                     <h6> Tahapan </h6>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Perencanaan</option>
+                        <option>Pengadaan</option>
+                        <option>Pemenang</option>
+                        <option>Kontrak</option>
+                        <option>Implementasi</option>
+                      </select>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                     <h6> Klasifikasi </h6>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Konstruksi</option>
+                        <option>Pengadaan Barang</option>
+                        <option>Jasa Konsultansi</option>
+                        <option>Jasa Lainnya</option>
+                      </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group justify-content-between">
+                     <h6> Pagu Anggaran / Nilai Kontrak </h6>
+                     <div class="row">
+                       <div class="col">
+                         <input type="text" class="form-control" placeholder="Min">
+                       </div>
+                       <div class="col">
+                         <input type="text" class="form-control" placeholder="Max">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="form-group justify-content-between">
+                     <h6>Tanggal</h6>
+                     <div class="row">
+                       <div class="col">
+                         <input type="date" class="form-control" >
+                       </div>
+                        <div class="col">
+                          <input type="date" class="form-control" >
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+              </div>
+
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -543,6 +625,7 @@
 <script type="text/javascript" src="js/graph.js"> </script>
 <script type="text/javascript" src="js/moment.js"> </script>
 <script type="text/javascript" src="js/recent.js"> </script>
+<script type="text/javascript" src="js/ui.js"> </script>
 
 
 </body>
