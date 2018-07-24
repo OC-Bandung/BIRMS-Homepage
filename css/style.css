@@ -278,8 +278,8 @@ body {
   counter-reset: section;                     /* Set a counter named 'section', and its initial value is 0. */
 }
 
-#timeline.card , #timeline.card-header{
-  background-color: transparent;
+.timeline-card {
+  background-color: #343a40;
 }
 
 .no-border {
@@ -287,11 +287,24 @@ body {
 
 }
 
-#timeline.card:not(:first-child) {
+.timeline-card  {
+  padding-left: 5px;
+  padding-top: 15px;
+}
+
+.timeline-card h5 {
+    padding-left: 50px;
+}
+
+.timeline-card:not(:first-child) {
   padding-top: 50px;
 }
 
-#timeline.card::before {
+.timeline-card p  {
+  margin-left: 60px;
+}
+
+.timeline-card::before {
    counter-increment: section;                 /* Increment the value of section counter by 1 */
     content: counter(section);
     position: absolute;
@@ -305,45 +318,35 @@ body {
     font-weight: bold;
     text-align: center;
     padding-top: 2px;
-    left: -50px;
     z-index: 1;
-    color: white;
-}
-
-#timeline.card:hover  .card::before{
-  background-color: white;
 }
 
 
-#timeline.card::after {
+.timeline-card::after {
   content: "";
   display: block;
   position: absolute;
-  top:  60px;
-  left: -20px;
+  top:  73px;
   height: calc(100%);
   width: 2px;
   background: white;
-  z-index: 10;
   z-index: 0;
+  margin-left: 30px;
+
 }
 
 
-#timeline.card:not(:first-child)::after {
+.timeline-card:not(:first-child)::after {
   top: 110px;
   height: calc(100% - 60px);
 }
 
-#timeline.card:last-child:after
+.timeline-card:last-child:after
 {
  content: '';
  background-color: transparent;
 }
 
-.bdg-timeline {
-  background: transparent;
-  color: white;
-}
 
 
 .bdg-carousel-title {
