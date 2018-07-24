@@ -278,7 +278,7 @@ body {
   counter-reset: section;                     /* Set a counter named 'section', and its initial value is 0. */
 }
 
-.card , .card-header{
+#timeline.card , #timeline.card-header{
   background-color: transparent;
 }
 
@@ -287,11 +287,11 @@ body {
 
 }
 
-.card:not(:first-child) {
+#timeline.card:not(:first-child) {
   padding-top: 50px;
 }
 
-.card::before {
+#timeline.card::before {
    counter-increment: section;                 /* Increment the value of section counter by 1 */
     content: counter(section);
     position: absolute;
@@ -310,12 +310,12 @@ body {
     color: white;
 }
 
-.card:hover  .card::before{
+#timeline.card:hover  .card::before{
   background-color: white;
 }
 
 
-.card::after {
+#timeline.card::after {
   content: "";
   display: block;
   position: absolute;
@@ -329,12 +329,12 @@ body {
 }
 
 
-.card:not(:first-child)::after {
+#timeline.card:not(:first-child)::after {
   top: 110px;
   height: calc(100% - 60px);
 }
 
-.card:last-child:after
+#timeline.card:last-child:after
 {
  content: '';
  background-color: transparent;
