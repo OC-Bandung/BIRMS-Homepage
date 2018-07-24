@@ -89,13 +89,13 @@ a.nav-link {
   margin-left: 15px; */
 }
 
-.verticaltext {
+.statistiktext {
     position: relative;
     margin-left: 30px;
     margin-right: -30px;
 }
 
-.verticaltext_content {
+.statistiktext_content {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
