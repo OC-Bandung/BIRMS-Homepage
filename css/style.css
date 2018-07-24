@@ -20,6 +20,9 @@ h1, .h1, h2, .h2, h3, .h3, h4 , .h4 , h5, .h5, h6 , .h6 {
 .bg-primary {
   background-color: #00cc99 !important;
 }
+.b-0 {
+  bottom: 0;
+}
 
 .separator-primary {
   fill:  #00cc99;
@@ -210,7 +213,6 @@ a.nav-link {
  .hammer {
    font-size: 0.8em;
    text-transform: uppercase;
-   font-weight: bold;
  }
 
  a.no-underline {
@@ -311,6 +313,7 @@ body {
 .card:hover  .card::before{
   background-color: white;
 }
+
 
 .card::after {
   content: "";
