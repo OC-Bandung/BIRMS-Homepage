@@ -287,18 +287,12 @@ body {
 
 }
 
-.timeline-card  {
-  padding-left: 5px;
-  padding-top: 15px;
+
+.timeline-card .card-header {
+  background: transparent;
+  border-bottom: 0px;
 }
 
-.timeline-card h5 {
-    padding-left: 50px;
-}
-
-.timeline-card:not(:first-child) {
-  padding-top: 50px;
-}
 
 .timeline-card p  {
   margin-left: 60px;
@@ -326,7 +320,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top:  73px;
+  top:  60px;
   height: calc(100%);
   width: 2px;
   background: white;
@@ -336,17 +330,15 @@ body {
 }
 
 
-.timeline-card:not(:first-child)::after {
-  top: 110px;
-  height: calc(100% - 60px);
-}
-
 .timeline-card:last-child:after
 {
  content: '';
  background-color: transparent;
 }
 
+.timeline-card .btn-link {
+  text-decoration: none;
+}
 
 
 .bdg-carousel-title {
