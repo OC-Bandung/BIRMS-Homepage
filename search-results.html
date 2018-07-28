@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>BIRMS Homepage</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+
+  <!-- menu will already be here  -->
+
+  <section class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 bg-primary bg-opacity p-4 mt-4">
+          <h4><span class="font-weight-700">Search</span> for tenders and contracts</h4>
+          <div class="input-group w-50">
+            <input type="text" class="form-control"  placeholder="Enter your keyword" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-dark" type="button">Search</button>
+            </div>
+          </div>
+
+          <div  class="pt-4">
+
+            <div class="row">
+              <div class="col">
+                  <div class="form-group">
+                     <h6> Tahun </h6>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                   <h6> Tahapan </h6>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Perencanaan</option>
+                      <option>Pengadaan</option>
+                      <option>Pemenang</option>
+                      <option>Kontrak</option>
+                      <option>Implementasi</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                   <h6> Klasifikasi </h6>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Konstruksi</option>
+                      <option>Pengadaan Barang</option>
+                      <option>Jasa Konsultansi</option>
+                      <option>Jasa Lainnya</option>
+                    </select>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group justify-content-between">
+                   <h6> Pagu Anggaran / Nilai Kontrak </h6>
+                   <div class="row">
+                     <div class="col">
+                       <input type="text" class="form-control" placeholder="Min">
+                     </div>
+                     <div class="col">
+                       <input type="text" class="form-control" placeholder="Max">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group justify-content-between">
+                   <h6>Tanggal</h6>
+                   <div class="row">
+                     <div class="col">
+                       <input type="date" class="form-control" >
+                     </div>
+                      <div class="col">
+                        <input type="date" class="form-control" >
+                      </div>
+                   </div>
+                 </div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row pt-3">
+        <div class="col">
+          <h3>Results</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div id="search-results" class="list-group">
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge badge-dark">Perencanaan</span>
+              <div class="d-flex w-100 justify-content-between pt-1">
+                <span><h5 class="mb-1">PEMBANGUNAN PJL Gg. Campaka IX, VIII, Gg. Karang Tineung</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">56.1</span>  <span class="h4">M</span> </span>
+              </div>
+             <div class="h6">Tanggal: 01/01/2018 -  Klasifikasi: Konstruksi</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Contract</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Narasumber</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">2.1</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Pemenang</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Belanja Modal Peralatan dan Mesin Pengadaan Mebelair </h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">12.1</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Implementasi</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Belanja Modal Peralatan dan Mesin Pengadaan Mebelair </h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">6.42</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge badge-dark">Perencanaan</span>
+              <div class="d-flex w-100 justify-content-between pt-1">
+                <span><h5 class="mb-1">PEMBANGUNAN PJL Gg. Campaka IX, VIII, Gg. Karang Tineung</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">56.1</span>  <span class="h4">M</span> </span>
+              </div>
+             <div class="h6">Tanggal: 01/01/2018 -  Klasifikasi: Konstruksi</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Contract</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Narasumber</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">2.1</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Pemenang</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Belanja Modal Peralatan dan Mesin Pengadaan Mebelair </h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">12.1</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Implementasi</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Belanja Modal Peralatan dan Mesin Pengadaan Mebelair </h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">6.42</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge badge-dark">Perencanaan</span>
+              <div class="d-flex w-100 justify-content-between pt-1">
+                <span><h5 class="mb-1">PEMBANGUNAN PJL Gg. Campaka IX, VIII, Gg. Karang Tineung</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">56.1</span>  <span class="h4">M</span> </span>
+              </div>
+             <div class="h6">Tanggal: 01/01/2018 -  Klasifikasi: Konstruksi</div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <span class="badge  badge-dark">Contract</span>
+              <div class="d-flex w-100 justify-content-between  pt-1">
+                <span><h5 class="mb-1">Narasumber</h5></span>
+                <span class="float-right"> <span class="h4">Rp</span>  <span class="h3">2.1</span>  <span class="h4">M</span> </span>
+              </div>
+              <div class="h6">Tanggal: 03/03/2018 -  Klasifikasi: Pengadaan Barang</div>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col pt-3 text-center">
+              <button type="button" class="btn btn-outline-dark font-primary">Load more</button>
+          </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="mt-5  pt-5">
+    <div class="container-fluid  bg-dark mt-5">
+      <div class="row p-4">
+        <div class="col-8">
+          <small class="color-white font-weight-light">
+            BIRMS ~ bandung integrated resouces management systemdeveloped & maintenance 2017 bagian pengadaan barang dan jasa sekretariat daerah kota bandung developed & maintenance jan - des 2016 bagian pembangunan & sumber daya alam kota bandungdeveloped sep 2015 - des 2015 dinas komunikasi dan informatika kota bandungdeveloped & maintenance jan - aug 2015 bagian pembangunan & sumber daya alam kota bandungdeveloped & maintenance 2010 - 2014 bappeda kota bandung
+          </small>
+        </div>
+        <div class="col">
+          <img class="float-right" src="img/bandung-branding.png">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+</html>
