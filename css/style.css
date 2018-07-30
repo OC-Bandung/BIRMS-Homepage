@@ -87,6 +87,11 @@ a.nav-link {
   width: 100%;
 }
 
+.badge {
+  font-size: 90%;
+  font-weight: normal;
+}
+
 .bdg-summary {
   /* border-left: 10px solid #00cc99;
   margin-left: 15px; */
@@ -344,3 +349,4 @@ body {
 .bdg-carousel-title {
   left: 0;
 }
+ 
