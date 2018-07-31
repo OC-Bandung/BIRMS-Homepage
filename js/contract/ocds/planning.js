@@ -2,7 +2,7 @@ function load_planning(planning) {
 
     if (planning.hasOwnProperty('budget')) {
 
-        $("#stage-amount").text(release.planning.budget.amount.amount);
+        $("#stage-amount").text(release.planning.budget.amount.amount/1000000);
         $("#planning-budget-amount-amount").text(planning.budget.amount.amount);
 
         $("#planning-rationale").text(planning.rationale);
@@ -14,7 +14,11 @@ function load_planning(planning) {
 
         $("#planning-budget-id").text(planning.budget.id);
 
-        $("#stage-status").text(planning.status);
+        if (planning.status) {
+          $("#stage-status").text(planning.status);
+        } else {
+            $("#stage-status").hide();
+        }
         // var d = new Date(tender.tenderPeriod.startDate);
         //
         // $("#planning-budget-year").text(d.getFullYear());

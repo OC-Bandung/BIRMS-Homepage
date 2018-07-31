@@ -15,75 +15,21 @@
 <body>
 
 
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12  text-center">
-
-          <ul class="list-inline mb-0  mt-2 border-bottom-1px">
-             <li class="nav-item list-inline-item"><a class="nav-link" href="#"><img src="img/birms.png"></a></li>
-             <li class="nav-item list-inline-item"><a class="nav-link" href="#">Beranda</a></li>
-             <li class="nav-item list-inline-item dropdown">
-               <a class="nav-link dropdown-toggle" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                BIRMS Apps
-               </a>
-               <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Login</span>
-                   <p>See contracts, sign-in, check your dashboard</p>
-                 </a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Contact</span>
-                   <p>Contact us, ask us questions, read faq.</p>
-                 </a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Developer</span>
-                   <p>Download data, read API documentation.</p>
-                 </a>
-               </div>
-             </li>
-             <li class="nav-item list-inline-item dropdown">
-               <a class="nav-link dropdown-toggle" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Public Dashboard
-               </a>
-               <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Login</span>
-                   <p>See contracts, sign-in, check your dashboard</p>
-                 </a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Contact</span>
-                   <p>Contact us, ask us questions, read faq.</p>
-                 </a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item nav-link" href="#">
-                   <span>Developer</span>
-                   <p>Download data, read API documentation.</p>
-                 </a>
-               </div>
-             </li>
-             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">Berita</a></li>
-             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">BIRMS Lama</a></li>
-             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">Developer</a></li>
-          </ul>
-
-
-        </div>
-      </div>
-    </div>
-  </section>
+<!--  header goes here  -->
 
 
   <section class="bg-primary">
     <div class="container">
       <div class="row">
         <div class="col p-5">
-           <div class="font-weight-700 h4">Contract details for: </div>
-           <div class="h6 text-light">ocds-afzrfb-s-2016-6124079</div>
-           <div  id="tender-title" class="h3 text-white">Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)</div>
+           <div class="h6 text-uppercase">
+             <span>Contracting process details</span>
+             <span class="float-right text-light"><a class="text-white" id="oc-json" target="_blank" href="#">json</a></span>
+           </div>
+           <div>
+             <span id="ocid" class="h6 text-light">#ocds-afzrfb-s-2016-6124079</span>
+           </div>
+           <div id="tender-title" class="h3 text-white ">Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)</div>
         </div>
       </div>
     </div>
@@ -102,37 +48,50 @@
                   <div class="col">
                       <div>
                         <h6>Status</h6>
-                          <span id="stage"></span> / <span id="stage-status"></span>
+                        <div class="h5">
+                          <span  class="text-capitalize" id="stage">Stage</span> <span class="text-capitalize" id="stage-status"> / Status</span>
+                        </div>
                       </div>
-                      <div>
+                      <div class="pt-3">
                           <h6>Planned Procurement Start</h6>
+                          <h5 id="tender-tenderPeriod-startDate">Apr 1, 1900</h5>
                       </div>
-                      <div>
-                          <h6>Award Amount</h6>
+                      <div class="pt-3">
+                          <h6>Planned Procurement End</h6>
+                          <h5 id="tender-tenderPeriod-endDate">Apr 1, 1900</h5>
                       </div>
-                      <div>
+                      <div class="pt-3">
+                          <h6><span class="contracting-stage text-capitalize"></span> Amount</h6>
+                          <span class="h5"> Rp. </span> <span class="h4" id="stage-amount" > 123456</span>  <span class="h5"> M </span>
+                      </div>
+                      <div class="pt-3">
                           <h6>Budget Source</h6>
+                          <h5 id="planning-budget-description">budget-source</h5>
                       </div>
                   </div>
                   <div class="col">
                     <div>
                       <h6>Procurement Category</h6>
+                      <h5 id="tender-mainProcurementCategory" class="text-capitalize">Procurement Category</h5>
                     </div>
-                    <div>
+                    <div class="pt-3">
                       <h6>Procurement Method</h6>
+                      <h5 id="tender-procurementMethod" class="text-capitalize">Procurement Method</h5>
                     </div>
-                    <div>
-                      <h6>Implementation Unit</h6>
+
+                    <div  id="parties-name-buyer-label" class="pt-3">
+                      <h6>Buyer</h6>
+                      <h5 id="parties-name-buyer" class="text-capitalize">Buyer</h5>
                     </div>
-                    <div>
+
+                    <div class="pt-3">
                       <h6>Procuring Entity</h6>
+                      <h5 id="parties-name-procuringEntity" class="text-capitalize"></h5>
                     </div>
+
                   </div>
                   <div class="col">
-                    <div>
-                      <h6>Location</h6>
-                      RS Khusus Ibu dan Anak Kota Bandung
-                    </div>
+
 
                     <div>
                       <h6 id="planning-rationale-title">Rationale</h6>
@@ -142,15 +101,6 @@
                 </div>
               </div>
             </div>
-
-          <!-- <div>
-            <div class="h5">Status</div>
-            <div class="">Award / Active</div>
-          </div> -->
-          <!-- <div>
-            <div class="h5">Rationale</div>
-            <div class="">Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.</div>
-          </div> -->
         </div>
       </div>
     </div>
@@ -164,19 +114,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="js/moment.js"> </script>
-
 <script type="text/javascript" src="js/contract/ui.js"> </script>
-<script type="text/javascript" src="js/contract/parties.js"> </script>
+
 
 <!-- a script for each stage  -->
-<script type="text/javascript" src="js/contract/ocds/shared.js"> </script>
+<script type="text/javascript" src="js/contract/data.js"> </script>
+
+
+<script type="text/javascript" src="js/contract/timeline.js"> </script>
+
 <script type="text/javascript" src="js/contract/ocds/planning.js"> </script>
 <script type="text/javascript" src="js/contract/ocds/tender.js"> </script>
 <script type="text/javascript" src="js/contract/ocds/awards.js"> </script>
 <script type="text/javascript" src="js/contract/ocds/contracts.js"> </script>
 <script type="text/javascript" src="js/contract/ocds/implementation.js"> </script>
 
-<script type="text/javascript" src="js/contract/data.js"> </script>
+
 <script type="text/javascript" src="js/contract/charts.js"> </script>
 
 

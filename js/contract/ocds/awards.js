@@ -4,7 +4,7 @@ function load_awards(awards) {
     $(".awards-stage").removeClass("hidden");
 
     $("#stage-status").text(awards[0].status);
-    $("#stage-amount").text(awards[0].value.amount);
+    $("#stage-amount").text(awards[0].value.amount/1000000);
 
     $("#awards-supplier-name").text(awards[0].suppliers[0].name);
     $("#awards-value-amount").text(awards[0].value.amount);
@@ -15,7 +15,7 @@ function load_awards(awards) {
     $("#awards-supplier-taxid").text(winningSupplier[0].taxid);
     $("#awards-supplier-address").text(winningSupplier[0].address.streetAddress);
 
-    console.log("test");
+   
 
     html = "";
     delete winningSupplier[0].roles;

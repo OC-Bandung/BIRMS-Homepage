@@ -1,12 +1,11 @@
 function load_tender(tender) {
 
-	console.log("tender");
-
+ 
     $("#tender-title").text(tender.title);
     $("#tender-status").text(tender.status);
     if(tender.hasOwnProperty('value')) {
         $("#tender-amount-value").text(tender.value.amount);
-        $("#stage-amount").text(tender.value.amount);
+        $("#stage-amount").text(tender.value.amount/1000000);
     }
 
      $(".tender-stage").removeClass("hidden");
@@ -21,16 +20,29 @@ function load_tender(tender) {
 
 
     $("#tender-awardCriteria").text(tender.awardCriteriaDetails);
-    $("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
-    $(".tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
+
+		if (tender.additionalProcurementCategories) {
+			$("#tender-mainProcurementCategory").text(tender.mainProcurementCategory + " (" + tender.additionalProcurementCategories + ")");
+		}
+		else {
+				$("#tender-mainProcurementCategory").text(tender.mainProcurementCategory);
+		}
+
+		if ( tender.procurementMethodDetails ) {
+			$("#tender-procurementMethod").text(tender.procurementMethod + " (" + tender.procurementMethodDetails + ")");
+
+		} else {
+			$("#tender-procurementMethod").text(tender.procurementMethod);
+
+		}
 
 
 
     $("#tender-numberOfTenderers").text(tender.numberOfTenderers);
 
 
-    $(".tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
-    $(".tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));
+    $("#tender-tenderPeriod-startDate").text(moment(tender.tenderPeriod.startDate).format('ll'));
+    $("#tender-tenderPeriod-endDate").text(moment(tender.tenderPeriod.endDate).format('ll'));
 
     $("#tender-contractPeriod-startDate").text(moment(tender.contractPeriod.startDate).format('ll'));
     $("#tender-contractPeriod-endDate").text(moment(tender.contractPeriod.endDate).format('ll'));
