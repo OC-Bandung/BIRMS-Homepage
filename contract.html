@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>BIRMS</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+
+<body>
+
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12  text-center">
+
+          <ul class="list-inline mb-0  mt-2 border-bottom-1px">
+             <li class="nav-item list-inline-item"><a class="nav-link" href="#"><img src="img/birms.png"></a></li>
+             <li class="nav-item list-inline-item"><a class="nav-link" href="#">Beranda</a></li>
+             <li class="nav-item list-inline-item dropdown">
+               <a class="nav-link dropdown-toggle" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                BIRMS Apps
+               </a>
+               <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Login</span>
+                   <p>See contracts, sign-in, check your dashboard</p>
+                 </a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Contact</span>
+                   <p>Contact us, ask us questions, read faq.</p>
+                 </a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Developer</span>
+                   <p>Download data, read API documentation.</p>
+                 </a>
+               </div>
+             </li>
+             <li class="nav-item list-inline-item dropdown">
+               <a class="nav-link dropdown-toggle" class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Public Dashboard
+               </a>
+               <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Login</span>
+                   <p>See contracts, sign-in, check your dashboard</p>
+                 </a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Contact</span>
+                   <p>Contact us, ask us questions, read faq.</p>
+                 </a>
+                 <div class="dropdown-divider"></div>
+                 <a class="dropdown-item nav-link" href="#">
+                   <span>Developer</span>
+                   <p>Download data, read API documentation.</p>
+                 </a>
+               </div>
+             </li>
+             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">Berita</a></li>
+             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">BIRMS Lama</a></li>
+             <li class="nav-item list-inline-item"><a class="nav-link" target="_blank" href="#">Developer</a></li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col p-5">
+           <div class="font-weight-700 h4">Contract details for: </div>
+           <div class="h6 text-light">ocds-afzrfb-s-2016-6124079</div>
+           <div  id="tender-title" class="h3 text-white">Belanja Kursus-Kursus Singkat/Pelatihan (Peningkatan Motivasi Kerja Pegawai)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container p-5">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+              <div class="card-header">
+                Key Information
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                      <div>
+                        <h6>Status</h6>
+                          <span id="stage"></span> / <span id="stage-status"></span>
+                      </div>
+                      <div>
+                          <h6>Planned Procurement Start</h6>
+                      </div>
+                      <div>
+                          <h6>Award Amount</h6>
+                      </div>
+                      <div>
+                          <h6>Budget Source</h6>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div>
+                      <h6>Procurement Category</h6>
+                    </div>
+                    <div>
+                      <h6>Procurement Method</h6>
+                    </div>
+                    <div>
+                      <h6>Implementation Unit</h6>
+                    </div>
+                    <div>
+                      <h6>Procuring Entity</h6>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div>
+                      <h6>Location</h6>
+                      RS Khusus Ibu dan Anak Kota Bandung
+                    </div>
+
+                    <div>
+                      <h6 id="planning-rationale-title">Rationale</h6>
+                      <p id="planning-rationale">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- <div>
+            <div class="h5">Status</div>
+            <div class="">Award / Active</div>
+          </div> -->
+          <!-- <div>
+            <div class="h5">Rationale</div>
+            <div class="">Meningkatkan dan menggalang kemitraan dalam upaya peningkatan program pemberdayaan perempuan, perlindungan anak dan pemberdayaan masyarakat. Improve and raise partnerships in efforts to improve women's empowerment programs, child protection and community empowerment.</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/moment.js"> </script>
+
+<script type="text/javascript" src="js/contract/ui.js"> </script>
+<script type="text/javascript" src="js/contract/parties.js"> </script>
+
+<!-- a script for each stage  -->
+<script type="text/javascript" src="js/contract/ocds/shared.js"> </script>
+<script type="text/javascript" src="js/contract/ocds/planning.js"> </script>
+<script type="text/javascript" src="js/contract/ocds/tender.js"> </script>
+<script type="text/javascript" src="js/contract/ocds/awards.js"> </script>
+<script type="text/javascript" src="js/contract/ocds/contracts.js"> </script>
+<script type="text/javascript" src="js/contract/ocds/implementation.js"> </script>
+
+<script type="text/javascript" src="js/contract/data.js"> </script>
+<script type="text/javascript" src="js/contract/charts.js"> </script>
+
+
+
+</body>
+</html>
