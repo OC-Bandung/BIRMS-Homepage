@@ -10,12 +10,12 @@ function load_awards(awards) {
     $("#awards-value-amount").text(awards[0].value.amount);
 
 
-    winningSupplier = getPartyByID(parties, awards[0].suppliers[0].id);
+    winningSupplier = getPartyByID(release.parties, awards[0].suppliers[0].id);
 
     $("#awards-supplier-taxid").text(winningSupplier[0].taxid);
     $("#awards-supplier-address").text(winningSupplier[0].address.streetAddress);
 
-   
+
 
     html = "";
     delete winningSupplier[0].roles;

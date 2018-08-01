@@ -14,20 +14,20 @@ function getPartyByID(data, id) {
     );
 }
 
-function load_parties(parties) {
+function load_parties( party) {
 
-	 var party = [];
+    for (i = 0; i < party.length -1; i++) {
 
-    for (i = 0; i < parties.length; i++) {
+        for (j = 0; j < party[i].roles.length  ; j++) {
 
-        for (j = 0; j < parties[i].roles.length ; j++) {
+            if (party[i].roles[j] == "procuringEntity") {
+              $("#parties-name-procuringEntity").append(party[i].name);
 
-            if (parties[i].roles[j] == "procuringEntity") {
-              $("#parties-name-procuringEntity").append(parties[i].name);
             }
 
-            if (parties[i].roles[j] == "buyer") {
-              $("#parties-name-buyer").text(parties[i].name);
+            if (party[i].roles[j] == "buyer") {
+              $("#parties-name-buyer").text(party[i].name);
+
             }
 
         }
@@ -43,6 +43,7 @@ function custom_sort(a, b) {
 var url="https://birms.bandung.go.id/beta/api/newcontract/"+getParameterByName("ocid");
 var callback_url=url+"?callback=?";
 
+  $("a#oc-json").attr("href", url);
 
 
 var jqxhr = $.getJSON(callback_url, function(data) {
@@ -61,10 +62,10 @@ var jqxhr = $.getJSON(callback_url, function(data) {
 function load_data(data) {
 
     var stage;
+    var parties;
     release = data;
     planning = release.planning;
     tender = release.tender;
-    parties = release.parties;
     awards = release.awards;
     contracts = release.contracts;
 
@@ -83,7 +84,6 @@ function load_data(data) {
         load_planning(release.planning);
         load_tender(release.tender);
 
-        buildTimeline(planning, stage);
         buildTimeline(tender, stage);
 
     }
@@ -94,8 +94,7 @@ function load_data(data) {
         load_tender(release.tender);
         load_awards(release.awards);
 
-        buildTimeline(planning, stage);
-        buildTimeline(tender, stage);
+      
         buildTimeline(awards, stage);
 
     }
@@ -122,13 +121,11 @@ function load_data(data) {
         buildTimeline(contracts[0], stage);
     }
 
-    load_parties(parties);
-
-
+    load_parties(release.parties);
 
 
     $("#ocid").text('Id: ' + release.ocid);
-    $("#oc-json").attr('href', url);
+
     $("#stage").text(stage);
 
     $('.contracting-stage').text(stage);
