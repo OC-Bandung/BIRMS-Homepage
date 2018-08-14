@@ -10,7 +10,8 @@ function buildTimeline(timeline_stage, stage) {
     }
 
 
-    var timeline_stage = timeline_stage.milestones.filter(function(x) { return x.code == "timeline"; });
+    var timeline_stage = timeline_stage.milestones.filter(function(x) { return x.title == "PENGUMUMAN_LELANG"; });
+
     timeline_stage.sort(custom_sort);
 
       console.log(timeline_stage);
