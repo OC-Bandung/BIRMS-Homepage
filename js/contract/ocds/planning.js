@@ -2,21 +2,38 @@ function load_planning(data) {
 
     planning = data.planning;
 
-
-    $("#ocdate").text(moment(data.date).format(("ll")));
-
-    $("#parties-buyer-name").text(data.buyer.name);
-
     // if there is a buyer id in data.buyer, then go to parties and lookup the information to show
     // sometimes data.id doesn't exist but the role of buyer is still there, so in the else statement, try to loop and see if there is a buyer.
+
+
+    if (data.buyer.name) {
+      $("#parties-buyer-name").text(data.buyer.name);
+      $("#parties-buyer-name-container").removeClass("d-none");
+    }
 
     if ( data.buyer.id ) {
       $("#parties-buyer-address").text(getPartyByID(data.parties, data.buyer.id)[0].address.streetAddress);
     } else {
-        found = findPartyByRole(data.parties, "buyer");
+        buyer = findPartyByRole(data.parties, "buyer");
         if (found.address) {
-            $("#parties-buyer-address").text(found.address.streetAddress);
+            $("#parties-buyer-address").text(buyer.address.streetAddress);
         }
+    }
+
+    procuringEntity = findPartyByRole(data.parties, "procuringEntity");
+    if (procuringEntity) {
+        if (procuringEntity.name) {
+          if (procuringEntity.name != data.buyer.name) {
+            $("#parties-proc-name").text(procuringEntity.name);
+            $("#parties-proc-name-container").removeClass("d-none");
+              if (procuringEntity.address.streetAddress) {
+                $("#parties-proc-address").text(procuringEntity.address.streetAddress);
+                $("#parties-proc-address").removeClass("d-none");
+
+              }
+          }
+        }
+
     }
 
 
@@ -29,7 +46,7 @@ function load_planning(data) {
 
         $("#planning-budget-description").text(planning.budget.description);
 
-        $("#planning-budget-project-name-container").hide();
+
     }
 
 }

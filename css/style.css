@@ -32,6 +32,13 @@ h1, .h1, h2, .h2, h3, .h3, h4 , .h4 , h5, .h5, h6 , .h6 {
   fill:  #00cc99;
 }
 
+.inner-image-banner {
+  content: "";
+    background-image: url("../img/bandung-grayscale.png");
+    background-position: bottom right;
+    background-size: contain;
+    background-blend-mode: hard-light;
+}
 
 .separator-bottom {
     right: 0;
@@ -218,6 +225,22 @@ a.nav-link {
 
 }
 
+.card-border-planning {
+  border-left: 15px solid orange;
+}
+
+.card-border-tender {
+  border-left: 15px solid #c6e9bc;
+}
+
+.card-border-award {
+  border-left: 15px solid #7ccdbd;
+}
+
+.card-border-contract {
+  border-left: 15px solid #679bc2;
+}
+
  .hammer {
    font-size: 0.8em;
    text-transform: uppercase;
@@ -323,6 +346,13 @@ body {
     z-index: 1;
 }
 
+.border-width-5 {
+  border-width: 10px;
+}
+
+.border-width-2 {
+  border-width: 5px;
+}
 
 .timeline-card::after {
   content: "";
@@ -351,4 +381,28 @@ body {
 
 .bdg-carousel-title {
   left: 0;
+}
+
+.tender-timeline-line {
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  margin-top: 10px;;
+}
+
+.paginationjs-pages ul {
+ width: 100%;
+}
+.paginationjs-pages ul li {
+  display: inline;
+  float: left;
+  padding-left: 10px;
+
+}
+
+.vertical-line{
+  height: 50px;
+  width: 1px;
+
+  background-color: black;
 }

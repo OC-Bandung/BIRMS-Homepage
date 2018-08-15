@@ -84,20 +84,21 @@ function load_data(data) {
         load_planning(data);
     }
 
-    if (data.hasOwnProperty('tender') && data.tender.length > 0 ) {
-        stage = "tender"
-        load_planning(data.planning);
-        load_tender(data.tender);
 
-        buildTimeline(tender, stage);
+    if (data.hasOwnProperty('tender') ) {
+        stage = "tender"
+        load_planning(data);
+        load_tender(data);
+
+        //buildTimeline(tender, stage);
 
     }
 
     if (data.hasOwnProperty('awards') && data.awards.length > 0 ) {
         stage = "award"
-        load_planning(data.planning);
-        load_tender(data.tender);
-        load_awards(data.awards);
+        // load_planning(data.planning);
+        // load_tender(data.tender);
+        // load_awards(data.awards);
 
 
         buildTimeline(awards, stage);
@@ -105,32 +106,33 @@ function load_data(data) {
     }
 
     if (data.hasOwnProperty('contracts') && data.contracts.length > 0) {
-        stage = "contract";
-        if (data.contracts[0].hasOwnProperty('implementation')) {
-            stage = "implementation";
-        }
+        // stage = "contract";
+        // if (data.contracts[0].hasOwnProperty('implementation')) {
+        //     stage = "implementation";
+        // }
     }
 
 
     if(data.hasOwnProperty('contracts' && data.contracts>0)) {
-        stage = "contract";
-        load_planning(data.planning);
-        load_tender(data.tender);
-        load_awards(data.awards);
-        load_contracts(data.contracts);
-        load_implementation(data.contracts[0].implementation);
-
-        buildTimeline(planning, stage);
-        buildTimeline(tender, stage);
-        buildTimeline(awards, stage);
-        buildTimeline(contracts[0], stage);
+        // stage = "contract";
+        // load_planning(data.planning);
+        // load_tender(data.tender);
+        // load_awards(data.awards);
+        // load_contracts(data.contracts);
+        // load_implementation(data.contracts[0].implementation);
+        //
+        // buildTimeline(planning, stage);
+        // buildTimeline(tender, stage);
+        // buildTimeline(awards, stage);
+        // buildTimeline(contracts[0], stage);
     }
 
 
     // load_parties(data.parties);
 
-
-    $("#stage").text(stage);
     $("#ocid").text(data.ocid);
+    $("#stage").text(stage);
+    $("#ocdate").text(moment(data.date).format(("ll")));
+
 
 }

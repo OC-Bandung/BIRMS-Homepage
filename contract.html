@@ -1,118 +1,124 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <title>BIRMS</title>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/style.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BIRMS</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/contract/charts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
 
 
-<!--  header goes here  -->
+  <!--  header goes here  -->
 
 
-  <section class="bg-primary">
+  <section class="bg-primary inner-image-banner">
     <div class="container">
-      <div class="row  pt-5 pb-5">
+      <div class="row  pt-3 pb-5">
         <div class="col">
-           <div class="h6 text-uppercase">
-             <span class="float-right text-light"><a class="text-white" id="oc-json" target="_blank" href="#">json</a></span>
-           </div>
-           <div class="text-white">
-             <div class="d-inline-block w100px">Id</div>
-             <div id="ocid" class="h6 d-inline-block"></div>
-           </div>
-           <div class="text-white">
-             <div class="d-inline-block w100px">Project</div>
-             <div id="page-title" class="h3 d-inline-block"> </div>
-           </div>
+          <div class="text-white">
+            <div id="ocid" class="h6 d-inline-block"></div>
+            <i data-placement="right" data-toggle="tooltip" data-original-title="The Open Contracting ID. A unique identifier." class="material-icons small">info</i>
+          </div>
+          <div class="text-white">
+            <div id="page-title" class="h3 d-inline-block"> </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-<section>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-3">
+  <section>
+    <div class="container mt-5">
+
+      <div class="row">
+
+        <div class="col">
           <h6>Stage</h6>
           <h5 id="stage" class="text-capitalize"></h5>
-     </div>
-     <div data-placement="left" data-toggle="tooltip"  data-original-title="The date the procurement plan was approved." class="col-3">
-         <h6 class="d-inline">Date</h6>
-           <i  class="material-icons small">info</i>
-           <h5 id="ocdate"></h5>
-    </div>
+        </div>
 
-      <div id="tender-procurementMethod-container" class="col-3 invisible">
-        <h6></h6>
-        <h5 id="tender-procurementMethod" class="text-capitalize"></h5>
+        <div class="col" data-placement="left" data-toggle="tooltip" data-original-title="The date the procurement plan was approved.">
+          <h6 class="d-inline">Date</h6>
+          <i class="material-icons small">info</i>
+          <h5 id="ocdate"></h5>
+        </div>
+
+        <div id="tender-x-container" class="col-3 invisible">
+          <h6></h6>
+          <h5 id="tender-x" class="text-capitalize"></h5>
+        </div>
+
+        <div class="col h6 text-uppercase">
+          <span class="float-right "><a class="text-right" id="oc-json" target="_blank" href="#">json</a></span>
+        </div>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Progress timeline -->
   <section class="d-none">
-      <div class="container pt-5 ">
-        <div class="row">
-          <div class="col-12">
-                  <span class="h5">Progress Timeline</span>
-                  <div class="float-right">
-                      <ul class="list-inline">
-                          <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on-time"> <span> On Time </span></li>
-                          <li class="icons padding-right-large"><img src="img/icon-late.png" alt="late"> <span>  Late </span></li>
-                          <li class="icons padding-right-large"><img src="img/icon-next-milestone.png" alt="next milestone"> <span> Next Milestone </span></li>
-                      </ul>
-                  </div>
-          </div>
-          <div class="col-12">
-              <ul class="list-inline">
-                  <li class="padding-right-large">
-                      <a href="#planning"> <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Planning </span></a>
-                  </li>
-                  <li class="tender-stage hidden padding-right-large">
-                      <a href="#tender">   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Tender </span>  </a>
-                  </li>
-                  <li class="awards-stage hidden padding-right-large">
-                      <a href="#award">   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Award </span> </a>
-                  </li>
-                  <li class="contract-stage hidden padding-right-large">
-                      <a href="#contract">   <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Contract </span></a>
-                  </li>
-                  <li class="implementation-stage hidden padding-right-large">
-                      <a href="#implementation"><img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Implementation </span></a>
-                  </li>
-              </ul>
-          </div>
-              <div class="col-12">
-                  <div>
-                      <ul class="timeline" id="main-timeline">   </ul>
-                  </div>
-              </div>
+    <div class="container pt-5 ">
+      <div class="row">
+        <div class="col-12">
+          <span class="h5">Progress Timeline</span>
+          <div class="float-right">
+            <ul class="list-inline">
+              <li class="icons padding-right-large"><img src="img/icon-on-time.png" alt="on-time"> <span> On Time </span></li>
+              <li class="icons padding-right-large"><img src="img/icon-late.png" alt="late"> <span>  Late </span></li>
+              <li class="icons padding-right-large"><img src="img/icon-next-milestone.png" alt="next milestone"> <span> Next Milestone </span></li>
+            </ul>
           </div>
         </div>
+        <div class="col-12">
+          <ul class="list-inline">
+            <li class="padding-right-large">
+              <a href="#planning"> <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Planning </span></a>
+            </li>
+            <li class="tender-stage hidden padding-right-large">
+              <a href="#tender"> <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Tender </span> </a>
+            </li>
+            <li class="awards-stage hidden padding-right-large">
+              <a href="#award"> <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Award </span> </a>
+            </li>
+            <li class="contract-stage hidden padding-right-large">
+              <a href="#contract"> <img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Contract </span></a>
+            </li>
+            <li class="implementation-stage hidden padding-right-large">
+              <a href="#implementation"><img src="img/icon-arrow-down.png" alt="down arrow"> <span class="mdc-typography--title"> Implementation </span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <div>
+            <ul class="timeline" id="main-timeline"> </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <hr>
 
-  <section >
+  <section>
     <div class="container">
 
       <div class="row">
         <div class="col">
-
-          <div class="card">
-            <div class="card-header">
-              Planning
+          <div class="row pb-2 pt-3">
+            <div class="col">
+              <h3>Planning</h3>
             </div>
+          </div>
+          <div class="card card-border-planning">
             <div class="card-body">
               <div class="row">
 
@@ -130,17 +136,17 @@
 
 
 
-                <div id="planning-budget-year-container" class="col-3 pt-2">
+                <div id="planning-budget-year-container" class="col-3 pt-2 d-none">
                   <h6>Budget Year</h6>
                   <h5 id="planning-budget-year" class="text-capitalize">Budget Year</h5>
                 </div>
 
-                <div id="planning-budget-project-name-container" class="col-3 d-none pt-2">
+                <div id="planning-budget-project-name-container" class="col-5  pt-2">
                   <h6>Project Name</h6>
                   <h5 id="planning-budget-project-name" class="text-capitalize">Project Name</h5>
                 </div>
 
-                <div id="buyer-container" class="col-6 pt-4">
+                <div id="parties-buyer-container" class="col-6 pt-4 ">
                   <h6>Buyer Name</h6>
                   <h5 id="parties-buyer-name" class="text-capitalize"></h5>
                 </div>
@@ -149,87 +155,416 @@
                   <h6>Buyer Address</h6>
                   <h5 id="parties-buyer-address" class="text-capitalize"></h5>
                 </div>
+
+                <div id="parties-proc-container" class="col-6 pt-4  d-none">
+                  <h6>Procuring Entity</h6>
+                  <h5 id="parties-proc-name" class="text-capitalize"></h5>
+                </div>
+
+                <div id="parties-address-proc-container" class="col-6 pt-4 d-none">
+                  <h6>Procuring Entity Address</h6>
+                  <h5 id="parties-proc-address" class="text-capitalize"></h5>
+                </div>
+
                 <!-- end of col -->
               </div>
             </div>
           </div>
+        </div>
       </div>
-    </div>
   </section>
 
-  <hr>
 
-  <section class="d-none">
+
+  <section id="tender-section" class="d-none mt-5">
+
     <div class="container">
-      <div class="row">
+      <div class="row pb-2 pt-3">
         <div class="col">
-          <h6></h6>
-          <h5 id="tender-status" class="text-capitalize">Tender Status</h5>
-        </div>
-        <div class="col">
-          <h6>Tender Amount</h6>
-          <h5 id="tender-amount-value" class="text-capitalize">Tender Amount</h5>
-        </div>
-        <div class="col">
-          <h6>Award Criteria</h6>
-          <h5 id="tender-awardCriteria" class="text-capitalize">Award Criteria</h5>
+          <span class="h3">Tender</span> <span class="h6 float-right">(status: active)</span>
         </div>
       </div>
-
       <div class="row">
+        <div class="col">
+          <ul class="nav nav-tabs card-border-tender " id="tenderTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active border-left-0" id="tender-details-tab" data-toggle="tab" href="#tender-details" role="tab" aria-controls="tender-details" aria-selected="true">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tender-tenderers-tab" data-toggle="tab" href="#tender-tenderers" role="tab" aria-controls="tender-tenderers" aria-selected="false">Tenderers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tender-milestones-tab" data-toggle="tab" href="#tender-milestones" role="tab" aria-controls="tender-milestones" aria-selected="false">Milestones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="tender-help-tab" data-toggle="tab" href="#tender-help" role="tab" aria-controls="tender-help" aria-selected="false">Help</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="tenderTabContent">
+            <div class="tab-pane fade show active" id="tender-details" role="tabpanel" aria-labelledby="tender-details-tab">
+              <div class="row">
+                <div class="col">
+                  <div class="card rounded-0 border-top-0 card-border-tender">
+                    <div class="card-body p-0">
+                      <div class="row bg-dark text-white">
 
+                        <div id="tender-mainProcurementCategory-container" class="col pt-3">
+                          <h6>Procurement Category</h6>
+                          <h5 id="tender-mainProcurementCategory" class="text-capitalize"></h5>
+                        </div>
+
+                        <div id="tender-procurementMethod-container" class="col pt-3">
+                          <h6>Procurement Method</h6>
+                          <h5 id="tender-procurementMethod" class="text-capitalize"></h5>
+                        </div>
+
+
+
+                        <div id="tender-numberOfTenderers-container" class="col text-center pt-3">
+                          <h6># Tenderers</h6>
+                          <h5 id="tender-numberOfTenderers" class="text-capitalize"></h5>
+                        </div>
+
+                        <div id="tender-awardCriteria-container" class="col pt-3">
+                          <h6>Award Criteria*</h6>
+                          <h5 id="tender-awardCriteria" class="text-capitalize">PriceOnly</h5>
+                        </div>
+
+
+
+                      </div>
+
+                      <!-- <div class="row mt-3">
+                        <div class="col-12">
+                          <span class="float-right"> <small> + add to calendar </small> </span>
+                        </div>
+                      </div> -->
+
+                      <div class="row mt-5">
+                        <div class="col-7">
+                          <div class="row">
+                            <div class="col-6">
+                            <div id="tender-tenderPeriod-startDate-container" class="col-12">
+                              <div data-toggle="tooltip" title="The period when the tender is open for submissions.">
+                                <h6>Tender Start <i class="material-icons small">info</i></h6>
+                                <h5 id="tender-tenderPeriod-startDate" class="text-capitalize"></h5>
+                              </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="vertical-line text-center">
+                                </div>
+                            </div>
+
+
+                            <div class="col-12 text-center  small">
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                 Days to submit
+                                  <span class="badge badge-dark badge-pill">10</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                + add to calendar
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="vertical-line text-center">
+                                </div>
+                            </div>
+
+
+                            <div id="tender-tenderPeriod-endDate-container" class="col-12 ">
+                              <div>
+                                <h6>Tender End <i class="material-icons small">info</i></h6>
+                                <h5 id="tender-tenderPeriod-endDate" class="text-capitalize"></h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="col-12 ">
+                              <div class="row">
+
+                                <div id="tender-tenderPeriod-startDate-container" class="col-12 ">
+                                  <div class="">
+                                    <h6>Estimated Contract Start</h6>
+                                    <h5 id="tender-contractPeriod-startDate" class="text-capitalize"></h5>
+                                  </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="vertical-line text-center">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 ">
+                                    <ul class="list-group small list-group-flush">
+                                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Contract duration (days)
+                                        <span class="badge badge-dark badge-pill">31</span>
+                                      </li>
+                                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                                      + add to calendar
+                                      </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="vertical-line text-center">
+                                    </div>
+                                </div>
+
+                                <div id="tender-tenderPeriod-endDate-container" class="col-12 pt-3 ">
+                                  <div class="">
+                                    <h6>Estimated Contract End</h6>
+                                    <h5 id="tender-contractPeriod-endDate" class="text-capitalize"></h5>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="col-5">
+                          <div class="row">
+                            <div class="col-12">
+                              <ul id="vertical-chart">
+                                <li id="expected"></li>
+                                <li id="actual"></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div id="tender-numberOfTenderers-container" class="col-6 pt-3">
+                              <h6>Budget Amount </h6>
+                              <h5 id="tender-x1" class="text-capitalize">1.2</h5>
+                            </div>
+
+                            <div id="tender-numberOfTenderers-container" class="col-6 pt-3">
+                              <h6>Tender Amount </h6>
+                              <h5 id="tender-x1" class="text-capitalize">1.2</h5>
+                            </div>
+
+
+                          </div>
+                        </div>
+
+
+
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tender-milestones" role="tabpanel" aria-labelledby="tender-milestones-tab">
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <div id="tender-milestones-cards" class="row mt-3 font-weight-light">
+
+                        <div class="container py-2">
+
+                          <!-- timeline item 1 -->
+                          <div class="row">
+                            <!-- timeline item 1 left dot -->
+                            <div class="col-auto text-center flex-column d-none d-sm-flex">
+                              <div class="row h-50">
+                                <div class="col">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                              <h5 class="m-2">
+                                          <span class="badge badge-pill bg-light border">&nbsp;</span>
+                                      </h5>
+                              <div class="row h-50">
+                                <div class="col border-right">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                            </div>
+                            <!-- timeline item 1 event content -->
+                            <div class="col py-2">
+                              <div class="card">
+                                <div class="card-body">
+                                  <div class="float-right text-muted">Mon, Jan 9th 2019 7:00 AM</div>
+                                  <h6 class="text-muted">Day 1 Orientation</h6>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--/row-->
+                          <!-- timeline item 2 -->
+                          <div class="row">
+                            <div class="col-auto text-center flex-column d-none d-sm-flex">
+                              <div class="row h-50">
+                                <div class="col border-right">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                              <h5 class="m-2">
+                                          <span class="badge badge-pill bg-primary">&nbsp;</span>
+                                      </h5>
+                              <div class="row h-50">
+                                <div class="col border-right">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                            </div>
+                            <div class="col py-2">
+                              <div class="card border-success shadow">
+                                <div class="card-body">
+                                  <div class="float-right text-success">Tue, Jan 10th 2019 8:30 AM</div>
+                                  <h4 class="card-title text-success">Day 2 Sessions</h4>
+                                  <p class="card-text">Sign-up for the lessons and speakers that coincide with your course syllabus. Meet and greet with instructors.</p>
+                                  <button class="btn btn-sm btn-outline-secondary" type="button" data-target="#t2_details" data-toggle="collapse">Show Details ▼</button>
+                                  <div class="collapse border" id="t2_details">
+                                    <div class="p-2 text-monospace">
+                                      <div>08:30 - 09:00 Breakfast in CR 2A</div>
+                                      <div>09:00 - 10:30 Live sessions in CR 3</div>
+                                      <div>10:30 - 10:45 Break</div>
+                                      <div>10:45 - 12:00 Live sessions in CR 3</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--/row-->
+
+                          <!-- timeline item 4 -->
+                          <div class="row">
+                            <div class="col-auto text-center flex-column d-none d-sm-flex">
+                              <div class="row h-50">
+                                <div class="col border-right">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                              <h5 class="m-2">
+                                          <span class="badge badge-pill bg-light border">&nbsp;</span>
+                                      </h5>
+                              <div class="row h-50">
+                                <div class="col">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                              </div>
+                            </div>
+                            <div class="col py-2">
+                              <div class="card">
+                                <div class="card-body">
+                                  <div class="float-right text-muted">Thu, Jan 12th 2019 11:30 AM</div>
+                                  <h4 class="card-title">Day 4 Wrap-up</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tender-tenderers" role="tabpanel" aria-labelledby="tender-tenderers-tab">
+              <div class="row">
+                <div class="card border-top-0">
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tender-tenderers-list"></tbody>
+                  </table>
+
+                  <div class="text-center" id="navcontainer">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tender-help" role="tabpanel" aria-labelledby="tender-help-tab">
+              c
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="row">
-
-      </div>
-
     </div>
   </section>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- <div id="wrapper">
+    <section>
+        <div class="data-container"></div>
+        <div id="pagination-demo1"></div>
+        <div class="data-container"></div>
+        <div id="pagination-demo2"></div>
+    </section>
+</div> -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
 
-<script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="js/moment.js"> </script>
-<script type="text/javascript" src="js/contract/ui.js"> </script>
+  <script type="text/javascript" src="js/moment.js">
+  </script>
+  <script type="text/javascript" src="js/pagination.min.js">
+  </script>
 
-
-<!-- a script for each stage  -->
-<script type="text/javascript" src="js/contract/data.js"> </script>
+  <script type="text/javascript" src="js/contract/ui.js">
+  </script>
 
 
-<script type="text/javascript" src="js/contract/timeline.js"> </script>
-
-<script type="text/javascript" src="js/contract/ocds/planning.js"> </script>
-<script type="text/javascript" src="js/contract/ocds/tender.js"> </script>
-<script type="text/javascript" src="js/contract/ocds/awards.js"> </script>
-<script type="text/javascript" src="js/contract/ocds/contracts.js"> </script>
-<script type="text/javascript" src="js/contract/ocds/implementation.js"> </script>
+  <!-- a script for each stage  -->
+  <script type="text/javascript" src="js/contract/data.js">
+  </script>
 
 
-<script type="text/javascript" src="js/contract/charts.js"> </script>
+  <script type="text/javascript" src="js/contract/timeline.js">
+  </script>
+
+  <script type="text/javascript" src="js/contract/ocds/planning.js">
+  </script>
+  <script type="text/javascript" src="js/contract/ocds/tender.js">
+  </script>
+  <script type="text/javascript" src="js/contract/ocds/awards.js">
+  </script>
+  <script type="text/javascript" src="js/contract/ocds/contracts.js">
+  </script>
+  <script type="text/javascript" src="js/contract/ocds/implementation.js">
+  </script>
+
+
 
 
 
 </body>
+
 </html>
