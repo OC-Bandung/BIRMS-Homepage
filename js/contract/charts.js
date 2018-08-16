@@ -22,4 +22,4 @@ $("#chart-contract-amount").width((contract/highest)*max);
 $("#chart-contract-amount").append(contract);
 
 
-console.log("test");
+ 

@@ -11,16 +11,38 @@ function load_tender(data) {
    $("#tender-procurementMethod").text(data.tender.procurementMethod);
    $("#tender-numberOfTenderers").text(data.tender.numberOfTenderers);
 
+
    $("#tender-tenderPeriod-startDate").text(moment(data.tender.tenderPeriod.startDate).format('ll'));
 
    $("#tender-tenderPeriod-endDate").text(moment(data.tender.tenderPeriod.endDate).format('ll'));
 
-   $("#tender-contractPeriod-startDate").text(moment(data.tender.tenderPeriod.startDate).format('ll'));
-   $("#tender-contractPeriod-endDate").text(moment(data.tender.tenderPeriod.endDate).format('ll'));
+   $("#tender-contractPeriod-startDate").text(moment(data.tender.contractPeriod.startDate).format('ll'));
+   $("#tender-contractPeriod-endDate").text(moment(data.tender.contractPeriod.endDate).format('ll'));
 
+
+
+
+   $("#tender-tender-days-diff").text(
+     moment(data.tender.tenderPeriod.endDate).diff( moment(data.tender.tenderPeriod.startDate), 'days') + " days"
+   );
+
+   $("#tender-contract-days-diff").text(
+     moment(data.tender.contractPeriod.endDate).diff( moment(data.tender.contractPeriod.startDate), 'days') + " days"
+   );
 
    var budget = data.planning.budget.amount.amount;
    var tender = data.tender.value.amount;
+   var diff_tb = tender - budget;
+   var diff_tb_perc = (tender/budget * 100).toFixed(2) - 100;
+
+   $("#tender-budget-amount").text(budget/1000000);
+   $("#tender-value-amount").text(tender/1000000);
+   $("#tender-value-diff").text( diff_tb /1000000);
+   if (diff_tb_perc <= 0 ) {
+     $("#tender-value-diff-percentage").append("<div class='text-success'><i class='material-icons'>arrow_downward</i>" + diff_tb_perc + " % </div>");
+   } else {
+
+   }
 
    var highest = Math.max(budget, tender);
 
@@ -30,8 +52,8 @@ function load_tender(data) {
    $("#actual").css('height', (tender/highest)*max);
 
 
-   $("li#expected").append(budget/1000000);
-   $("li#actual").append(tender/1000000);
+   $("li#expected").append('<span class="chart-label mt-5 h6 bg-dark text-white p-2" style="margin-left:-120px;"> Budget: ' + budget/1000000 + ' M<span>');
+   $("li#actual").append( '<span class="chart-label mt-5 ml-5 h6 bg-dark text-white p-2"> Tender: ' + tender/1000000 + ' M<span>');
 
 
    if (data.tender.tenderers) {

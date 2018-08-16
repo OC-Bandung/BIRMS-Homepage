@@ -31,13 +31,13 @@ ul#vertical-chart li {
 
 
 #expected {
-    width: 50px;
-    background-color: #ffe57f;
+    width: 60px;
+    background-color: orange;
 }
 
 #actual {
-    width: 50px;
-    background-color: #ffd012;
+    width: 60px;
+    background-color: #c6e9bc;
 }
 
 #horizontal-chart {

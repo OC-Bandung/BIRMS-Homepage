@@ -166,6 +166,11 @@
                   <h5 id="parties-proc-address" class="text-capitalize"></h5>
                 </div>
 
+                <div id="parties-address-proc-container" class="col-12 pt-4">
+                  <h6>Rationale*</h6>
+                  <p id="parties-proc-rationale" class="text-capitalize">Berkembangnya  ekonomi  kreatif  untuk  mendukung  tercapainya Bandung sebagai Kota Kreatif.</p>
+                </div>
+
                 <!-- end of col -->
               </div>
             </div>
@@ -181,7 +186,7 @@
     <div class="container">
       <div class="row pb-2 pt-3">
         <div class="col">
-          <span class="h3">Tender</span> <span class="h6 float-right">(status: active)</span>
+          <span class="h3">Tender</span> <span class="h6 ml-3"> <i class="material-icons">outlined_flag</i>status: active</span>
         </div>
       </div>
       <div class="row">
@@ -205,8 +210,8 @@
               <div class="row">
                 <div class="col">
                   <div class="card rounded-0 border-top-0 card-border-tender">
-                    <div class="card-body p-0">
-                      <div class="row bg-dark text-white">
+                    <div class="card-body">
+                      <div class="row ">
 
                         <div id="tender-mainProcurementCategory-container" class="col pt-3">
                           <h6>Procurement Category</h6>
@@ -230,135 +235,115 @@
                           <h5 id="tender-awardCriteria" class="text-capitalize">PriceOnly</h5>
                         </div>
 
-
-
                       </div>
 
-                      <!-- <div class="row mt-3">
-                        <div class="col-12">
-                          <span class="float-right"> <small> + add to calendar </small> </span>
-                        </div>
-                      </div> -->
 
                       <div class="row mt-5">
-                        <div class="col-7">
+
+                        <div class="col">
+                          <div id="tender-tenderPeriod-startDate-container" class="col-12 border-left">
+                            <div data-toggle="tooltip" title="The period when the tender is open for submissions.">
+                              <h6>Tender Start   <i class="material-icons small lightgray">info</i></h6>
+                              <h5 id="tender-tenderPeriod-startDate" class="text-capitalize mb-0"></h5>
+                            </div>
+                          </div>
+
+                          <div class="col-12 text-center pr-3 pt-3 pb-3 small border-left">
+                            <ul class="list-group w-75 list-group-flush">
+                              <li  id="tender-tender-days-diff" class="list-group-item p-2 d-flex justify-content-between align-items-center">
+
+                              </li>
+                              <li class="list-group-item  p-2 d-flex justify-content-between align-items-center">
+                              + add to calendar
+                              </li>
+                            </ul>
+                          </div>
+
+                          <div id="tender-tenderPeriod-endDate-container" class="col-12 border-left">
+                            <div class="">
+                              <h6>Tender End   <i class="material-icons small">info</i></h6>
+                              <h5 id="tender-tenderPeriod-endDate" class="text-capitalize "></h5>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div class="col">
+                        <div class="col-12 ">
                           <div class="row">
-                            <div class="col-6">
-                            <div id="tender-tenderPeriod-startDate-container" class="col-12">
-                              <div data-toggle="tooltip" title="The period when the tender is open for submissions.">
-                                <h6>Tender Start <i class="material-icons small">info</i></h6>
-                                <h5 id="tender-tenderPeriod-startDate" class="text-capitalize"></h5>
+                            <div id="tender-tenderPeriod-startDate-container" class="col-12 border-left">
+                              <div >
+                                <h6>Estimated Contract Start   <i class="material-icons small">info</i></h6>
+                                <h5 id="tender-contractPeriod-startDate" class="text-capitalize"></h5>
                               </div>
                             </div>
+                            <div class="col-12  border-left">
+                                <ul class="list-group small pr-3 pt-3 pb-3  w-75 list-group-flush">
+                                  <li id="tender-contract-days-diff" class="list-group-item p-2 d-flex justify-content-between align-items-center">
 
-                            <div class="col-12">
-                                <div class="vertical-line text-center">
-                                </div>
+                                  </li>
+                                  <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
+                                  + add to calendar
+                                  </li>
+                                </ul>
                             </div>
-
-
-                            <div class="col-12 text-center  small">
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                 Days to submit
-                                  <span class="badge badge-dark badge-pill">10</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                + add to calendar
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="vertical-line text-center">
-                                </div>
-                            </div>
-
-
-                            <div id="tender-tenderPeriod-endDate-container" class="col-12 ">
+                            <div id="tender-tenderPeriod-endDate-container" class="col-12 border-left">
                               <div>
-                                <h6>Tender End <i class="material-icons small">info</i></h6>
-                                <h5 id="tender-tenderPeriod-endDate" class="text-capitalize"></h5>
+                                <h6>Estimated Contract End   <i class="material-icons small">info</i></h6>
+                                <h5 id="tender-contractPeriod-endDate" class="text-capitalize"></h5>
                               </div>
                             </div>
                           </div>
-                          <div class="col-6">
-                            <div class="col-12 ">
-                              <div class="row">
-
-                                <div id="tender-tenderPeriod-startDate-container" class="col-12 ">
-                                  <div class="">
-                                    <h6>Estimated Contract Start</h6>
-                                    <h5 id="tender-contractPeriod-startDate" class="text-capitalize"></h5>
-                                  </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="vertical-line text-center">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <ul class="list-group small list-group-flush">
-                                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        Contract duration (days)
-                                        <span class="badge badge-dark badge-pill">31</span>
-                                      </li>
-                                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                                      + add to calendar
-                                      </li>
-                                    </ul>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="vertical-line text-center">
-                                    </div>
-                                </div>
-
-                                <div id="tender-tenderPeriod-endDate-container" class="col-12 pt-3 ">
-                                  <div class="">
-                                    <h6>Estimated Contract End</h6>
-                                    <h5 id="tender-contractPeriod-endDate" class="text-capitalize"></h5>
-                                  </div>
-                                </div>
-
-                              </div>
-
-                            </div>
-                          </div>
                         </div>
-                        </div>
-
-                        <div class="col-5">
-                          <div class="row">
-                            <div class="col-12">
-                              <ul id="vertical-chart">
-                                <li id="expected"></li>
-                                <li id="actual"></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div id="tender-numberOfTenderers-container" class="col-6 pt-3">
-                              <h6>Budget Amount </h6>
-                              <h5 id="tender-x1" class="text-capitalize">1.2</h5>
-                            </div>
-
-                            <div id="tender-numberOfTenderers-container" class="col-6 pt-3">
-                              <h6>Tender Amount </h6>
-                              <h5 id="tender-x1" class="text-capitalize">1.2</h5>
-                            </div>
-
-
-                          </div>
-                        </div>
-
-
-
                       </div>
 
 
+                      <div class="col">
+                        <div class="col-12 ">
+                          <div class="row">
+                            <div id="tender-tenderPeriod-startDate-container" class="col-12 border-left">
+                              <div >
+                                <h6>Budget Amount <i class="material-icons small">info</i></h6>
+                                <h5 id="tender-budget-amount" class="text-capitalize">Rp 11.7 M</h5>
+                              </div>
+                            </div>
+                            <div class="col-12  border-left">
+                                <ul class="list-group small pr-3 pt-3 pb-3  w-75 list-group-flush">
+                                  <li  class="list-group-item p-2 d-flex align-items-center">
+                                    <span class="pr-1">Rp. </span> <span id="tender-value-diff"></span><span class="pl-1"> M</span>
+                                  </li>
+                                  <li class="list-group-item p-2 d-flex ">
+                                    <span class="badge badge-pill badge-success">Tender is less than budget</span>
+                                  </li>
+                                </ul>
+                            </div>
+                            <div id="tender-tenderPeriod-endDate-container" class="col-12 border-left">
+                              <!-- The total upper estimated value of the procurement -->
+                              <div>
+                                <h6> Tender value <i class="material-icons small">info</i></h6>
+                                <div>
+                                  <span="h5">Rp.</span>
+                                  <span class="h4" id="tender-value-amount" class="text-capitalize"> 11.7 M</span>
+                                  <span="h5">M</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col"></div>
+                    <div class="col-5">
+                      <ul id="vertical-chart" class="mb-0">
+                         <li id="expected"></li>
+                         <li id="actual"></li>
+                     </ul>
+                     <div id="tender-value-diff-percentage" class="h6 p-2 text-center bg-light">  </div>
+                    </div>
+                    <div class="col"></div>
+                  </div>
 
                     </div>
                   </div>
