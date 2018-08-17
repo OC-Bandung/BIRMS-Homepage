@@ -422,3 +422,7 @@ body {
 .bl-3px-black {
   border-left: 3px solid black;
 }
+
+tbody#tender-tenderers-list tr td {
+  height: 63px;
+}
