@@ -411,4 +411,14 @@ body {
   position: absolute;
 
 }
- 
+
+.tender-timeline-counter{
+  font-weight: 700;
+  font-size: 2rem;
+  color: lightgray;
+
+}
+
+.bl-3px-black {
+  border-left: 3px solid black;
+}

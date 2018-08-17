@@ -1,5 +1,7 @@
 function load_tender(data) {
 
+  //ocds-afzrfb-s-2016-6124079
+
     $("#tender-section").removeClass("d-none");
 
     if (data.tender.title) {
@@ -35,6 +37,13 @@ function load_tender(data) {
    var diff_tb = tender - budget;
    var diff_tb_perc = (tender/budget * 100).toFixed(2) - 100;
 
+   if (diff_tb <= 0 ) {
+     $("#tender-amount-flag").html('<span class="badge badge-pill badge-success">Tender is less than budget</span>');
+   } else {
+     $("#tender-amount-flag").html('<span class="badge badge-pill badge-danger">Tender is more than budget</span>');
+
+   }
+
    $("#tender-budget-amount").text(budget/1000000);
    $("#tender-value-amount").text(tender/1000000);
    $("#tender-value-diff").text( diff_tb /1000000);
@@ -56,54 +65,49 @@ function load_tender(data) {
    $("li#actual").append( '<span class="chart-label mt-5 ml-5 h6 bg-dark text-white p-2"> Tender: ' + tender/1000000 + ' M<span>');
 
 
-   if (data.tender.tenderers) {
-     //pagination and tenderers
-     $(function() {
-       (function(name) {
-         var container = $('#' + name);
-         var navcontainer = $("#navcontainer");
-         var sources = function () {
-           var result = [];
-           //only show specific values, not whole array that includes things like contact phone and email
-           for (i=0; i< data.tender.tenderers.length; i++) {
-             tenderers_fields =  [ (i+1),   data.tender.tenderers[i].id  ,  data.tender.tenderers[i].name  , data.tender.tenderers[i].address.streetAddress ];
-             result.push(tenderers_fields);
-           }
-           return result;
-         }();
-         var options = {
-           dataSource: sources,
-           pageSize: 5,
-           callback: function (response, pagination) {
-             var dataHtml = '';
-             $.each(response, function (index, item) {
-               dataHtml += '<tr>';
-               for (i=0; i< item.length; i++) {
-                 dataHtml += '<td>' + item[i] + '</td>';
-               }
-                dataHtml += '</tr>';
-             });
-             navcontainer.prev().html(dataHtml);
-           }
-         };
-         navcontainer.pagination(options);
-       })('tender-tenderers-list');
+   var numberMilestones = data.tender.milestones.length ;
 
-     })
-   } else {
-     $("#tender-tenderers-tab").addClass("d-none");
+   $("sup#tender-milestone-count").text("(" + numberMilestones + ")");
+
+
+   for (i=0; i < data.tender.milestones.length  ; i++ ) {
+
+      diff_milestone = moment(data.tender.milestones[i].dateMet).diff( moment(data.tender.milestones[i].dueDate), 'days') ;
+
+       html = '<div class="col-6 mt-2">';
+          html +='<div class="card  shadow">';
+           html +='<div class="card-body">';
+           html+= '<div class="tender-timeline-counter text-center float-right">' + (i+1) + '</div>';
+              html +='<h5 class="card-title">' +   data.tender.milestones[i].title +   '</h5>';
+                html += '<div class="row">';
+                html += '<div class="col-6">';
+                    html+= '<div class="h6">Due Date: ' + moment(data.tender.milestones[i].dueDate).format('ll')  + '</div>';
+                    html+=  '<div class="h6">Date Met: ' + moment(data.tender.milestones[i].dateMet).format('ll')  + '</div>';
+                html += '</div>';
+                if (diff_milestone <=0) {
+                  html += '<div class="col-6 h6 pt-3 text-success float-right">' +  diff_milestone +  '<small> days before deadline</small></div>';
+                } else {
+                  html += '<div class="col-6 h6 pt-3 text-danger float-right"> ' +  diff_milestone +  '<small> days after deadline</small> </div>';
+                }
+
+              html+= '</div>';
+             html +='<div><button class="btn btn-sm btn-outline-secondary float-right" type="button" data-target="#t_details" data-toggle="collapse">Add to Calendar ▼</button>';
+             html +='<div class="collapse bl-3px-black" id="t_details">';
+               html +='<div class="p-2 small text-monospace">';
+                 html +='<div><a href="#">add to Google Calendar</a></div>';
+                html += '<div><a href="#">add to Outlook</a></div>';
+                 html +='<div><a href="#">send by email</a></div>';
+              html += '</div>';
+           html +='</div>';
+          html += '</div></div>';
+         html +='</div>';
+      html +=' </div>';
+
+    $("#tender-milestones-cards").append(html);
+      //html = "<div class='col-12'><div class='card border-0'><div class='card-body '><div class='h6 text-muted'>" +  tender.milestones[i].title.replace( "_", " ") +  "</div></div></div></div>";
+      // $("sup#tender-milestone-count").append (html);
+      //  console.log(tender.milestones[i].title);
    }
-
-
-
-
-
-
-   // for (i=0; i < tender.milestones.length ; i++ ) {
-   //    html = "<div class='col-12'><div class='card border-0'><div class='card-body '><div class='h6 text-muted'>" +  tender.milestones[i].title.replace( "_", " ") +  "</div></div></div></div>";
-   //    $("#tender-milestones-cards").append (html);
-   //     console.log(tender.milestones[i].title);
-   // }
 
     //     html= '<div class="col-12><div class="card"><div class="card-body"><div class="float-right text-muted"></div><h6 class="text-muted">' + tender.milestones[i].title.replace( "_", " ") + '</h6> </div></div> </div</div>';
 

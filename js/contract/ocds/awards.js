@@ -27,6 +27,44 @@ function load_awards(awards) {
 
     $("#awards-winner-info").html(html);
 
+    // if (data.tender.tenderers) {
+    //   //pagination and tenderers
+    //   $(function() {
+    //     (function(name) {
+    //       var container = $('#' + name);
+    //       var navcontainer = $("#navcontainer");
+    //       var sources = function () {
+    //         var result = [];
+    //         //only show specific values, not whole array that includes things like contact phone and email
+    //         for (i=0; i< data.tender.tenderers.length; i++) {
+    //           tenderers_fields =  [ (i+1),   data.tender.tenderers[i].id  ,  data.tender.tenderers[i].name  , data.tender.tenderers[i].address.streetAddress ];
+    //           result.push(tenderers_fields);
+    //         }
+    //         return result;
+    //       }();
+    //       var options = {
+    //         dataSource: sources,
+    //         pageSize: 5,
+    //         callback: function (response, pagination) {
+    //           var dataHtml = '';
+    //           $.each(response, function (index, item) {
+    //             dataHtml += '<tr>';
+    //             for (i=0; i< item.length; i++) {
+    //               dataHtml += '<td>' + item[i] + '</td>';
+    //             }
+    //              dataHtml += '</tr>';
+    //           });
+    //           navcontainer.prev().html(dataHtml);
+    //         }
+    //       };
+    //       navcontainer.pagination(options);
+    //     })('tender-tenderers-list');
+    //
+    //   })
+    // } else {
+    //   $("#tender-tenderers-tab").addClass("d-none");
+    // }
+    //
 
 
     if (tender.tenderers) {
