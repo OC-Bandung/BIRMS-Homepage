@@ -37,30 +37,22 @@
 
   <section>
     <div class="container mt-5">
-
       <div class="row">
-
         <div class="col">
           <h6>Stage</h6>
           <h5 id="stage" class="text-capitalize"></h5>
         </div>
-
         <div class="col" data-placement="left" data-toggle="tooltip" data-original-title="The date the procurement plan was approved.">
           <h6 class="d-inline">Date</h6>
           <i class="material-icons small">info</i>
           <h5 id="ocdate"></h5>
         </div>
-
-        <div id="tender-x-container" class="col-3 invisible">
-          <h6></h6>
-          <h5 id="tender-x" class="text-capitalize"></h5>
-        </div>
-
-        <div class="col h6 text-uppercase">
-          <span class="float-right "><a class="text-right" id="oc-json" target="_blank" href="#">json</a></span>
+        <div class="colfloat-right  h6 text-uppercase float-right">
+          <div class="text-right"><a id="oc-json" target="_blank" href="#">json</a></div>
+          <div><a class="text-right" id="add-to-watchlist" target="_blank" href="#">add to list</a></div>
+          <div><a class="text-right" id="get-watchlist" target="_blank" href="#"> Get watchlist</a></div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -110,7 +102,6 @@
 
   <section>
     <div class="container">
-
       <div class="row">
         <div class="col">
           <div class="row pb-2 pt-3">
@@ -133,8 +124,6 @@
                   <span class="h3" id="planning-budget-amount-amount"></span>
                   <span class="h5"> M</span>
                 </div>
-
-
 
                 <div id="planning-budget-year-container" class="col-3 pt-2 d-none">
                   <h6>Budget Year</h6>
@@ -186,7 +175,7 @@
     <div class="container">
       <div class="row pb-2 pt-3">
         <div class="col">
-          <span class="h3">Tender</span> <span class="h6 ml-3"> <i class="material-icons">outlined_flag</i>status: active</span>
+          <span class="h3">Tender</span> <span id="tender-status-container" class="h6 ml-3"> <i class="material-icons">outlined_flag</i>status: <span id="tender-status"></span></span>
         </div>
       </div>
       <div class="row">
@@ -196,10 +185,10 @@
               <a class="nav-link active border-left-0" id="tender-details-tab" data-toggle="tab" href="#tender-details" role="tab" aria-controls="tender-details" aria-selected="true">Details</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="tender-milestones-tab" data-toggle="tab" href="#tender-milestones" role="tab" aria-controls="tender-milestones" aria-selected="false">Milestones <sup id="tender-milestone-count">()</sup></a>
+              <a class="nav-link d-none" id="tender-milestones-tab" data-toggle="tab" href="#tender-milestones" role="tab" aria-controls="tender-milestones" aria-selected="false">Milestones <sup id="tender-milestone-count">()</sup></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="tender-registered-bidders-tab" data-toggle="tab" href="#tender-registered-bidders" role="tab" aria-controls="tender-registered-bidders" aria-selected="false">Registered Bidders <sup id="tender-registered-bidders-counter">()</sup></a>
+              <a class="nav-link d-none" id="tender-registered-bidders-tab" data-toggle="tab" href="#tender-registered-bidders" role="tab" aria-controls="tender-registered-bidders" aria-selected="false">Registered Bidders <sup id="tender-registered-bidders-counter">()</sup></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" id="tender-help-tab" data-toggle="tab" href="#tender-help" role="tab" aria-controls="tender-help" aria-selected="false">Engagement Stats</a>
@@ -212,32 +201,27 @@
                   <div class="card rounded-0 border-top-0 card-border-tender">
                     <div class="card-body">
                       <div class="row ">
-
-                        <div id="tender-mainProcurementCategory-container" class="col pt-3">
+                        <div id="tender-mainProcurementCategory-container" class="col d-none pt-3">
                           <h6>Procurement Category</h6>
                           <h5 id="tender-mainProcurementCategory" class="text-capitalize"></h5>
                         </div>
 
-                        <div id="tender-procurementMethod-container" class="col pt-3">
+                        <div id="tender-procurementMethod-container" class="col d-none pt-3">
                           <h6>Procurement Method</h6>
                           <h5 id="tender-procurementMethod" class="text-capitalize"></h5>
                         </div>
 
-                        <div id="tender-numberOfTenderers-container" class="col text-center pt-3">
+                        <div id="tender-numberOfTenderers-container" class="col d-none text-center pt-3">
                           <h6># Tenderers</h6>
                           <h5 id="tender-numberOfTenderers" class="text-capitalize"></h5>
                         </div>
 
-                        <div id="tender-awardCriteria-container" class="col pt-3">
+                        <div id="tender-awardCriteria-container" class="col d-none pt-3">
                           <h6>Award Criteria*</h6>
                           <h5 id="tender-awardCriteria" class="text-capitalize">PriceOnly</h5>
                         </div>
-
                       </div>
-
-
                       <div class="row mt-5">
-
                         <div class="col">
                           <div id="tender-tenderPeriod-startDate-container" class="col-12 border-left">
                             <div data-toggle="tooltip" title="The period when the tender is open for submissions.">
@@ -245,18 +229,16 @@
                               <h5 id="tender-tenderPeriod-startDate" class="text-capitalize mb-0"></h5>
                             </div>
                           </div>
-
                           <div class="col-12 text-center pr-3 pt-3 pb-3 small border-left">
                             <ul class="list-group w-75 list-group-flush">
-                              <li id="tender-tender-days-diff" class="list-group-item p-2 d-flex justify-content-between align-items-center">
-
+                              <li id="tender-tender-days-diff-container" class="list-group-item d-none p-2 d-flex justify-content-between align-items-center">
+                                <span id="tender-tender-days-diff"></span>
                               </li>
                               <li class="list-group-item  p-2 d-flex justify-content-between align-items-center">
                                 + add to calendar
                               </li>
                             </ul>
                           </div>
-
                           <div id="tender-tenderPeriod-endDate-container" class="col-12 border-left">
                             <div class="">
                               <h6>Tender End   <i class="material-icons small">info</i></h6>
@@ -264,7 +246,6 @@
                             </div>
                           </div>
                         </div>
-
                         <div class="col">
                           <div class="col-12 ">
                             <div class="row">
@@ -276,9 +257,7 @@
                               </div>
                               <div class="col-12  border-left">
                                 <ul class="list-group small pr-3 pt-3 pb-3  w-75 list-group-flush">
-                                  <li id="tender-contract-days-diff" class="list-group-item p-2 d-flex justify-content-between align-items-center">
-
-                                  </li>
+                                  <li id="tender-contract-days-diff" class="list-group-item p-2 d-flex justify-content-between align-items-center"></li>
                                   <li class="list-group-item p-2 d-flex justify-content-between align-items-center">
                                     + add to calendar
                                   </li>
@@ -293,34 +272,30 @@
                             </div>
                           </div>
                         </div>
-
-
                         <div class="col">
                           <div class="col-12 ">
                             <div class="row">
-                              <div id="tender-tenderPeriod-startDate-container" class="col-12 border-left">
+                              <div id="tender-budget-amount-container" class="col-12  d-none border-left">
                                 <div>
                                   <h6>Budget Amount <i class="material-icons small">info</i></h6>
-                                  <h5 id="tender-budget-amount" class="text-capitalize">Rp 11.7 M</h5>
+                                  <span class="h5 pr-1">Rp. </span> <span class="h4" id="tender-budget-amount"></span><span class="h5 pl-1"> M</span>
                                 </div>
                               </div>
-                              <div class="col-12  border-left">
+                              <div id="tender-value-diff-container" class="col-12 d-none border-left">
                                 <ul class="list-group small pr-3 pt-3 pb-3  w-75 list-group-flush">
                                   <li class="list-group-item p-2 d-flex align-items-center">
                                     <span class="pr-1">Rp. </span> <span id="tender-value-diff"></span><span class="pl-1"> M</span>
                                   </li>
-                                  <li id="tender-amount-flag" class="list-group-item p-2 d-flex ">
-
-                                  </li>
+                                  <li id="tender-amount-flag" class="list-group-item p-2 d-flex "> </li>
                                 </ul>
                               </div>
-                              <div id="tender-tenderPeriod-endDate-container" class="col-12 border-left">
+                              <div id="tender-value-amount-container" class="col-12 d-none border-left">
                                 <!-- The total upper estimated value of the procurement -->
                                 <div>
                                   <h6> Tender value <i class="material-icons small">info</i></h6>
                                   <div>
                                     <span="h5">Rp.</span>
-                                      <span class="h4" id="tender-value-amount" class="text-capitalize"> 11.7 M</span>
+                                      <span class="h4" id="tender-value-amount" class="text-capitalize"> </span>
                                       <span="h5">M</span>
                                   </div>
                                 </div>
@@ -328,44 +303,42 @@
                             </div>
                           </div>
                         </div>
-
                       </div>
-
                       <div class="row mt-5">
                         <div class="col">
                           <h6>Documents & Links</h6>
                           <dl class="small">
                             <dt>FAQ</dt>
                             <dd>A list of all the frequently asked questions about the tender process can be found <a href="#"> here.</a></dd>
+                            <dt>Short list </dt>
+                            <dd>Pre-Qualification report</dd>
                             <dt>SIRUP Links</dt>
                             <dd>Read the procurement documents on <a href="#">this link</a>. </dd>
                           </dl>
                         </div>
-                        <div class="col-5">
-                          <ul id="vertical-chart" class="mb-0">
+                        <div id="vertical-chart-container" class="col-5 d-none">
+                          <ul id="vertical-chart" class="mb-0 ">
                             <li id="expected"></li>
                             <li id="actual"></li>
                           </ul>
                           <div id="tender-value-diff-percentage" class="h6 p-2 text-center bg-light"> </div>
                         </div>
-
                         <div class="col pt-2  font-weight-light bdg-feedback">
                           <h6 class="mb-5"> Engagement & Update</h6>
-                          <div class="mt-5 text-center">
+                          <div class="mt-5 ">
                             <a target="_blank" id="bdg-feedback-form" href="#"><small> Share your feedback </small></a>
                           </div>
-                          <div class="text-center">
+                          <div class="">
                             <img class="w-25" src="img/icon-conversation.png">
                           </div>
                         </div>
-
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
 
             <div class="tab-pane fade" id="tender-registered-bidders" role="tabpanel" aria-labelledby="tender-registered-bidders-tab">
               <div class="row">
@@ -384,8 +357,7 @@
                           </thead>
                           <tbody id="tender-tenderers-list"></tbody>
                         </table>
-
-                        <div class="ml-2 h4" id="navcontainer">   </div>
+                        <div class="ml-2 h4" id="navcontainer"> </div>
                       </div>
                     </div>
                   </div>
@@ -399,7 +371,7 @@
                 <div class="col">
                   <div class="card border-top-0 rounded-0 card-border-tender">
                     <div class="card-body">
-                      <div id="tender-milestones-cards" class="row mt-3 font-weight-light">  </div>
+                      <div id="tender-milestones-cards" class="row mt-3 font-weight-light"> </div>
                     </div>
                   </div>
                 </div>
@@ -407,26 +379,154 @@
             </div>
 
             <div class="tab-pane fade" id="tender-help" role="tabpanel" aria-labelledby="tender-help-tab">
-
-               <div class="row">
-                 <div class="col">
-                   <div class="card rounded-0 border-top-0 card-border-tender">
-                     <div class="card-body">
-                       <div class="row ">
-                         <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="row">
+                <div class="col">
+                  <div class="card rounded-0 border-top-0 card-border-tender">
+                    <div class="card-body">
+                      <div class="row ">
+                        <p class="p-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-             </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </section>
 
+  <section id="award-section">
+    <div class="container mt-3">
+      <div class="row pb-2 pt-3">
+        <div class="col">
+          <span class="h3">Awards</span><span><sup>( <span id="awards-count"> </span> )</sup>
+          </span>
+        </div>
+      </div>
+
+      <div id="awards-parent-container">
+
+        <div class="card awards-sample-container card-border-award rounded-0 d-none  mt-3">
+          <div class="card-body">
+
+            <div class="row">
+
+              <div class="col-5">
+                <div class="row">
+                  <div class="col-12  awards-id-container">
+                    <div class="h6">Award #<span class="awards-id h6">20160316.21706.0ce0b</span></div>
+                  </div>
+                  <div class="col-12 awards-title-container">
+                    <div class="awards-title h5"> </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="row">
+                  <div class="col awards-status-container">
+                    <div class="h6">Status</div>
+                    <div class="awards-status h5"> </div>
+                  </div>
+                  <div class="col awards-date-container">
+                    <div class="h6">Award Date</div>
+                    <div class="awards-date h5"> </div>
+                  </div>
+                  <div class="col awards-value-amount-container">
+                    <div class="h6">Amount</div>
+                    <div class="awards-value-amount h5"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="awards-suppliers-parent-container col" class="mt-3"></div>
+
+              <div id="awards-suppliers-sample-container" class="row mt-2">
+                <div class="col-5 awards-suppliers-id-container">
+                  <div class="h6 ">Tax ID/Registration ID</div>
+                  <div class="awards-suppliers-id h5"> </div>
+                </div>
+                <div class="col awards-suppliers-name-container">
+                  <div class="h6">Supplier Name</div>
+                  <div class="awards-suppliers-name h5"> </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="awards-contracts-parent-container" class="mt-2"> </div>
+
+                <div id="awards-contracts-sample-container" class="ml-3 mt-2">
+                  <div class="row">
+                    <div class="col-3  pt-1 ">
+                      <div class="bg-dark h6 p-2 text-white">CONTRACT</div>
+                    </div>
+                  </div>
+                  <div class="row ">
+                    <div class="col-5">
+                      <div class="row">
+                        <div class="col contracts-value-amount-container">
+                          <div class="h6">Amount</div>
+                          <div class="contracts-value-amount h5"></div>
+                        </div>
+                      </div>
+                      <div class="row mt-2 d-flex">
+                        <div class="col contracts-period-startDate-container">
+                          <div class="h6">Start Date</div>
+                          <div class="contracts-period-startDate h5"> </div>
+                        </div>
+                        <div class="col contracts-period-endDate-container">
+                          <div class="h6">End Date</div>
+                          <div class="contracts-period-endDate h5"> </div>
+                        </div>
+                      </div>
+                      <div class="row  mt-2  d-flex">
+                        <div class="col contracts-status-container">
+                          <div class="h6">Status</div>
+                          <div class="contracts-status h5"></div>
+                        </div>
+                        <div class="col contracts-dateSigned-container">
+                          <div class="h6">Date Signed</div>
+                          <div class="contracts-dateSigned h5"> </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div  class="col">
+                      <div class="row">
+                        <div class="col contracts-items-count-container">
+                          <div class="h6">Contract Document</div>
+                          <div class="h5"> <a href="#">link</a> </div>
+                        </div>
+                      </div>
+                      <div class= "contract-items-container">
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
   <br>
   <br>
   <br>
@@ -434,6 +534,8 @@
   <br>
   <br>
   <br>
+
+
 
   <!-- <li class="nav-item">
     <a class="nav-link" id="tender-tenderers-tab" data-toggle="tab" href="#tender-tenderers" role="tab" aria-controls="tender-tenderers" aria-selected="false">Tenderers</a>

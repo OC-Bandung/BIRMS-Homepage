@@ -426,3 +426,7 @@ body {
 tbody#tender-tenderers-list tr td {
   height: 63px;
 }
+
+#awards-suppliers-sample-container, #awards-contracts-sample-container {
+  display: none;
+}

@@ -46,7 +46,7 @@ function load_planning(data) {
 
         $("#planning-budget-description").text(planning.budget.description);
 
-
+        $("#planning-budget-project-name-container").hide();
     }
 
 }

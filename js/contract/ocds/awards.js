@@ -1,104 +1,87 @@
-function load_awards(awards) {
+function load_awards(data) {
 
-    $(".tender-stage").removeClass("hidden");
-    $(".awards-stage").removeClass("hidden");
-
-    $("#stage-status").text(awards[0].status);
-    $("#stage-amount").text(awards[0].value.amount/1000000);
-
-    $("#awards-supplier-name").text(awards[0].suppliers[0].name);
-    $("#awards-value-amount").text(awards[0].value.amount);
+  awards = data.awards;
 
 
-    winningSupplier = getPartyByID(release.parties, awards[0].suppliers[0].id);
+$("#awards-count").text(awards.length );
 
-    $("#awards-supplier-taxid").text(winningSupplier[0].taxid);
-    $("#awards-supplier-address").text(winningSupplier[0].address.streetAddress);
+// dynamically create UI.
+// dynamically create the json array//
+// display json in UI
+ for (award in awards) {
 
+   element_id  = "awards-id-" + awards[award].id.split(".").join("");
 
+   $(".awards-sample-container").clone().addClass('awards-actual').attr("id" , element_id ).removeClass('d-none').removeClass('awards-sample-container').appendTo("#awards-parent-container");
 
-    html = "";
-    delete winningSupplier[0].roles;
-    var details = JSON.stringify(winningSupplier[0], null, 4);
-    details = details.replace(/["'{]/g, "");
-    details = details.replace(/[},]/g, "<br>");
-    html += "<br>";
-    html += details;
+          var  myAwardsUI = [
+             {
+               "name": "id" ,
+               "ui_element":  "div#" + element_id +  " .awards-id",
+               "ui_container": "div#" + element_id + " .awards-id-container"
+             },
+             {
+               "name": "status",
+               "ui_element": "div#" + element_id + " .awards-status",
+               "ui_container":"div#" + element_id +  " .awards-status-container"
+             },
+             {
+               "name": "title",
+               "ui_element": "div#" + element_id + " .awards-title",
+               "ui_container": "div#" + element_id + " .awards-title-container"
+             },
+             {
+               "name": "date",
+               "ui_element": "div#" + element_id + " .awards-date",
+               "ui_container": "div#" + element_id + " .awards-date-container"
+             },
+             {
+               "name": "value.amount",
+               "ui_element": "div#" + element_id + " .awards-value-amount",
+               "ui_container": "div#" + element_id + " .awards-value-amount-container"
+             }
+           ];
 
-    $("#awards-winner-info").html(html);
+         awardParent = "div#" + element_id + " div.awards-suppliers-parent-container";
 
-    // if (data.tender.tenderers) {
-    //   //pagination and tenderers
-    //   $(function() {
-    //     (function(name) {
-    //       var container = $('#' + name);
-    //       var navcontainer = $("#navcontainer");
-    //       var sources = function () {
-    //         var result = [];
-    //         //only show specific values, not whole array that includes things like contact phone and email
-    //         for (i=0; i< data.tender.tenderers.length; i++) {
-    //           tenderers_fields =  [ (i+1),   data.tender.tenderers[i].id  ,  data.tender.tenderers[i].name  , data.tender.tenderers[i].address.streetAddress ];
-    //           result.push(tenderers_fields);
-    //         }
-    //         return result;
-    //       }();
-    //       var options = {
-    //         dataSource: sources,
-    //         pageSize: 5,
-    //         callback: function (response, pagination) {
-    //           var dataHtml = '';
-    //           $.each(response, function (index, item) {
-    //             dataHtml += '<tr>';
-    //             for (i=0; i< item.length; i++) {
-    //               dataHtml += '<td>' + item[i] + '</td>';
-    //             }
-    //              dataHtml += '</tr>';
-    //           });
-    //           navcontainer.prev().html(dataHtml);
-    //         }
-    //       };
-    //       navcontainer.pagination(options);
-    //     })('tender-tenderers-list');
-    //
-    //   })
-    // } else {
-    //   $("#tender-tenderers-tab").addClass("d-none");
-    // }
-    //
+         displayJsonInUI(myAwardsUI, awards[award]);
 
 
-    if (tender.tenderers) {
-      var html = "";
-      for (i = 0; i < tender.tenderers.length; i++) {
+         var suppliers =  awards[award].suppliers;
 
-          html = "<div class='mdc-layout-grid__cell mdc-layout-grid__cell--span-4 first'>";
-          supplierDetails = getPartyByID(parties, tender.tenderers[i].id);
+         var eln = document.getElementById("awards-suppliers-sample-container");
+         var eln_copy =eln.cloneNode(true);
 
-          for (j = 0; j < supplierDetails.length; j++) {
+         for ( supplier in suppliers) {
 
-              delete supplierDetails[j].roles;
-              delete supplierDetails[j].address;
+           supplier_id =  suppliers[supplier].id.split(".").join("").split("-").join("");
 
-              for (var key in supplierDetails[j]) {
-                if (supplierDetails[j].hasOwnProperty(key)) {
-                  html+= "<strong>" + key + "</strong> : " + supplierDetails[j][key] + "<br>";
-                }
-              }
+           var mySupplierUI = [
+             {
+               "name": "id" ,
+               "ui_element":  awardParent + " div#awarded-supplier-" + supplier_id + " .awards-suppliers-id" ,
+               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + ".awards-suppliers-id-container"
+             },
+             {
+               "name": "name",
+               "ui_element":  awardParent + " div#awarded-supplier-" + supplier_id + " .awards-suppliers-name" ,
+               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + ".awards-suppliers-name-container"
+             }
+           ];
+
+           eln_copy.id = "awarded-supplier-" + supplier_id;
+
+           $(awardParent).html(eln_copy);
+
+           displayJsonInUI(mySupplierUI, suppliers[supplier]);
+
+         }
+         // end supplier loop
+         load_contracts(data, awards[award], awards[award].id);
 
 
-          }
-
-
-
-          html += "</div>";
-
-
-          $("div#awards-bidders-info").append(html);
-
-      }
     }
-
-
+    // end each award
 
 
 }

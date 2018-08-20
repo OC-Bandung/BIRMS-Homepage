@@ -1,22 +1,87 @@
-function load_contracts(contracts) {
+function load_contracts(data , award, awardID) {
 
- $("#process-status").text(contracts[0].status);
+ var awardParent = "#awards-id-" + awardID.split(".").join("");
 
-    $(".tender-stage").removeClass("hidden");
-    $(".awards-stage").removeClass("hidden");
-    $(".contract-stage").removeClass("hidden");
-
-    $("#stage-amount").text(contracts[0].value.amount);
-    $("#stage-status").text(contracts[0].status);
-
-    $("#contract-dateSigned").text(contracts[0].dateSigned);
-    $("#contract-value-amount").text(contracts[0].value.amount);
+ var cn = document.getElementById("awards-contracts-sample-container");
+ var cn_copy = cn.cloneNode(true);
 
 
+   var thisAwardsContracts = getContractByAwardID( data.contracts, awardID);
 
-    $("#contract-period-endDate").text(contracts[0].period.endDate);
-    $("#contract-period-startDate").text(contracts[0].period.startDate);
 
-    $("#contract-id").text(contracts[0].id);
+   for ( myContract in thisAwardsContracts ) {
+
+      contract_id =  thisAwardsContracts[myContract].id;
+
+       var myContractUI = [
+         {
+           "name": "value.amount" ,
+           "ui_element":  "div#contract-" + contract_id + " div.contracts-value-amount" ,
+           "ui_container": "div#contract-" + contract_id +  " div.contracts-value-amount-container"
+         },
+         {
+           "name": "period.startDate",
+           "ui_element": "div#contract-" + contract_id +  " div.contracts-period-startDate" ,
+           "ui_container":"div#contract-" + contract_id +  " div.contracts-period-startDate-container"
+         },
+         {
+           "name": "period.endDate",
+           "ui_element": "div#contract-" + contract_id +  " div.contracts-period-endDate" ,
+           "ui_container":"div#contract-" + contract_id +  " div.contracts-period-endDate-container"
+         },
+         {
+           "name": "period.endDate",
+           "ui_element": "div#contract-" + contract_id +  " div.contracts-period-endDate" ,
+           "ui_container": "div#contract-" + contract_id +  " div.contracts-period-endDate-container"
+         },
+         {
+           "name": "status",
+           "ui_element": "div#contract-" + contract_id +  " div.contracts-status" ,
+           "ui_container":"div#contract-" + contract_id +  " div.contracts-status-container"
+         },
+         {
+           "name": "dateSigned",
+           "ui_element": "div#contract-" + contract_id +  " div.contracts-dateSigned" ,
+           "ui_container": "div#contract-" + contract_id +  " div.contracts-dateSigned-container"
+         }
+       ];
+
+
+      cn_copy.id = "contract-" + contract_id;
+      $(awardParent).append(cn_copy);
+
+      displayJsonInUI(myContractUI, thisAwardsContracts[myContract]);
+
+      var items = thisAwardsContracts[myContract].items;
+      var itemsParent = "#contract-" + contract_id + " .contract-items-container";
+
+      console.log("-----");
+      console.log(awardID);
+      console.log(items);
+
+
+      for (myItem in items) {
+        item_html= '<div id="" class="row mt-2 ">';
+          item_html += '<div class="col-12 contracts-items-description-container">';
+            item_html +='<div class="badge badge-secondary h6">Item</div>';
+            item_html +=  '<div class="contracts-items-description h5"> ' + items[myItem].description + '</div>';
+          item_html +='</div>';
+          item_html +='<div class="col contracts-items-quantity-container">';
+            item_html +=item_html +='<div class="h6">Quantity</div>';
+            '<div class="contracts-items-quantity h5">' + items[myItem].quantity + '</div>';
+          item_html +='</div>';
+          item_html +='<div class="col contracts-items-quantity-container">';
+            item_html +='<div class="h6">Unit</div>';
+            item_html +='<div class="contracts-items-unit-unit h5">' + items[myItem].unit.unit + '</div>';
+          item_html +='</div>';
+        item_html +='</div>';
+
+        $(itemsParent).append(item_html);
+      }
+
+
+     }
+
+
 
 }

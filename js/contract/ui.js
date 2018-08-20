@@ -11,3 +11,47 @@ $("#bdg-feedback-form").click(function() {
   lnk += "&entry.831032170= ";
   $(this).attr("href", lnk);
 });
+
+
+$("#add-to-watchlist").click(function(e) {
+
+  e.preventDefault();
+
+var watchlist =  [
+      {
+        "list": "a",
+        "watching": [
+          {"ocid": "123"},
+          {"ocid": "345"},
+          {"ocid": "678"}
+        ]
+      },
+      {
+        "list": "b",
+        "watching": [
+          {"ocid": "x"},
+          {"ocid": "y"},
+          {"ocid": "z"}
+        ]
+      }
+  ];
+
+  localStorage.setItem("ocds-birms-watchlist" , JSON.stringify(watchlist) );
+
+  console.log("local storage set");
+});
+
+$("#get-watchlist").click(function(e) {
+    e.preventDefault();
+
+  if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
+    var myList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
+    for ( item in myList) {
+      console.log(myList[item].list);
+      console.log(myList[item].watching);
+    }
+  }
+
+
+
+});

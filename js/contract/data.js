@@ -14,6 +14,12 @@ function getPartyByID(party, param) {
     );
 }
 
+function getContractByAwardID(contracts, param) {
+    return contracts.filter(
+        function(contracts) { return contracts.awardID == param }
+    );
+}
+
 function findPartyByRole(party, role) {
   for (i = 0; i < party.length  ; i++) {
       for (j = 0; j < party[i].roles.length  ; j++) {
@@ -22,6 +28,27 @@ function findPartyByRole(party, role) {
           }
       }
   }
+}
+
+function displayJsonInUI(myUIMap, data) {
+
+  for (let item of myUIMap) {
+
+    content = data;
+
+    var path = item.name.split(".");
+      for(let node of path) {
+        content = content[node];
+      }
+
+    //format date.
+    if(moment(content,  moment.ISO_8601, true).isValid()) content = moment(content).format('ll');
+
+    $(item.ui_element).html(content);
+    $(item.ui_container).removeClass("d-none");
+
+  }
+
 }
 
 
@@ -96,36 +123,10 @@ function load_data(data) {
 
     if (data.hasOwnProperty('awards') && data.awards.length > 0 ) {
         stage = "award"
-        // load_planning(data.planning);
-        // load_tender(data.tender);
-        // load_awards(data.awards);
-
-
-        buildTimeline(awards, stage);
+        load_awards(data);
 
     }
 
-    if (data.hasOwnProperty('contracts') && data.contracts.length > 0) {
-        // stage = "contract";
-        // if (data.contracts[0].hasOwnProperty('implementation')) {
-        //     stage = "implementation";
-        // }
-    }
-
-
-    if(data.hasOwnProperty('contracts' && data.contracts>0)) {
-        // stage = "contract";
-        // load_planning(data.planning);
-        // load_tender(data.tender);
-        // load_awards(data.awards);
-        // load_contracts(data.contracts);
-        // load_implementation(data.contracts[0].implementation);
-        //
-        // buildTimeline(planning, stage);
-        // buildTimeline(tender, stage);
-        // buildTimeline(awards, stage);
-        // buildTimeline(contracts[0], stage);
-    }
 
 
     // load_parties(data.parties);
