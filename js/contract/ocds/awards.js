@@ -1,7 +1,7 @@
 function load_awards(data) {
 
-  awards = data.awards;
-
+awards = data.awards;
+$("#award-section").removeClass('d-none');
 
 $("#awards-count").text(awards.length );
 
