@@ -9,7 +9,7 @@ ocds-afzrfb-s-2016-6124079
 
 ocds-afzrfb-b-2016-38946 - zero budget Amount
 
-ocid=ocds-afzrfb-b-2016-38800
+ocds-afzrfb-b-2016-38800 - supplier doesn't have ID.
 
 ocds-afzrfb-b-2016-38963 - many awards for one tender - weird number of tenderer
 
@@ -21,6 +21,10 @@ ocds-afzrfb-b-2016-39513 - 5 + contract
 
 ocds-afzrfb-b-2016-43158 - 100 awards
 
+ocds-afzrfb-b-2016-38800 - 25 items in contract
+
+
+ocds-afzrfb-b-2016-36658 - good example
 
 supplier information (contact, email)
 

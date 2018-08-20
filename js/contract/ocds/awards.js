@@ -54,18 +54,19 @@ $("#awards-count").text(awards.length );
 
          for ( supplier in suppliers) {
 
-           supplier_id =  suppliers[supplier].id.split(".").join("").split("-").join("");
+           suppliers[supplier].id ?  supplier_id =  suppliers[supplier].id.split(".").join("").split("-").join("") :  supplier_id =  "supplier-fake-" + Math.floor(Math.random() * 100);
+
 
            var mySupplierUI = [
              {
                "name": "id" ,
                "ui_element":  awardParent + " div#awarded-supplier-" + supplier_id + " .awards-suppliers-id" ,
-               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + ".awards-suppliers-id-container"
+               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + " div.awards-suppliers-id-container"
              },
              {
                "name": "name",
                "ui_element":  awardParent + " div#awarded-supplier-" + supplier_id + " .awards-suppliers-name" ,
-               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + ".awards-suppliers-name-container"
+               "ui_container": awardParent + " div#awarded-supplier-" + supplier_id + " div.awards-suppliers-name-container"
              }
            ];
 
@@ -77,6 +78,7 @@ $("#awards-count").text(awards.length );
 
          }
          // end supplier loop
+
          load_contracts(data, awards[award], awards[award].id);
 
 

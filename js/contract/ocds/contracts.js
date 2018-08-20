@@ -53,35 +53,28 @@ function load_contracts(data , award, awardID) {
       displayJsonInUI(myContractUI, thisAwardsContracts[myContract]);
 
       var items = thisAwardsContracts[myContract].items;
-      var itemsParent = "#contract-" + contract_id + " .contract-items-container";
-
-      console.log("-----");
-      console.log(awardID);
-      console.log(items);
-
+      var itemsParent = "div#contract-" + contract_id + " div.contract-items-container";
 
       for (myItem in items) {
-        item_html= '<div id="" class="row mt-2 ">';
-          item_html += '<div class="col-12 contracts-items-description-container">';
+
+        item_html= '<hr> <div class="row mt-2 ">';
+          item_html += '<div class="col-12 ">';
             item_html +='<div class="badge badge-secondary h6">Item</div>';
-            item_html +=  '<div class="contracts-items-description h5"> ' + items[myItem].description + '</div>';
+            item_html +=  '<div class=" h5"> ' + items[myItem].description + '</div>';
           item_html +='</div>';
-          item_html +='<div class="col contracts-items-quantity-container">';
-            item_html +=item_html +='<div class="h6">Quantity</div>';
-            '<div class="contracts-items-quantity h5">' + items[myItem].quantity + '</div>';
+          item_html +='<div class="col ">';
+          item_html   +='<div class="h6">Quantity</div>';
+          item_html   +=  '<div class=" h5">' + items[myItem].quantity + '</div>';
           item_html +='</div>';
-          item_html +='<div class="col contracts-items-quantity-container">';
+          item_html +='<div class="col ">';
             item_html +='<div class="h6">Unit</div>';
-            item_html +='<div class="contracts-items-unit-unit h5">' + items[myItem].unit.unit + '</div>';
+            item_html +='<div class=" h5">' + items[myItem].unit.unit + '</div>';
           item_html +='</div>';
         item_html +='</div>';
 
+
         $(itemsParent).append(item_html);
+
       }
-
-
-     }
-
-
-
+    }
 }
