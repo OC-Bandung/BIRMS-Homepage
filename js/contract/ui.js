@@ -12,43 +12,47 @@ $("#bdg-feedback-form").click(function() {
   $(this).attr("href", lnk);
 });
 
-$(document).ready(function() {
-  if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
-    var myList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
-    for ( item in myList) {
-      var eln = document.getElementById("list-group-item-sample").cloneNode(true);
-      eln.id =  myList[item].listCode;
-      $("ul#notificationList").append(eln);
-      $("ul#notificationList li#" + myList[item].listCode ).text(myList[item].listName);
-    }
-  }
-});
-
-
-
-$(document).on('click', '[id^="ocds-notificationList-"]', function(e) {
+$(document).on('click', '[id^="watch-list-"]', function(e) {
   e.preventDefault();
   ocid = $("#ocid").text();
   var clickedList = $(this).attr("id");
     if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
         var watchList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
-        var watchListClicked = getWatchListByListCode(watchList, clickedList)[0]["watching"];
-        watchListClicked.push({ ocid: ocid});
+        var myList = getListByListCode(watchList, clickedList);
+        console.log(myList);
+        listItems = watchList[0]["listItems"];
+        newdata = [{ "ocid": ocid}];
+        listItems.push(newdata[0]);
+        myList.push(listItems[0]);
         localStorage.setItem("ocds-birms-watchlist" , JSON.stringify(watchList) );
+        console.log(watchList);
     }
 });
 
 $("li#notificationListAddNew").click(function(e) {
-    e.preventDefault();
+  e.preventDefault();
   if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
     var myList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
-    console.log(myList);
   }
 });
 
 $("#add-to-watchlist").click(function(e) {
-
     e.preventDefault();
     $("#notificationList").removeClass("d-none");
-   
+
+});
+
+
+$(document).ready(function() {
+
+    let myList = getOCLocalStorage();
+    console.log(myList);
+    if(myList) {
+      for ( item in myList) {
+        var eln = document.getElementById("list-group-item-sample").cloneNode(true);
+        eln.id =  myList[item].listCode;
+        $("ul#notificationList").append(eln);
+        $("ul#notificationList li#" + myList[item].listCode ).text(myList[item].listName);
+      }
+    }
 });

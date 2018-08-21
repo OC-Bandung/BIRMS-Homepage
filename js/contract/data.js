@@ -20,11 +20,7 @@ function getContractByAwardID(contracts, param) {
     );
 }
 
-function getWatchListByListCode(watchlist, param) {
-    return watchlist.filter(
-        function(watchlist) { return watchlist.listCode == param }
-    );
-}
+
 
 
 function findPartyByRole(party, role) {

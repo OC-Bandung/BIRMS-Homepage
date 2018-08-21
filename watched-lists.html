@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BIRMS</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="bg-primary inner-image-banner">
+      <div class="container">
+        <div class="row  pt-5 pb-5">
+          <div class="col">
+            <div class="text-white">
+              <div class="h3 d-inline-block">OC-Explorer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col">
+            <h3>My lists</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h5> <a id="watch-list-create" href="#"> + create a new list </a></h5>
+          </div>
+        </div>
+        <div id="watch-list-input-container" class="row pb-5 d-none">
+          <div class="col-4 bg-dark text-light p-3 ml-3">
+                <div class="alert alert-danger d-none" role="alert">
+                    List name already exists, please choose another.
+                </div>
+                <label> List name</label>
+                <input id="watch-list-input" type="text" class="form-control rounded-0" aria-label="Create watch list" aria-describedby="inputGroup-sizing-default">
+                <button id="watch-list-input-submit" type="button" class="btn btn-outline-light btn-secondary btn-sm mt-2 float-right rounded-0">Create</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+       <div id="watch-list-sample" class="watch-list border-bottom d-none">
+         <div class="row p-3 text-white watch-list-header sticky">
+          <div class="col-8">
+            <div class="h5">already submitted (20 items)</div>
+          </div>
+          <div class="col-4 text-uppercase">
+            <div class="small d-inline mr-2"> fetch updates</div>
+            <div class="small d-inline mr-2">export</div>
+            <div class="small d-inline mr-2">delete</div>
+            <div class="small d-inline">collapse</div>
+          </div>
+        </div>
+        <div class="watch-list-content row  d-none">
+          <div class="col-12">
+            <ul class="watch-list-ocid list-group list-group-flush">
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div id="watch-list-container" class="container">
+      </div>
+    </section>
+
+    <section>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-6 h3"> <i class="material-icons">
+trending_up
+</i> Trending tenders  <small>(> 10 tenderers)</small> </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/watched-lists/shared.js"></script>
+    <script type="text/javascript" src="js/watched-lists/ui.js"></script>
+</body>
+</html>
