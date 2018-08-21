@@ -12,46 +12,43 @@ $("#bdg-feedback-form").click(function() {
   $(this).attr("href", lnk);
 });
 
-
-$("#add-to-watchlist").click(function(e) {
-
-  e.preventDefault();
-
-var watchlist =  [
-      {
-        "list": "a",
-        "watching": [
-          {"ocid": "123"},
-          {"ocid": "345"},
-          {"ocid": "678"}
-        ]
-      },
-      {
-        "list": "b",
-        "watching": [
-          {"ocid": "x"},
-          {"ocid": "y"},
-          {"ocid": "z"}
-        ]
-      }
-  ];
-
-  localStorage.setItem("ocds-birms-watchlist" , JSON.stringify(watchlist) );
-
-  console.log("local storage set");
-});
-
-$("#get-watchlist").click(function(e) {
-    e.preventDefault();
-
+$(document).ready(function() {
   if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
     var myList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
     for ( item in myList) {
-      console.log(myList[item].list);
-      console.log(myList[item].watching);
+      var eln = document.getElementById("list-group-item-sample").cloneNode(true);
+      eln.id =  myList[item].listCode;
+      $("ul#notificationList").append(eln);
+      $("ul#notificationList li#" + myList[item].listCode ).text(myList[item].listName);
     }
   }
+});
 
 
 
+$(document).on('click', '[id^="ocds-notificationList-"]', function(e) {
+  e.preventDefault();
+  ocid = $("#ocid").text();
+  var clickedList = $(this).attr("id");
+    if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
+        var watchList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
+        var watchListClicked = getWatchListByListCode(watchList, clickedList)[0]["watching"];
+        watchListClicked.push({ ocid: ocid});
+        localStorage.setItem("ocds-birms-watchlist" , JSON.stringify(watchList) );
+    }
+});
+
+$("li#notificationListAddNew").click(function(e) {
+    e.preventDefault();
+  if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
+    var myList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
+    console.log(myList);
+  }
+});
+
+$("#add-to-watchlist").click(function(e) {
+
+    e.preventDefault();
+    $("#notificationList").removeClass("d-none");
+   
 });
