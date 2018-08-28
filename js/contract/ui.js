@@ -15,18 +15,20 @@ $("#bdg-feedback-form").click(function() {
 $(document).on('click', '[id^="watch-list-"]', function(e) {
   e.preventDefault();
   ocid = $("#ocid").text();
+  if (! $(this).hasClass('added')) {
   var clickedList = $(this).attr("id");
     if(localStorage && localStorage.getItem('ocds-birms-watchlist')){
         var watchList = JSON.parse(localStorage.getItem('ocds-birms-watchlist'));
         var myList = getListByListCode(watchList, clickedList);
-        console.log(myList);
         listItems = watchList[0]["listItems"];
         newdata = [{ "ocid": ocid}];
         listItems.push(newdata[0]);
         myList.push(listItems[0]);
         localStorage.setItem("ocds-birms-watchlist" , JSON.stringify(watchList) );
-        console.log(watchList);
+        $(this).html('<i class="material-icons small pr-2">check</i>' + $(this).text());
+        $(this).addClass('added');
     }
+  }
 });
 
 $("li#notificationListAddNew").click(function(e) {
@@ -39,20 +41,22 @@ $("li#notificationListAddNew").click(function(e) {
 $("#add-to-watchlist").click(function(e) {
     e.preventDefault();
     $("#notificationList").removeClass("d-none");
-
+    let myList = getOCLocalStorage();
+    if(myList) {
+      for ( item in myList) {
+      }
+    }
 });
 
 
 $(document).ready(function() {
-
     let myList = getOCLocalStorage();
-    console.log(myList);
     if(myList) {
       for ( item in myList) {
         var eln = document.getElementById("list-group-item-sample").cloneNode(true);
         eln.id =  myList[item].listCode;
         $("ul#notificationList").append(eln);
-        $("ul#notificationList li#" + myList[item].listCode ).text(myList[item].listName);
+        $("ul#notificationList li#" + myList[item].listCode ).html( myList[item].listName);
       }
     }
 });

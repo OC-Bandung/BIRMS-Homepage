@@ -79,52 +79,39 @@
     <section>
       <div class="container mt-5">
         <div class="row">
-          <div class="col-6 h3"> <i class="material-icons">
-trending_up
-</i> Trending tenders  <small>(> 10 tenderers)</small> </div>
+          <div class="col-6 h3"> <i class="material-icons">trending_up</i> Trending tenders  <small>(> 10 tenderers)</small> </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div id="trending-tender-container"></div>
+          <div id="trending-tender-sample" class="col-5">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <div class="trending-tender-number-of-tenderers-container">
+                  <div class="h6 trending-tender-number-of-tenderers">10 tenderers</div>
+                </div>
+                <div class="trending-tender-title card-title h5"></div>
+                <h6 class="trending-tender-subtitle card-subtitle mb-2 text-muted">Buyer: Dinas Komunikasi dan Informatika</h6>
+                <div class="card-text">
+                  <div class="row">
+                    <div class="col trending-tender-status-container">
+                      <div class="h6">Status</div>
+                      <div class="trending-tender-status h5"></div>
+                    </div>
+                    <div class="col trending-tender-value-amount-container">
+                      <div class="h6">Value</div>
+                      <div class="trending-tender-value-amount h5"></div>
+                    </div>
+                    <div class="col trending-tender-procurementMethod-container">
+                      <div class="h6">Method</div>
+                      <div class="trending-tender-procurementMethod h5"></div>
+                    </div>
+                    <div class="col trending-tender-period-endDate-container">
+                      <div class="h6">End Date</div>
+                      <div class="trending-tender-period-endDate h5"></div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="card-link">View</a>
               </div>
             </div>
           </div>
@@ -145,6 +132,8 @@ trending_up
     <br>
     <br>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/contract/data.js"></script>
     <script type="text/javascript" src="js/watched-lists/shared.js"></script>
     <script type="text/javascript" src="js/watched-lists/ui.js"></script>
 </body>

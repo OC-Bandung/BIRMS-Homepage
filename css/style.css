@@ -435,6 +435,17 @@ tbody#tender-tenderers-list tr td {
   background-color:#343a40;
   z-index: 2;
 }
+
+ul#notificationList li {
+  cursor: pointer;
+}
+
+ul#notificationList li.added {
+color: darkgray;
+}
+ 
+
+
 .sticky {
   position: sticky;
   top:10px;

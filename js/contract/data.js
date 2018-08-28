@@ -20,9 +20,6 @@ function getContractByAwardID(contracts, param) {
     );
 }
 
-
-
-
 function findPartyByRole(party, role) {
   for (i = 0; i < party.length  ; i++) {
       for (j = 0; j < party[i].roles.length  ; j++) {

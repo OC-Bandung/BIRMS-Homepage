@@ -21,6 +21,13 @@ function getListByListName(data, param) {
     );
 }
 
+function findOCID(data, param) {
+    return data.filter(
+        function(data) { return data.ocid == param }
+    );
+}
+
+
 function addToLocalStorage(listCode, listName) {
 
   var myList =
