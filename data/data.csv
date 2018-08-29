@@ -1,0 +1,11 @@
+
+{ "planning exists true" : 31985 }
+{ "buyer id exists true" : 31228 }
+{ "buyer name exists true" : 31985 }
+{ "tender mainProcurementCategory exists true" : 28881 }
+{ "planning budget amount amount exists true" : 31985 }
+{ "planning budget description exists true" : 31985 }
+{ "planning budget project exists true" : 31985 }
+{ "tender title exists true" : 227 }
+{ "tender milestone exists true" : 28881 }
+{ "tender milestone array has data" : 1395 }
