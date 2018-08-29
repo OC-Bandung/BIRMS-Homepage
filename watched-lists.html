@@ -53,15 +53,14 @@
     <section>
 
        <div id="watch-list-sample" class="watch-list border-bottom d-none">
-         <div class="row p-3 text-white watch-list-header sticky">
+         <div class="row p-3 watch-list-header bg-dark text-white ">
           <div class="col-8">
-            <div class="h5">already submitted (20 items)</div>
+            <div class="h5  watch-list-title "></div>
           </div>
-          <div class="col-4 text-uppercase">
-            <div class="small d-inline mr-2"> fetch updates</div>
+          <div class="col-4 float-right text-uppercase">
+            <div class="fetch-update small d-inline mr-2"><a class="text-white"  href="#"> <div class="lds-dual-ring d-none"></div> fetch updates</a></div>
             <div class="small d-inline mr-2">export</div>
             <div class="small d-inline mr-2">delete</div>
-            <div class="small d-inline">collapse</div>
           </div>
         </div>
         <div class="watch-list-content row  d-none">
@@ -83,14 +82,14 @@
         </div>
         <div class="row">
           <div id="trending-tender-container"></div>
-          <div id="trending-tender-sample" class="col-5">
+          <div id="trending-tender-sample" class="col d-none">
             <div class="card">
               <div class="card-body">
-                <div class="trending-tender-number-of-tenderers-container">
-                  <div class="h6 trending-tender-number-of-tenderers">10 tenderers</div>
+                <div class="trending-tender-numberOfTenderers-container">
+                  <div class="h6 trending-tender-numberOfTenderers d-inline"></div> <div class=" d-inline"> Tenderers</div>
                 </div>
-                <div class="trending-tender-title card-title h5"></div>
-                <h6 class="trending-tender-subtitle card-subtitle mb-2 text-muted">Buyer: Dinas Komunikasi dan Informatika</h6>
+                <a href="#"><div class="trending-tender-title card-title h5"></div></a>
+                <div class="trending-tender-subtitle card-subtitle mb-2 text-muted mb-3"></div>
                 <div class="card-text">
                   <div class="row">
                     <div class="col trending-tender-status-container">
@@ -101,13 +100,13 @@
                       <div class="h6">Value</div>
                       <div class="trending-tender-value-amount h5"></div>
                     </div>
-                    <div class="col trending-tender-procurementMethod-container">
-                      <div class="h6">Method</div>
-                      <div class="trending-tender-procurementMethod h5"></div>
+                    <div class="col trending-tender-mainProcurementCategory-container">
+                      <div class="h6">Category</div>
+                      <div class="trending-tender-mainProcurementCategory h5"></div>
                     </div>
-                    <div class="col trending-tender-period-endDate-container">
+                    <div class="col trending-tender-tenderPeriod-endDate-container">
                       <div class="h6">End Date</div>
-                      <div class="trending-tender-period-endDate h5"></div>
+                      <div class="trending-tender-tenderPeriod-endDate h5"></div>
                     </div>
                   </div>
                 </div>
@@ -120,21 +119,10 @@
     </section>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/moment.js"></script>
-    <script type="text/javascript" src="js/contract/data.js"></script>
-    <script type="text/javascript" src="js/watched-lists/shared.js"></script>
+    <script type="text/javascript" src="js/shared.js"></script>
     <script type="text/javascript" src="js/watched-lists/ui.js"></script>
 </body>
 </html>

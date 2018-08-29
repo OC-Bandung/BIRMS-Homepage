@@ -182,7 +182,13 @@ function load_tenderers (data) {
           var result = [];
           //only show specific values, not whole array that includes things like contact phone and email
           for (i=0; i< data.tender.tenderers.length; i++) {
-            tenderers_fields =  [ (i+1),   data.tender.tenderers[i].id  ,  data.tender.tenderers[i].name  , data.tender.tenderers[i].address.streetAddress ];
+            let strAddress = "";
+            
+            if ( data.tender.tenderers[i].address && data.tender.tenderers[i].address.streetAddress ) {
+              strAddress = data.tender.tenderers[i].address.streetAddress;
+            }
+
+            tenderers_fields =  [ (i+1),   data.tender.tenderers[i].id  ,  data.tender.tenderers[i].name  , strAddress ];
             result.push(tenderers_fields);
           }
           return result;

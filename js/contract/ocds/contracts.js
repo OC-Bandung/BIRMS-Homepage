@@ -1,12 +1,16 @@
 function load_contracts(data , award, awardID) {
 
- var awardParent = "#awards-id-" + awardID.split(".").join("");
+ awardID.toString().indexOf(".") != -1 ?  awardParent = "#awards-id-" + awardID.split(".").join("") :  awardParent = "#awards-id-" + awardID;
+
 
  var cn = document.getElementById("awards-contracts-sample-container");
  var cn_copy = cn.cloneNode(true);
 
 
-   var thisAwardsContracts = getContractByAwardID( data.contracts, awardID);
+
+   if ( data.contracts ) {
+
+     var thisAwardsContracts = getContractByAwardID( data.contracts, awardID);
 
 
    for ( myContract in thisAwardsContracts ) {
@@ -77,4 +81,5 @@ function load_contracts(data , award, awardID) {
 
       }
     }
+  }
 }
