@@ -20,13 +20,6 @@ function getContractByAwardID(contracts, param) {
     );
 }
 
-function getWatchListByListCode(watchlist, param) {
-    return watchlist.filter(
-        function(watchlist) { return watchlist.listCode == param }
-    );
-}
-
-
 function findPartyByRole(party, role) {
   for (i = 0; i < party.length  ; i++) {
       for (j = 0; j < party[i].roles.length  ; j++) {
@@ -36,28 +29,6 @@ function findPartyByRole(party, role) {
       }
   }
 }
-
-function displayJsonInUI(myUIMap, data) {
-
-  for (let item of myUIMap) {
-
-    content = data;
-
-    var path = item.name.split(".");
-      for(let node of path) {
-        content = content[node];
-      }
-
-    //format date.
-    if(moment(content,  moment.ISO_8601, true).isValid()) content = moment(content).format('ll');
-
-    $(item.ui_element).html(content);
-    $(item.ui_container).removeClass("d-none");
-
-  }
-
-}
-
 
 // function load_parties(party) {
 //

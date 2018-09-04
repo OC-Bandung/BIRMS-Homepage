@@ -10,7 +10,7 @@ $("#awards-count").text(awards.length );
 // display json in UI
  for (award in awards) {
 
-   element_id  = "awards-id-" + awards[award].id.split(".").join("");
+   awards[award].id.toString().indexOf(".") != -1 ? element_id  = "awards-id-" + awards[award].id.split(".").join("") : element_id  = "awards-id-" + awards[award].id ;
 
    $(".awards-sample-container").clone().addClass('awards-actual').attr("id" , element_id ).removeClass('d-none').removeClass('awards-sample-container').appendTo("#awards-parent-container");
 

@@ -29,3 +29,5 @@ ocds-afzrfb-b-2016-36658 - good example
 supplier information (contact, email)
 
 award items, exist?
+
+ocds-afzrfb-s-2016-5043143

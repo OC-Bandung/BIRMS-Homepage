@@ -430,3 +430,50 @@ tbody#tender-tenderers-list tr td {
 #awards-suppliers-sample-container, #awards-contracts-sample-container, #list-group-item-sample {
   display: none;
 }
+
+.watch-list-header {
+  background-color:#343a40;
+  z-index: 2;
+}
+
+ul#notificationList li {
+  cursor: pointer;
+}
+
+ul#notificationList li.added {
+color: darkgray;
+}
+
+.list-group-item-label {
+  font-size: .9rem;
+  padding: .5rem;
+}
+
+.sticky {
+  position: sticky;
+  top:10px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

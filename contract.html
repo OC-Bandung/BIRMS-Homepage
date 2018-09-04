@@ -48,18 +48,50 @@
           <h5 id="ocdate"></h5>
         </div>
         <div class="col float-right  h6  float-right">
+          <div class="text-right text-uppercase"><a target="_blank" href="#">email</a></div>
           <div class="text-right text-uppercase"><a id="oc-json" target="_blank" href="#">json</a></div>
-          <div  class="float-right">
+          <div  class="float-right text-right">
             <div>
               <a  id="add-to-watchlist" target="_blank" href="#">add to list</a>
             </div>
             <div>
               <ul id="notificationList"  class="list-group d-none">
                 <li id="list-group-item-sample" class="list-group-item"></li>
-                <li id="notificationListAddNew" class="list-group-item">Create a new List</li>
+                <li  data-toggle="modal" data-target="#addNewList" class="list-group-item bg-light text-dark list-group-item-label"><a href="#">Create a new List</a></li>
+                <li  data-toggle="modal"  class="list-group-item bg-light text-dark list-group-item-label"><a href="watched-lists.html">Manage lists</a></li>
               </ul>
             </div>
           </div>
+          <!-- Modal -->
+        <div class="modal fade" id="addNewList" tabindex="-1" role="dialog" aria-labelledby="addNewList" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Create new list</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div  id="watch-list-input-container">
+                  <div class="alert alert-danger d-none" role="alert">
+                      List name already exists, please choose another.
+                    </div>
+                 </div>
+
+                  <div class="form-group">
+                    <label for="list-name" class="col-form-label">List Name:</label>
+                    <input id="watch-list-name" autofocus type="text" autocomplete="off"  class="form-control">
+                  </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="addNewList-submit" type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     </div>
@@ -595,16 +627,16 @@
 
   <script type="text/javascript" src="js/moment.js">
   </script>
-  <script type="text/javascript" src="js/pagination.min.js">
-  </script>
+  <script type="text/javascript" src="js/pagination.min.js"></script>
 
-  <script type="text/javascript" src="js/contract/ui.js">
-  </script>
+
+  <script type="text/javascript" src="js/shared.js"></script>
+
+  <script type="text/javascript" src="js/contract/ui.js"></script>
 
 
   <!-- a script for each stage  -->
-  <script type="text/javascript" src="js/contract/data.js">
-  </script>
+  <script type="text/javascript" src="js/contract/data.js"></script>
 
 
   <script type="text/javascript" src="js/contract/timeline.js">
