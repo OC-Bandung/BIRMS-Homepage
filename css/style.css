@@ -469,6 +469,14 @@ color: darkgray;
   border-color: #fff transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
+#back-to-top {
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+    z-index: 3
+}
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
