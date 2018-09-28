@@ -46,6 +46,13 @@ $("#awards-count").text(awards.length );
 
          displayJsonInUI(myAwardsUI, awards[award]);
 
+         // Sample code for Titan
+         // the function displayJsonInUI takes the json and displays it in the ui
+         // after it is done displaying, i just read the value and then put it in a variable
+         // once I have the variable, I can do thing like concatenate or divide by million
+         var old_awardval = $("div#" + element_id + " .awards-value-amount" ).text();
+         var new_awardval = old_awardval + " curr";
+         $("div#" + element_id + " .awards-value-amount" ).text(new_awardval );
 
          var suppliers =  awards[award].suppliers;
 
