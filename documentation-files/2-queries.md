@@ -1,12 +1,3 @@
-## Summary
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-The query API is not public.
-All API access requires a key provided as the parameter `secret`.
-This key will be provided on demand by the Bandung OC team.
-
 #### Get release by ocid
 
 `https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/get-by-ocid?secret=[secret]&ocid=[ocid]`
@@ -26,10 +17,10 @@ them by the given query using the `q` parameter. It can also limit the number of
 returned by the use of `limit` parameter, with a default value of 20.
 Pagination is provided using the last MongoDB document with `_id` displayed, using `fromId` parameter.
 This is an efficient results pagination method described in detail here (Approach 2):
-https://www.codementor.io/arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr
+[https://www.codementor.io/arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr](https://www.codementor.io/arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr)
 
 The query syntax of the `q` parameter follows the MongoDB query syntax
-https://docs.mongodb.com/manual/tutorial/query-documents/
+[https://docs.mongodb.com/manual/tutorial/query-documents/](https://docs.mongodb.com/manual/tutorial/query-documents/)
 
 Examples:
 
@@ -65,11 +56,3 @@ Examples:
 ###### Count the releases in the system that have non-empty `tender.value.amount`
 
 `https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-releases?secret=[secret]&q={"tender.value.amount":{"$exists":true}}`
-
-#### Find errors during data import
-
-`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-errors?secret=[secret]`
-
-#### Count errors during data import
-
-`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-errors?secret=[secret]`
