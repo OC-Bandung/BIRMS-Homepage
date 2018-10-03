@@ -56,15 +56,19 @@ function load_tender(data) {
 
 
   // custom if conditions for calculated fields
-
-  if (data.tender.tenderPeriod.endDate && data.tender.tenderPeriod && data.tender.tenderPeriod.startDate ) {
+  if (data.tender.tenderPeriod) {
+   if (data.tender.tenderPeriod.endDate && data.tender.tenderPeriod.startDate ) {
       $("#tender-tender-days-diff").text("Duration: " + moment(data.tender.tenderPeriod.endDate).diff( moment(data.tender.tenderPeriod.startDate), 'days') + " days");
       $("#tender-tender-days-diff-container").removeClass('d-none') ;
+    }
   }
 
-  if (data.tender.contractPeriod.endDate && data.tender.contractPeriod && data.tender.contractPeriod.startDate ) {
-     $("#tender-contract-days-diff").text("Duration: " +  moment(data.tender.contractPeriod.endDate).diff( moment(data.tender.contractPeriod.startDate), 'days') + " days" );
+  if(data.tender.contractPeriod) {
+    if (data.tender.contractPeriod.endDate  && data.tender.contractPeriod.startDate ) {
+      $("#tender-contract-days-diff").text("Duration: " +  moment(data.tender.contractPeriod.endDate).diff( moment(data.tender.contractPeriod.startDate), 'days') + " days" );
+   }
   }
+
 
   if ( data.planning.budget.amount.amount &&  data.planning.budget) {
       $("#tender-budget-amount").text(data.planning.budget.amount.amount/1000000);
@@ -78,9 +82,7 @@ function load_tender(data) {
 
    if (data.planning.budget.amount.amount &&  data.tender.value && data.tender.value.amount) {
 
-     console.log("test");
-
-      var myBudget = data.planning.budget.amount.amount;
+       var myBudget = data.planning.budget.amount.amount;
       var myTender = data.tender.value.amount;
       var diff_tb = myTender - myBudget;
       var diff_tb_perc = (myTender/myBudget * 100).toFixed(2) - 100;
@@ -183,7 +185,7 @@ function load_tenderers (data) {
           //only show specific values, not whole array that includes things like contact phone and email
           for (i=0; i< data.tender.tenderers.length; i++) {
             let strAddress = "";
-            
+
             if ( data.tender.tenderers[i].address && data.tender.tenderers[i].address.streetAddress ) {
               strAddress = data.tender.tenderers[i].address.streetAddress;
             }
