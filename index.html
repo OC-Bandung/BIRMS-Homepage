@@ -9,6 +9,7 @@
       <link href="https://fonts.googleapis.com/css?family=Rubik:400,700,900" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -19,6 +20,72 @@
 
 <section>
   <div class="container-fluid m-0 p-0">
+  <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img src="img/birms.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto list-inline mb-0  mt-2 border-bottom-1px">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  APPS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div>
+                      <a class="dropdown-item text-dark" href="#">e-planning (SIRA)<br>
+                      <small class="alert-link">Sistem Informasi Perencanaan & Penganggaran</small>
+                      </a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div>
+                      <a class="dropdown-item text-dark" href="#">e-finance (SIMDA)<br>
+                      <small class="alert-link">Sistem Informasi Manajemen Keuangan Daerah</small>
+                      </a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div>
+                      <a class="dropdown-item text-dark" href="#">e-finance (SIMDA)<br>
+                      <small class="alert-link">Sistem Informasi Manajemen Keuangan Daerah</small>
+                      </a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div>
+                      <a class="dropdown-item text-dark" href="#">e-finance (SIMDA)<br>
+                      <small class="alert-link">Sistem Informasi Manajemen Keuangan Daerah</small>
+                      </a>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                  <div>
+                      <a class="dropdown-item text-dark" href="#">e-finance (SIMDA)<br>
+                      <small class="alert-link">Sistem Informasi Manajemen Keuangan Daerah</small>
+                      </a>
+                  </div>
+                  
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Berita</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Arsip</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Tentang Pengadaan</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Developer</a>
+              </li>  
+            </ul>
+          </div>
+      </nav>
+  </div>
+  <div class="container-fluid">
     <div class="row">
       <div class="col-12 p-0 m-0 text-center">
         <ul  id="bdg-primary-nav" class="list-inline mb-0  mt-2 border-bottom-1px">
@@ -93,11 +160,13 @@
 
             <div class="pt-2">
               <span><small>* Use advanced filters for more options.</small></span>
-              <span id="show-search-filters" class="float-right"><a class="h6 no-underline " href="#">Show filters <i class="material-icons align-middle"> arrow_drop_down </i> </a></span>
+              	<div class="float-right">
+              		<a class="h6 no-underline" href="#" data-toggle="collapse" data-target="#search-filters">Show filters <i class="material-icons align-middle"> arrow_drop_down </i> </a>
+				</div>
             </div>
 
 
-            <div id="search-filters" class="pt-3 d-none">
+            <div id="search-filters" class="pt-3 collapse">
 
               <div class="row">
                 <div class="col">
@@ -199,6 +268,95 @@
 </section>
 
 <a name="about"></a>
+	<div class="container-fluid">
+		<div class="row">
+		<div class="col">
+			<div class="dash-box dash-box-color-1">
+				<div class="dash-box-icon">
+					<i class="fa fa-money" aria-hidden="true"></i>
+				</div>
+				<div class="dash-box-body">
+					<span class="dash-box-title">Rp</span>
+					<span class="dash-box-count">7.289M</span>
+					<span class="dash-box-title">Total Anggaran</span>
+				</div>
+				
+				<div class="dash-box-action">
+					<button>Sumber:APBD</button>
+				</div>				
+			</div>
+		</div>
+		<div class="col">
+			<div class="dash-box dash-box-color-2">
+				<div class="dash-box-icon">
+					<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+				</div>
+				<div class="dash-box-body">
+					<span class="dash-box-title">Rp</span>
+					<span class="dash-box-count">2.000M</span>
+					<span class="dash-box-title">8639 Paket</span>
+				</div>
+				
+				<div class="dash-box-action">
+					<button>Barang/Jasa Sumber:SIRUP</button>
+				</div>				
+			</div>
+		</div>
+		<div class="col">
+			<div class="dash-box dash-box-color-3">
+				<div class="dash-box-icon">
+					<i class="fa fa-file-text" aria-hidden="true"></i>
+				</div>
+				<div class="dash-box-body">
+					<span class="dash-box-title">Rp</span>
+					<span class="dash-box-count">1.000M</span>
+					<span class="dash-box-title">150 Pkt Tender</span>
+				</div>
+				
+				<div class="dash-box-action">
+					<button>200 <i class="fa fa-users" aria-hidden="true" title="Peminat"></i> / 10 <i class="fa fa-user" aria-hidden="true" title="Penawar"></i></button>
+				</div>				
+			</div>
+		</div>
+		<div class="col">
+			<div class="dash-box dash-box-color-4">
+				<div class="dash-box-icon">
+					<i class="fa fa-file" aria-hidden="true"></i>
+				</div>
+				<div class="dash-box-body">
+					<span class="dash-box-title">Rp</span>
+					<span class="dash-box-count">1.000M</span>
+					<span class="dash-box-title">3649 Pkt NonTender</span>
+				</div>
+				
+				<div class="dash-box-action">
+					<button>10 <i class="fa fa-user" aria-hidden="true" title="Penawar"></i></button>
+				</div>				
+			</div>
+		</div>
+		<div class="col">
+			<div class="dash-box dash-box-color-1">
+				<div class="dash-box-icon">
+					<i class="fa fa-trophy" aria-hidden="true"></i>
+				</div>
+				<div class="dash-box-body">
+					<span class="dash-box-title">Rp</span>
+					<span class="dash-box-count">1.500M</span>
+					<span class="dash-box-title">3649 Kontrak</span>
+				</div>
+				
+				<div class="dash-box-action">
+					<button>Sumber:e-kontrak</button>
+				</div>				
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+
+<section class="mt-5">
+  <div class="container mt-5">
+    <div class="row mt-5">
 
 <section>
   <div class="container mt-2">
@@ -291,7 +449,7 @@
 
   <div class="row">
 
-    <div class="col-6">
+    <div class="col">
       <div id="graph01" style="min-width: 100%;  height: 400px; margin: 0 auto"></div>
       <div class="text-right bg-white pr-3 pb-3">
               <a target="_blank" href="https://birms.bandung.go.id/beta/api/graph/1"><i class="material-icons align-bottom pr-1">code</i>json</a>
@@ -300,7 +458,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col">
       <div id="graph02" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
       <div class="text-right bg-white pr-3 pb-3">
               <a target="_blank" href="https://birms.bandung.go.id/beta/api/graph/2/2017"><i class="material-icons align-bottom pr-1">code</i>json</a>
@@ -311,7 +469,7 @@
   </div>
 
   <div class="row pt-3">
-    <div class="col-6">
+    <div class="col">
       <div id="graph03" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
       <div class="text-right bg-white pr-3 pb-3">
               <a target="_blank" href="https://birms.bandung.go.id/beta/api/graph/3/2017"><i class="material-icons align-bottom pr-1">code</i>json</a>
@@ -320,7 +478,7 @@
       </div>
     </div>
 
-    <div class="col-6">
+    <div class="col">
       <div id="graph04" style="min-width: 100%; height: 400px; margin: 0 auto"></div>
       <div class="text-right bg-white pr-3 pb-3">
               <a target="_blank" href="https://birms.bandung.go.id/beta/api/graph/3/2017"><i class="material-icons align-bottom pr-1">code</i>json</a>

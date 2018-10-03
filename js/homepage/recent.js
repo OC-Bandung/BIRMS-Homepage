@@ -74,68 +74,53 @@ function get_planning(data) {
 
   html = "";
 
+  html+= '<div class="container">'; 
   for (i=0; i < data.length; i++) {
 
     json = data[i];
-
-
     html+= '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start rounded-0">';
-    html+= '<div class="d-flex w-100 justify-content-between">';
+    html+= '<div class="row">'; 
+    html+= '    <div class="col">';
     html+= '    <h5 class="mb-1">' + json.title + '</h5>';
-    html+= '    <small>3 days ago</small>';
-    html+= '  </div>';
+    html+= '    </div>'; 
+    html+= '</div>';
 
-    html+= '  <div class="d-flex w-100 justify-content-between">';
+    html+= '<div class="row">'; 
+    html+= '    <div class="col">';
     html+= '      <h6>SirupID: ' +  json.sirupID + ' - Kota Bandung: ' + json.SKPD + ' </h6>';
-    html+= '  </div>';
+    html+= '    </div>'; 
+    html+= '</div>';
 
-    html+= '  <div class="d-flex w-100 justify-content-between pt-1">';
-    html+= '    <span class="h6">';
+    html+= '<div class="row">'; 
+    html+= '  <div class="col">'; 
     html+= '      <span class="font-weight-bold"> Pagu  </span>';
-    html+= '        <div class="h6 pt-1">' + json.budget.amount.amount / 1000000  + '</div>';
-    html+= '    </span>';
-
-
-    html+= '    <span class="h6">';
-    html+= '       <span class="font-weight-bold"> Budget </span>';
-    html+= '      <div class="h6 pt-1">' +   json.budget.description + '</div>';
-    html+= '    </span>';
-
-    html+= '    <span class="h6">';
-    html+= '    <span class="font-weight-bold"> Tender start </span>';
-    html+= '      <div class="h6 pt-1"> ' + moment(json.tender.startDate).format('ll') + '</div>';
-    html+= '    </span>';
-
-    html+= '      <span class="h6">';
-    html+= '      <span class="font-weight-bold"> Tender end </span>';
-    html+= '      <div class="h6 pt-1">' +  moment(json.tender.endDate).format('ll') + '</div>';
-    html+= '    </span>';
-    html+= '    <span class="h6">';
-    html+= '      <span class="font-weight-bold"> Contract start </span>';
-    html+= '      <div class="h6 pt-1">' + moment(json.contract.startDate).format('ll') + '</div>';
-    html+= '    </span>';
-    html+= '    <span class="h6">';
-    html+= '      <span class="font-weight-bold"> Contract end </span>';
-    html+= '      <div class="h6 pt-1">' + moment(json.contract.endDate).format('ll') + '</div>';
-    html+= '    </span>';
-    html+= '  </div>';
-
-
-    html+= '    <p class="mb-0"><span class="hammer">Program: </span>' + json.project + '' ;
-    html+= '  </p>';
-
-    html+= '  <div class="d-flex w-100 justify-content-between">';
-    html+= '    <span><span class="hammer">Category</span>: <span class="text-capitalize">' + json.mainProcurementCategory + '</span></span>';
-    html+= '    <span><span class="hammer">Procurement method: </span>' +  json.procurementMethodDetails + '</span>';
-    html+= '    <span><span class="hammer">Award criteria: </span>' +  json.awardCriteria + '</span>';
-    html+= '  </div>';
-
-    html+= '</a>';
-
-
-
+    html+= '      <div class="h6 pt-1">' + json.budget.amount.amount / 1000000  + '</div>';
+    html+= '    </div>'; 
+    html+= '    <div class="col">'; 
+    html+= '      <span class="font-weight-bold"> Budget  </span>';
+    html+= '      <div class="h6 pt-1">' + json.budget.description  + '</div>';
+    html+= '    </div>'; 
+    html+= '    <div class="col">'; 
+    html+= '      <span class="font-weight-bold"> Tender start  </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.tender.startDate).format('ll')  + '</div>';
+    html+= '    </div>'; 
+    html+= '    <div class="col">'; 
+    html+= '      <span class="font-weight-bold"> Tender end  </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.tender.endDate).format('ll')  + '</div>';
+    html+= '    </div>'; 
+    html+= '    <div class="col">'; 
+    html+= '      <span class="font-weight-bold"> Contract start  </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.contract.startDate).format('ll')  + '</div>';
+    html+= '    </div>'; 
+    html+= '    <div class="col">'; 
+    html+= '      <span class="font-weight-bold"> Contract end  </span>';
+    html+= '      <div class="h6 pt-1">' + moment(json.contract.endDate).format('ll')  + '</div>';
+    html+= '    </div>'; 
+    html+= '</div>';
+    html+= '</a>';   
   }
-
+  html+= '</div>'; 
+	
   $("#recent-from-api").html(html);
 
 }
