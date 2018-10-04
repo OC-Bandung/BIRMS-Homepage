@@ -7,10 +7,6 @@ function load_tender(data) {
   var myUI = [
 
     {
-      "name": "tender.title",
-      "ui_element": "#page-title",
-    },
-    {
       "name": "tender.status",
       "ui_element": "#tender-status",
       "ui_container": "#tender-status-container"
