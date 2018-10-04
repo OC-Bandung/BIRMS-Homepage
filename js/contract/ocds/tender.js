@@ -5,7 +5,10 @@ function load_tender(data) {
   //ocds-afzrfb-s-2016-6124079
 
   var myUI = [
-
+    {
+      "name": "tender.title",
+      "ui_element": "#page-title"
+    },
     {
       "name": "tender.status",
       "ui_element": "#tender-status",
@@ -49,7 +52,6 @@ function load_tender(data) {
   ];
 
   displayJsonInUI (myUI , data);
-
 
   // custom if conditions for calculated fields
   if (data.tender.tenderPeriod) {
