@@ -1,24 +1,21 @@
 function displayJsonInUI(myUIMap, data) {
 
   for (let item of myUIMap) {
-
     content = data;
-    console.log(item.name);
       var path = item.name.split(".");
         for(let node of path) {
           if (typeof content   !== 'undefined')  {
             content = content[node];
           }
         }
-    //format date.
+
     if (typeof content   !== 'undefined')  {
+      //format date.
       if(moment(content,  moment.ISO_8601, true).isValid()) content = moment(content).format('ll');
 
       $(item.ui_element).html(content);
       $(item.ui_container).removeClass("d-none");
     }
-
-
   }
 
 }
