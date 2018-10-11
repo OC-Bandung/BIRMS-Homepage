@@ -122,6 +122,8 @@ function load_tender(data) {
    }
 
 
+   //update document links
+   load_document_link(data.ocid);
 
 
 
@@ -166,6 +168,28 @@ function load_tender(data) {
     $("#tender-milestones-cards").append(html);
 
    }
+
+
+}
+
+function load_document_link(ocid) {
+  // custom links based on ocid
+  // if it has s: ocds-afzrfb-s-2016-6124079 - show sirup links
+  // if it has b: show birms link ocds-afzrfb-b-2016-38800
+  var the_link = "#";
+
+  if (ocid.substring(12, 13) == "s") {
+    $("#link-title").text("SIRUP Link");
+    the_link = "http://sirup.bandung.go.id/";
+  }
+
+  if (ocid.substring(12, 13) == "b") {
+      $("#link-title").text("BIRMS Link");
+      the_link = "http://birms.bandung.go.id/";
+  }
+
+  $("#link-content").html('Read the procurement documents on <a  target="_blank" href="' +  the_link + '">this link</a>.');
+
 }
 
 function load_tenderers (data) {
