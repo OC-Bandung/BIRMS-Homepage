@@ -30,9 +30,9 @@ You can build an endpoint in which you return the JSON documents where a field m
 Query format: `&q={"fieldname":"fieldvalue"}`
 
 Example query:
-- Find documents where status is set to active: `&q={"status":"active"}`  
+- Find documents where status is set to active: `&q={"status":"active"}`
 - Find documents where the buyer.name is "Dinas Kesehatan": `&q={"buyer.name":"Dinas Kesehatan"}`
-- Find documents where the budget is "APBD": `&q={"planning.budget.description":"APBD"}`  
+- Find documents where the budget is "APBD": `&q={"planning.budget.description":"APBD"}`
 - Find documents where the mainProcurementCategory is "services" : `&q={"tender.mainProcurementCategory":"services"}`
 
 Example endpoint:
@@ -56,20 +56,29 @@ Example:
 - **List** the documents with Dinas Kesehatan as a buyer and APBD as a budget by using **find-releases**
 [https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"buyer.name":"Dinas Kesehatan","planning.budget.description":"APBD"}](https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={%22buyer.name%22:%22Dinas%20Kesehatan%22,%22planning.budget.description%22:%22APBD%22})
 
-------
-**Where a in (b,c,d)**
-
-Query format: `&q={$in["services", "works"]}`
-
 -----
 **Where a > n**
 
-`&q={"tender.value.amount":{"$gt":100000}}``
+Query format: `&q={"tender.value.amount":{"$gt":100000}}`
+
+- **Count** the documents where tender.value.amount is greater than 100000 by using **count-releases**
+[https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$gt":100000}}](https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$gt":100000}})
+
+- **List** the documents where tender.value.amount is greater than 100000  by using **find-releases**
+[https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$gt":100000}}](https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$gt":100000}})
+
 
 -----
 **Where a < n**
 
-`&q={"tender.value.amount":{"$lt":100000}}`
+Query format: `&q={"tender.value.amount":{"$lt":100000}}`
+
+- **Count** the documents where tender.value.amount is less than 100000 by using **count-releases**
+[https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$lt":100000}}](https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/count-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$lt":100000}})
+
+- **List** the documents where tender.value.amount is less than 100000  by using **find-releases**
+[https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$lt":100000}}](https://webhooks.mongodb-stitch.com/api/client/v2.0/app/birms-cvrbm/service/query-birms/incoming_webhook/find-releases?secret=6WkBFKh6SS4ibE2O0Fm5UHGEQWv8hQbj&q={"tender.value.amount":{"$lt":100000}})
+
 
 -----
 **Where a not equals n**
