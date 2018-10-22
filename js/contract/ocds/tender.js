@@ -143,7 +143,7 @@ function load_tender(data) {
               html +='<h5 class="card-title">' +   data.tender.milestones[i].title +   '</h5>';
                 html += '<div class="row">';
                 html += '<div class="col-6">';
-                    html+= '<div class="h6">Due Date: ' + moment(data.tender.milestones[i].dueDate).format('ll')  + '</div>';
+                    html+= '<div class="h6 cal-duedate">Due Date: ' + moment(data.tender.milestones[i].dueDate).format('ll')  + '</div>';
                     html+=  '<div class="h6">Date Met: ' + moment(data.tender.milestones[i].dateMet).format('ll')  + '</div>';
                 html += '</div>';
                 if (diff_milestone <=0) {
@@ -153,10 +153,20 @@ function load_tender(data) {
                 }
 
               html+= '</div>';
+
+              base_url = "https://calendar.google.com/calendar/r/eventedit";
+              text = "?text=" + $("#page-title").text();
+              due_date1 =   moment(data.tender.milestones[i].dueDate ).format("YYYYMMDD") ;
+              due_date2  =   moment(data.tender.milestones[i].dueDate ).add(1, 'days').format("YYYYMMDD");
+              dates = "&dates=" + due_date1 + "/" + due_date2 ;
+              details = "&details=Milestone: " +  data.tender.milestones[i].title + ". <br> For more details please visit: " + window.location.href  ;
+
+              calendar_url = base_url +  text + dates + details ;
+
              html +='<div><button class="btn btn-sm btn-outline-secondary float-right" type="button" data-target="#t_details" data-toggle="collapse">Add to Calendar ▼</button>';
              html +='<div class="collapse bl-3px-black" id="t_details">';
                html +='<div class="p-2 small text-monospace">';
-                 html +='<div><a href="#">add to Google Calendar</a></div>';
+                 html +='<div><a  target="_blank" class="cal-addtocalendar" href="' + calendar_url + ' ">add to Google Calendar</a></div>';
                 html += '<div><a href="#">add to Outlook</a></div>';
                  html +='<div><a href="#">send by email</a></div>';
               html += '</div>';
