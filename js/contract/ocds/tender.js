@@ -156,7 +156,7 @@ function load_tender(data) {
 
               base_url = "https://calendar.google.com/calendar/r/eventedit";
               text = "?text=" + $("#page-title").text();
-              due_date1 =   moment(data.tender.milestones[i].dueDate ).format("YYYYMMDD") ;
+              due_date1 =   moment(data.tender.milestones[i].dateMet ).format("YYYYMMDD") ;
               due_date2  =   moment(data.tender.milestones[i].dueDate ).add(1, 'days').format("YYYYMMDD");
               dates = "&dates=" + due_date1 + "/" + due_date2 ;
               details = "&details=Milestone: " +  data.tender.milestones[i].title + ". <br> For more details please visit: " + window.location.href  ;
