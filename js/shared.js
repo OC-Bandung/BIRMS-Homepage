@@ -1,9 +1,32 @@
+// function displayJsonInUI(myUIMap, data) {
+//
+//   for (let item of myUIMap) {
+//
+//     content = data;
+//
+//     var path = item.name.split(".");
+//       for(let node of path) {
+//         content = content[node];
+//       }
+//
+//     //format date.
+//     if(moment(content,  moment.ISO_8601, true).isValid()) content = moment(content).format('ll');
+//
+//     $(item.ui_element).html(content);
+//     $(item.ui_container).removeClass("d-none");
+//
+//   }
+//
+// }
+
 function displayJsonInUI(myUIMap, data) {
 
-  for (let item of myUIMap) {
-    content = data;
+  for (var i=0; i<myUIMap.length; i++) {
+    var content = data;
+     var item = myUIMap[i];
       var path = item.name.split(".");
-        for(let node of path) {
+        for(var j=0; j<path.length; j++) {
+         node = path[j];
           if (typeof content   !== 'undefined')  {
             content = content[node];
           }
